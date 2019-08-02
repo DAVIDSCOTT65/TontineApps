@@ -1,0 +1,4 @@
+D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\InscriptionLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\InscriptionLib.pdb
+D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\obj\Debug\InscriptionLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\obj\Debug\InscriptionLib.pdb

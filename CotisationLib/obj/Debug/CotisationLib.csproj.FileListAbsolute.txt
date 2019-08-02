@@ -1,0 +1,5 @@
+D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\CotisationLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\CotisationLib.pdb
+D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\obj\Debug\CotisationLib.csprojResolveAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\obj\Debug\CotisationLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\obj\Debug\CotisationLib.pdb

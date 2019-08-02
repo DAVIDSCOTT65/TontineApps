@@ -1,0 +1,5 @@
+D:\DAVID\PROJETBDD\TontineSoft\MembreLib\bin\Debug\MembreLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\MembreLib\bin\Debug\MembreLib.pdb
+D:\DAVID\PROJETBDD\TontineSoft\MembreLib\obj\Debug\MembreLib.csprojResolveAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\MembreLib\obj\Debug\MembreLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\MembreLib\obj\Debug\MembreLib.pdb
