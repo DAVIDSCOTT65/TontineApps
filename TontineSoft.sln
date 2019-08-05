@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CotisationLib", "Cotisation
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemboursementLib", "RemboursementLib\RemboursementLib.csproj", "{51CC2FB2-549A-4DA6-9E2E-39559417F7AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageSingleConnection", "ManageSingleConnection\ManageSingleConnection.csproj", "{C84BFE57-55D6-41B2-A909-737097FCF273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParametreConnexionLib", "ParametreConnexionLib\ParametreConnexionLib.csproj", "{AC391344-B2BC-4DA8-B169-76A6AEB9B85B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{51CC2FB2-549A-4DA6-9E2E-39559417F7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51CC2FB2-549A-4DA6-9E2E-39559417F7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51CC2FB2-549A-4DA6-9E2E-39559417F7AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84BFE57-55D6-41B2-A909-737097FCF273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84BFE57-55D6-41B2-A909-737097FCF273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84BFE57-55D6-41B2-A909-737097FCF273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84BFE57-55D6-41B2-A909-737097FCF273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC391344-B2BC-4DA8-B169-76A6AEB9B85B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC391344-B2BC-4DA8-B169-76A6AEB9B85B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC391344-B2BC-4DA8-B169-76A6AEB9B85B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC391344-B2BC-4DA8-B169-76A6AEB9B85B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

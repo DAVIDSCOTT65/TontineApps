@@ -1,0 +1,5 @@
+D:\DAVID\PROJETBDD\TontineSoft\ManageSingleConnection\bin\Debug\ManageSingleConnection.dll
+D:\DAVID\PROJETBDD\TontineSoft\ManageSingleConnection\bin\Debug\ManageSingleConnection.pdb
+D:\DAVID\PROJETBDD\TontineSoft\ManageSingleConnection\obj\Debug\ManageSingleConnection.csprojResolveAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\ManageSingleConnection\obj\Debug\ManageSingleConnection.dll
+D:\DAVID\PROJETBDD\TontineSoft\ManageSingleConnection\obj\Debug\ManageSingleConnection.pdb

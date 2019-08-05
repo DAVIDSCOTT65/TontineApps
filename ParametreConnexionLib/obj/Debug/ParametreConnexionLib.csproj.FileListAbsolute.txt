@@ -1,0 +1,4 @@
+D:\DAVID\PROJETBDD\TontineSoft\ParametreConnexionLib\bin\Debug\ParametreConnexionLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\ParametreConnexionLib\bin\Debug\ParametreConnexionLib.pdb
+D:\DAVID\PROJETBDD\TontineSoft\ParametreConnexionLib\obj\Debug\ParametreConnexionLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\ParametreConnexionLib\obj\Debug\ParametreConnexionLib.pdb
