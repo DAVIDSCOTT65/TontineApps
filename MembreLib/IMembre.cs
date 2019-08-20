@@ -19,7 +19,7 @@ namespace MembreLib
         string LieuNaiss { get; set; }
         string Profession { get; set; }
         Image Photo { get; set; }
-        byte QrCode { get; set; }
+        Image QrCode { get; set; }
         int RefMandataire { get; set; }
         int Nouveau();
         void Enregistrer(IMembre membre);

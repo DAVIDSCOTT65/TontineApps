@@ -9,6 +9,6 @@ namespace MembreLib
     public enum Sexe
     {
         Masculin,
-        Feminin
+        Féminin
     }
 }
