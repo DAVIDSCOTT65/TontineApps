@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +45,20 @@
     <Compile Include="Cotisation.cs" />
     <Compile Include="Frais.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ManageSingleConnection\ManageSingleConnection.csproj">
+      <Project>{c84bfe57-55d6-41b2-a909-737097fcf273}</Project>
+      <Name>ManageSingleConnection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParametreConnexionLib\ParametreConnexionLib.csproj">
+      <Project>{ac391344-b2bc-4da8-b169-76a6aeb9b85b}</Project>
+      <Name>ParametreConnexionLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TontineUtilities\TontineUtilities.csproj">
+      <Project>{cc265143-b6a1-4076-b4ff-08b4a085e149}</Project>
+      <Name>TontineUtilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParametreConnexionLib", "Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TontineUtilities", "TontineUtilities\TontineUtilities.csproj", "{CC265143-B6A1-4076-B4FF-08B4A085E149}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoundLib", "RoundLib\RoundLib.csproj", "{4AD49126-B376-4AEA-891E-E2B876D42710}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{CC265143-B6A1-4076-B4FF-08B4A085E149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC265143-B6A1-4076-B4FF-08B4A085E149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC265143-B6A1-4076-B4FF-08B4A085E149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD49126-B376-4AEA-891E-E2B876D42710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD49126-B376-4AEA-891E-E2B876D42710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD49126-B376-4AEA-891E-E2B876D42710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD49126-B376-4AEA-891E-E2B876D42710}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

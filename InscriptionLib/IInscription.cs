@@ -10,7 +10,7 @@ namespace InscriptionLib
     {
         int Id { get; set; }
         int RefMembre { get; set; }
-        int IdRound { get; set; }
+        int RefRound { get; set; }
         string UserSession { get; set; }
         int Nouveau();
         void Enregistrer(IInscription membre);
