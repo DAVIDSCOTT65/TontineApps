@@ -1,0 +1,63 @@
+CREATE PROC SELECT_MEMBRES
+AS
+BEGIN
+	SELECT * FROM Affichage_Details_Adresse_Membre
+END
+GO
+CREATE PROC SELECT_TELEPHONES_MEMBRE
+(
+	@id int
+)
+AS
+BEGIN
+	SELECT * FROM Telephone Where Ref_Membre=@id
+END
+GO
+CREATE PROC SELECT_INSCRIPTIONS_FROM_ONE_ROUND
+(
+	@id int
+)
+AS
+BEGIN
+	SELECT * FROM Affichage_Details_Inscriptions WHERE IdRound=@id
+END
+GO
+CREATE PROC SELECT_ROUNDS
+AS
+BEGIN
+	SELECT * FROM Affichage_Details_Rounds
+END
+GO
+CREATE PROC SELECT_COTISATIONS_FROM_ROUND
+(
+	@id int
+)
+AS
+BEGIN
+	SELECT * FROM Affichage_Details_Cotisation WHERE IdRound=@id
+END
+GO
+CREATE PROC SELECT_REMBOURSEMENTS_FROM_ROUND
+(
+	@id int
+)
+AS
+BEGIN
+	SELECT * FROM Affichage_Details_Remboursement WHERE IdRound=@id
+END
+GO
+CREATE PROC SELECT_SEMAINES_FROM_ROUND
+(
+	@id int
+)
+AS
+BEGIN
+	SELECT * FROM Affichage_Details_Semaine WHERE IdRound=@id
+END
+GO
+CREATE PROC SELECT_TYPE_FRAIS
+AS
+BEGIN
+	SELECT * FROM Type_Frais
+END
+

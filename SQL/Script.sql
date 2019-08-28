@@ -145,3 +145,7 @@ CREATE TABLE Cotisation
 	Constraint fk_cotisation_frais
 	FOREIGN KEY(Ref_Frais) REFERENCES Type_Frais(Id)
 )
+
+ALTER TABLE Semaine
+ADD CONSTRAINT fk_semaine_inscription 
+FOREIGN KEY(RefInscription) REFERENCES Inscription(Id)
