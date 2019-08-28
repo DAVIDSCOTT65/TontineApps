@@ -21,6 +21,16 @@ namespace MembreLib
         Image Photo { get; set; }
         Image QrCode { get; set; }
         int RefMandataire { get; set; }
+        string Noms { get; set; }
+        string Contact { get; set; }
+        int IdAdresse { get; set; }
+        string Pays { get; set; }
+        string Ville { get; set; }
+        string Commune { get; set; }
+        string Quartier { get; set; }
+        int IdDomicile { get; set; }
+        string Avenue { get; set; }
+        int Numero { get; set; }
         int Nouveau();
         void Enregistrer(IMembre membre);
         void Supprimer(int id);

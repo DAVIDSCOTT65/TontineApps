@@ -70,8 +70,33 @@ namespace CotisationLib
         }
         public List<Frais> AllFrais()
         {
+            List<Frais> fr = new List<Frais>();
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd=ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_TYPE_FRAIS";
+                cmd.CommandType = CommandType.StoredProcedure;
 
-            throw new NotImplementedException();
+                IDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    fr.Add(GetAllFrais(rd));
+                }
+                rd.Dispose();
+            }
+
+            return fr;
+        }
+        private Frais GetAllFrais(IDataReader rd)
+        {
+            Frais fr = new Frais();
+
+            fr.Id = Convert.ToInt32(rd["Id"].ToString());
+            fr.Designation = rd["Designation"].ToString();
+
+            return fr;
         }
     }
 }

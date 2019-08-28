@@ -17,6 +17,7 @@ namespace MembreLib
         public string Contat { get; set; }
         public string Profession { get; set; }
         public DateTime DateNaiss { get; set; }
+        public int Age { get; set; }
         public int Nouveau()
         {
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
@@ -76,7 +77,36 @@ namespace MembreLib
         }
         public List<Mandataire> AllMandataire()
         {
-            throw new NotImplementedException();
+            List<Mandataire> manda = new List<Mandataire>();
+
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_MANDATAIRES";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    manda.Add(GetAllMandataire(rd));
+                }
+                rd.Dispose();
+            }
+            return manda;
+        }
+        private Mandataire GetAllMandataire(IDataReader rd)
+        {
+            Mandataire m = new Mandataire();
+
+            m.Id = Convert.ToInt32(rd["Id"].ToString());
+            m.Noms = rd["Noms"].ToString();
+            m.Contat = rd["Contact"].ToString();
+            m.Profession = rd["Profession"].ToString();
+            m.Age= Convert.ToInt32(rd["Age"].ToString());
+
+            return m;
         }
     }
 }

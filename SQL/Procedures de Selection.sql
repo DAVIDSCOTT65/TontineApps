@@ -60,4 +60,11 @@ AS
 BEGIN
 	SELECT * FROM Type_Frais
 END
+GO
+CREATE PROC SELECT_MANDATAIRES
+AS
+BEGIN
+	SELECT Id,Noms,Contact,Profession,DATEDIFF(YEAR,Date_Naiss,GETDATE()) as Age FROM Mandataire
+END
+
 

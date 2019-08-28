@@ -64,9 +64,118 @@ namespace InscriptionLib
             }
         }
 
+        public DateTime DateInscrit
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Matricule
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Nom
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Postnom
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Sexe
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Designation
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Prenom
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public List<IInscription> AllInscriptionsRound(int idround)
         {
-            throw new NotImplementedException();
+            List<IInscription> lst = new List<IInscription>();
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd=ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_INSCRIPTIONS_FROM_ONE_ROUND";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, idround));
+
+                IDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    lst.Add(GetAllDetailsInscription(dr));
+                }
+                dr.Dispose();
+            }
+            return lst;
         }
 
         public void Enregistrer(IInscription membre)
@@ -127,6 +236,23 @@ namespace InscriptionLib
 
                 MessageBox.Show("Suppression reussie", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+        private IInscription GetAllDetailsInscription(IDataReader rd)
+        {
+            IInscription ins = new Inscription();
+
+            ins.Id = Convert.ToInt32(rd["Id"].ToString());
+            ins.DateInscrit = Convert.ToDateTime(rd["Date_Inscription"].ToString());
+            ins.RefMembre= Convert.ToInt32(rd["IdMembre"].ToString());
+            ins.Matricule = rd["Matricule"].ToString();
+            ins.Nom= rd["Nom"].ToString();
+            ins.Postnom= rd["Postnom"].ToString();
+            ins.Prenom= rd["Prenom"].ToString();
+            ins.Sexe = rd["Sexe"].ToString();
+            ins.RefRound= Convert.ToInt32(rd["IdRound"].ToString());
+            ins.Designation = rd["Designation"].ToString();
+
+            return ins;
         }
     }
 }

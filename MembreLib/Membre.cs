@@ -14,6 +14,45 @@ namespace MembreLib
 {
     public class Membre : IMembre
     {
+        public string Avenue
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Commune
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Contact
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public DateTime DateNaiss
         {
             get
@@ -38,6 +77,33 @@ namespace MembreLib
                 throw new NotImplementedException();
             }
         }
+
+        public int IdAdresse
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public int IdDomicile
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public string LieuNaiss
         {
             get
@@ -74,6 +140,46 @@ namespace MembreLib
                 throw new NotImplementedException();
             }
         }
+
+        public string Noms
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public int Numero
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Pays
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public Image Photo
         {
             get
@@ -134,6 +240,20 @@ namespace MembreLib
                 throw new NotImplementedException();
             }
         }
+
+        public string Quartier
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public int RefMandataire
         {
             get
@@ -158,9 +278,38 @@ namespace MembreLib
                 throw new NotImplementedException();
             }
         }
+
+        public string Ville
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public List<IMembre> AllMembres()
         {
-            throw new NotImplementedException();
+            List<IMembre> membre = new List<IMembre>();
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_MEMBRES";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    membre.Add(GetAllDetailsMembre(dr));
+                }
+            }
+            return membre;
         }
         public void Enregistrer(IMembre membre)
         {
@@ -235,6 +384,32 @@ namespace MembreLib
             bytImage = ms.ToArray();
             ms.Close();
             return bytImage;
+        }
+        private IMembre GetAllDetailsMembre(IDataReader dr)
+        {
+            IMembre m = new Membre();
+
+            m.Id = Convert.ToInt32(dr["Id"].ToString());
+            m.Matricule = dr["Matricule"].ToString();
+            m.Nom= dr["Nom"].ToString();
+            m.Postnom= dr["Postnom"].ToString();
+            m.Prenom= dr["Prenom"].ToString();
+            m.Sex= dr["Sexe"].ToString().Equals("M") ? Sexe.Masculin : Sexe.Féminin;
+            m.DateNaiss = Convert.ToDateTime(dr["Date_Naissance"].ToString());
+            m.LieuNaiss= dr["Lieu_Naissance"].ToString();
+            m.Profession = dr["Profession"].ToString();
+            m.RefMandataire = Convert.ToInt32(dr["IdMandataire"].ToString());
+            m.Noms = dr["Noms"].ToString();
+            m.Contact = dr["Contact"].ToString();
+            m.IdAdresse = Convert.ToInt32(dr["IdAdresse"].ToString());
+            m.Pays= dr["Pays"].ToString();
+            m.Ville = dr["Ville"].ToString();
+            m.Commune = dr["Quartier"].ToString();
+            m.IdDomicile = Convert.ToInt32(dr["IdDomicile"].ToString());
+            m.Avenue= dr["Avenue"].ToString();
+            m.Numero = Convert.ToInt32(dr["Numero"].ToString());
+
+            return m;
         }
     }
 }
