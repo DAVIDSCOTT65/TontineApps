@@ -15,6 +15,12 @@ namespace RemboursementLib
         public int Id { get; set; }
         public int RefInscription { get; set; }
         public int RefSemaine { get; set; }
+        public int IdRound { get; set; }
+        public string Matricule { get; set; }
+        public string Nom { get; set; }
+        public string Postnom { get; set; }
+        public string Prenom { get; set; }
+        public string Sexe { get; set; }
         public int Nouveau()
         {
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
@@ -69,9 +75,45 @@ namespace RemboursementLib
                 MessageBox.Show("Suppression reussie", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        public List<Remboursement> AllRemboursements()
+        public List<Remboursement> AllRemboursements(int id)
         {
-            throw new NotImplementedException();
+            List<Remboursement> r = new List<Remboursement>();
+
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_REMBOURSEMENTS_FROM_ROUND";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, id));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    r.Add(GetDetailsRemboursement(rd));
+                }
+                rd.Dispose();
+            }
+            return r;
+        }
+        private Remboursement GetDetailsRemboursement(IDataReader rd)
+        {
+            Remboursement r = new Remboursement();
+
+            r.Id = Convert.ToInt32(rd["Id"].ToString());
+            r.RefInscription = Convert.ToInt32(rd["IdInscription"].ToString());
+            r.IdRound = Convert.ToInt32(rd["IdRound"].ToString());
+            r.Matricule = rd["Matricule"].ToString();
+            r.Nom = rd["Nom"].ToString();
+            r.Postnom = rd["Postnom"].ToString();
+            r.Prenom = rd["Prenom"].ToString();
+            r.Sexe = rd["Sexe"].ToString();
+            r.RefSemaine = Convert.ToInt32(rd["IdSemaine"].ToString());
+
+            return r;
+            
         }
     }
 }

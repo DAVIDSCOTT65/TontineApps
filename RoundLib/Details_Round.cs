@@ -14,10 +14,14 @@ namespace RoundLib
     {
         public int Id { get; set; }
         public int Ecart_Jour { get; set; }
-        public float Montant_Jour { get; set; }
+        public decimal Montant_Jour { get; set; }
         public string Devise { get; set; }
         public int Limite { get; set; }
         public string UserSession { get; set; }
+        public string Designation { get; set; }
+        public DateTime DateDebut { get; set; }
+        public DateTime DateFin { get; set; }
+        public int IdRound { get; set; }
         public int Nouveau()
         {
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
@@ -74,6 +78,43 @@ namespace RoundLib
 
                 MessageBox.Show("Suppression reussie", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+        public List<Details_Round> AllDetailsRounds()
+        {
+            List<Details_Round> dr = new List<Details_Round>();
+
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_ROUNDS";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    dr.Add(GetDetailsRounds(rd));
+                }
+                rd.Dispose();
+            }
+            return dr;
+        }
+        private Details_Round GetDetailsRounds(IDataReader rd)
+        {
+            Details_Round dr = new Details_Round();
+
+            dr.IdRound = Convert.ToInt32(rd["Id"].ToString());
+            dr.Designation = rd["Designation"].ToString();
+            dr.DateDebut = Convert.ToDateTime(rd["Date_Debut"].ToString());
+            dr.DateFin = Convert.ToDateTime(rd["Date_Debut"].ToString());
+            dr.Id= Convert.ToInt32(rd["IdDetail"].ToString());
+            dr.Montant_Jour= Convert.ToDecimal(rd["Montant"].ToString());
+            dr.Devise = rd["Devise"].ToString();
+            dr.Ecart_Jour= Convert.ToInt32(rd["Ecart_Jour"].ToString());
+            dr.Limite= Convert.ToInt32(rd["Limite"].ToString());
+
+            return dr;
         }
     }
 }
