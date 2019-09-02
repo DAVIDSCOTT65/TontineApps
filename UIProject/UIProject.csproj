@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{736A6366-A22A-4BF2-8145-A64D2E0B1F23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UIProject</RootNamespace>
+    <AssemblyName>UIProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\DynamicClasses.cs" />
+    <Compile Include="Forms\ConnectionUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConnectionUser.Designer.cs">
+      <DependentUpon>ConnectionUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\PubCon.cs" />
+    <Compile Include="Forms\ConfigForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigForms.Designer.cs">
+      <DependentUpon>ConfigForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Principale_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Principale_Form.Designer.cs">
+      <DependentUpon>Principale_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Splash_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Splash_Form.Designer.cs">
+      <DependentUpon>Splash_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ConnectionUser.resx">
+      <DependentUpon>ConnectionUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigForms.resx">
+      <DependentUpon>ConfigForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Principale_Form.resx">
+      <DependentUpon>Principale_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Splash_Form.resx">
+      <DependentUpon>Splash_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CotisationLib\CotisationLib.csproj">
+      <Project>{9e018c7d-57e9-4122-8e69-22eca7158a40}</Project>
+      <Name>CotisationLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InscriptionLib\InscriptionLib.csproj">
+      <Project>{711cb8bb-b5ca-4325-9551-6a33e48ae9a7}</Project>
+      <Name>InscriptionLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManageSingleConnection\ManageSingleConnection.csproj">
+      <Project>{c84bfe57-55d6-41b2-a909-737097fcf273}</Project>
+      <Name>ManageSingleConnection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MembreLib\MembreLib.csproj">
+      <Project>{32571984-3128-414e-a922-bed135f53837}</Project>
+      <Name>MembreLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParametreConnexionLib\ParametreConnexionLib.csproj">
+      <Project>{ac391344-b2bc-4da8-b169-76a6aeb9b85b}</Project>
+      <Name>ParametreConnexionLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RemboursementLib\RemboursementLib.csproj">
+      <Project>{51cc2fb2-549a-4da6-9e2e-39559417f7af}</Project>
+      <Name>RemboursementLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RoundLib\RoundLib.csproj">
+      <Project>{4ad49126-b376-4aea-891e-e2b876d42710}</Project>
+      <Name>RoundLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TontineUtilities\TontineUtilities.csproj">
+      <Project>{cc265143-b6a1-4076-b4ff-08b4a085e149}</Project>
+      <Name>TontineUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

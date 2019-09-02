@@ -2,3 +2,10 @@ D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\RemboursementLib.dll
 D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\RemboursementLib.pdb
 D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\obj\Debug\RemboursementLib.dll
 D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\obj\Debug\RemboursementLib.pdb
+D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\ManageSingleConnection.dll
+D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\ParametreConnexionLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\TontineUtilities.dll
+D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\ManageSingleConnection.pdb
+D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\ParametreConnexionLib.pdb
+D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\TontineUtilities.pdb
+D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\obj\Debug\RemboursementLib.csprojResolveAssemblyReference.cache

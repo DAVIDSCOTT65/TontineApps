@@ -46,6 +46,7 @@
     <Compile Include="ClsGetdatas.cs" />
     <Compile Include="ClsSMS.cs" />
     <Compile Include="DatabaseBackupOrRestor.cs" />
+    <Compile Include="InstantRound.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserSession.cs" />
   </ItemGroup>
@@ -53,6 +54,10 @@
     <ProjectReference Include="..\ManageSingleConnection\ManageSingleConnection.csproj">
       <Project>{c84bfe57-55d6-41b2-a909-737097fcf273}</Project>
       <Name>ManageSingleConnection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MembreLib\MembreLib.csproj">
+      <Project>{32571984-3128-414e-a922-bed135f53837}</Project>
+      <Name>MembreLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\ParametreConnexionLib\ParametreConnexionLib.csproj">
       <Project>{ac391344-b2bc-4da8-b169-76a6aeb9b85b}</Project>
