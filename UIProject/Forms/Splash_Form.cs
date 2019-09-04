@@ -36,8 +36,9 @@ namespace UIProject.Forms
                 if (rectangleShape2.Width >= 551)
                 {
                     timer1.Stop();
-                    PubCon.testFile();
                     this.Hide();
+                    PubCon.testFile();
+                   
                     Principale_Form fr = new Principale_Form();
                     fr.Show();
                 }

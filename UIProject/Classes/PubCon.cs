@@ -37,6 +37,7 @@ namespace UIProject.Classes
             }
             else
             {
+               
                 ConfigForms frm = new ConfigForms();
                 frm.ShowDialog();
                 ClsConnection.GetInstance().connecter();
