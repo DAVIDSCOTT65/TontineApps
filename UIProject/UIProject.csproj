@@ -97,6 +97,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -147,6 +148,45 @@
       <Project>{cc265143-b6a1-4076-b4ff-08b4a085e149}</Project>
       <Name>TontineUtilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\05400728543080160.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Shutdown_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Shutdown_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money Bag_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money BagWhite_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Groups_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Donate_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refund_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rounded Rectangle Stroked_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown_40pxB.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
