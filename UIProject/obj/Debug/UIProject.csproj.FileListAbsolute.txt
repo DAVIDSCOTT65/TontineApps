@@ -3,7 +3,6 @@ D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\UIProject.exe
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\UIProject.pdb
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
-D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csprojResolveAssemblyReference.cache
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Properties.Resources.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csproj.GenerateResource.Cache
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.exe
@@ -28,3 +27,10 @@ D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.ConfigForms.r
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.ConnectionUser.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.Splash_Form.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.Principale_Form.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Home.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Member.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csprojAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csproj.CoreCompileInputs.cache
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csproj.CopyComplete
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\ThoughtWorks.QRCode.dll
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.MiniFormAdresse.resources

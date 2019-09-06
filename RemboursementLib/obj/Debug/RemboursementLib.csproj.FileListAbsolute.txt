@@ -8,4 +8,6 @@ D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\TontineUtilities.dll
 D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\ManageSingleConnection.pdb
 D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\ParametreConnexionLib.pdb
 D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\TontineUtilities.pdb
-D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\obj\Debug\RemboursementLib.csprojResolveAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\obj\Debug\RemboursementLib.csprojAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\obj\Debug\RemboursementLib.csproj.CoreCompileInputs.cache
+D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\obj\Debug\RemboursementLib.csproj.CopyComplete

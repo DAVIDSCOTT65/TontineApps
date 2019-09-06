@@ -1,4 +1,5 @@
 ﻿using ManageSingleConnection;
+using MembreLib;
 using ParametreConnexionLib;
 using System;
 using System.Collections.Generic;
@@ -12,149 +13,27 @@ namespace InscriptionLib
 {
     public class Inscription : IInscription
     {
-        public int Id
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public int Id { get; set; }
+        public int RefRound { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int RefMembre { get; set; }
 
-        public int RefRound
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string UserSession { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public DateTime DateInscrit { get; set; }
 
-        public int RefMembre
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string Matricule { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public string Nom { get; set; }
 
-        public string UserSession
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string Postnom { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public Sexe Sexe { get; set; }
 
-        public DateTime DateInscrit
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string Designation { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Matricule
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Nom
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Postnom
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Sexe
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Designation
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Prenom
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
+        public string Prenom { get; set; }
+        public string NomComplet { get; set; }
         public List<IInscription> AllInscriptionsRound(int idround)
         {
             List<IInscription> lst = new List<IInscription>();
@@ -188,7 +67,7 @@ namespace InscriptionLib
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, Id));
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@ref_memebre", 4, DbType.Int32, RefMembre));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@ref_membre", 4, DbType.Int32, RefMembre));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@ref_round", 4, DbType.Int32, RefRound));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@user_session", 30, DbType.String, UserSession));
 
@@ -245,10 +124,11 @@ namespace InscriptionLib
             ins.DateInscrit = Convert.ToDateTime(rd["Date_Inscription"].ToString());
             ins.RefMembre= Convert.ToInt32(rd["IdMembre"].ToString());
             ins.Matricule = rd["Matricule"].ToString();
+            ins.NomComplet = rd["Nom_Complet"].ToString();
             ins.Nom= rd["Nom"].ToString();
             ins.Postnom= rd["Postnom"].ToString();
             ins.Prenom= rd["Prenom"].ToString();
-            ins.Sexe = rd["Sexe"].ToString();
+            ins.Sexe = rd["Sexe"].ToString().Equals("M") ? Sexe.Masculin : Sexe.Féminin;
             ins.RefRound= Convert.ToInt32(rd["IdRound"].ToString());
             ins.Designation = rd["Designation"].ToString();
 

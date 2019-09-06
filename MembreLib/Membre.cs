@@ -14,283 +14,42 @@ namespace MembreLib
 {
     public class Membre : IMembre
     {
-        public string Avenue
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string Avenue { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public string Commune { get; set; }
 
-        public string Commune
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string Contact { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public DateTime DateNaiss { get; set; }
+        public int Id { get; set; }
+        
 
-        public string Contact
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public int IdAdresse { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int IdDomicile { get; set; }
 
-        public DateTime DateNaiss
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string LieuNaiss { get; set; }
+         public string Matricule { get; set; }
+        public string Nom { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public int Id
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string Noms { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int Numero { get; set; }
 
-        public int IdAdresse
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string Pays { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public Image Photo { get; set; }
+        public string Postnom { get; set; }
+        public string Prenom { get; set; }
+        public string Profession { get; set; }
+        public Image QrCode { get; set; }
 
-        public int IdDomicile
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string Quartier { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int RefMandataire { get; set; }
+        public Sexe Sex { get; set; }
 
-        public string LieuNaiss
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-         public string Matricule
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public string Nom
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Noms
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public int Numero
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Pays
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public Image Photo
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public string Postnom
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public string Prenom
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public string Profession
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public Image QrCode
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Quartier
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public int RefMandataire
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public Sexe Sex
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Ville
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public string Ville { get; set; }
 
         public List<IMembre> AllMembres()
         {
@@ -335,7 +94,7 @@ namespace MembreLib
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }

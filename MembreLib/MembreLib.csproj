@@ -49,6 +49,7 @@
     <Compile Include="Membre.cs" />
     <Compile Include="Sexe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telephone.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ManageSingleConnection\ManageSingleConnection.csproj">

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UIProject.UserControls;
 
 namespace UIProject.Forms
 {
@@ -22,7 +23,22 @@ namespace UIProject.Forms
             panelWidth = panelLeft.Width;
             isColapsed = false;
         }
+        void ChargerUser(UserControl userc)
+        {
+            try
+            {
+                userc.Dock = DockStyle.Fill;
+                panel1.Controls.Clear();
+                panel1.Controls.Add(userc);
 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
+       
         private void Principale_Form_Load(object sender, EventArgs e)
         {
             var form = new ConnectionUser();
@@ -80,12 +96,17 @@ namespace UIProject.Forms
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            UC_Home user = new UC_Home();
             MoveSidePanel(btnHome);
+            ChargerUser(user);
+            
         }
 
         private void btnMembre_Click(object sender, EventArgs e)
         {
+            UC_Member fr = new UC_Member();
             MoveSidePanel(btnMembre);
+            ChargerUser(fr);
         }
 
         private void btnContrib_Click(object sender, EventArgs e)
@@ -112,6 +133,11 @@ namespace UIProject.Forms
         {
             DateTime dt = DateTime.Now;
             labelTime.Text = dt.ToString("HH:MM:ss");
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

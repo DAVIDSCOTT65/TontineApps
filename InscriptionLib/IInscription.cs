@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MembreLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +14,14 @@ namespace InscriptionLib
         int RefRound { get; set; }
         DateTime DateInscrit { get; set; }
         string Matricule { get; set; }
+        string NomComplet
+        {
+            get; set;
+        }
         string Nom { get; set; }
         string Postnom { get; set; }
         string Prenom { get; set; }
-        string Sexe { get; set; }
+        Sexe Sexe { get; set; }
         string Designation { get; set; }
         string UserSession { get; set; }
         int Nouveau();

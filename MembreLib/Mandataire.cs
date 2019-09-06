@@ -55,7 +55,7 @@ namespace MembreLib
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }

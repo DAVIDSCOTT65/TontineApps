@@ -63,7 +63,7 @@ namespace UIProject.Classes
             con.Close();
             return ds.Tables[0];
         }
-        public void retreivePhoto(string ChampPhoto, string nomTable, string ChampCode, string Valeur, PictureBox pic)
+        public void retreivePhoto(string Valeur, PictureBox photo)
         {
             try
             {
@@ -71,7 +71,7 @@ namespace UIProject.Classes
                     ImplementeConnexion.Instance.Conn.Open();
                 using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
                 {
-                    cmd.CommandText = @"SELECT " + ChampPhoto + " from " + nomTable + " WHERE  " + ChampCode + " = " + Valeur + "";
+                    cmd.CommandText = @"SELECT Photo from Affichage_Details_Adresse_Membre WHERE  Id = " + Valeur + "";
                     dt = new SqlDataAdapter((SqlCommand)cmd);
                     Object resultat = cmd.ExecuteScalar();
                     if (DBNull.Value == (resultat))
@@ -82,14 +82,15 @@ namespace UIProject.Classes
                         Byte[] buffer = (Byte[])resultat;
                         MemoryStream ms = new MemoryStream(buffer);
                         Image image = Image.FromStream(ms);
-                        pic.Image = image;
+                        photo.Image = image;
+                        
                     }
                 }
 
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show("Cette erreur est survenue lors du chargement de la photo : " + ex.Message);
             }
 
         }
@@ -136,6 +137,39 @@ namespace UIProject.Classes
                 cmd.Dispose();
             }
             return identifiant;
+        }
+        public int retourInfoMembre(TextBox champ1, TextBox champ2, TextBox champ3, TextBox champ4, ComboBox champ5, MaskedTextBox champ6, TextBox champ7, TextBox champ8, TextBox champ9, string valeur)
+        {
+            int identifiant = 0;
+
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = @"select Id,Matricule,Nom,Postnom,Prenom,Sexe,Date_Naissance,Lieu_Naissance,Profession,Noms from Affichage_Details_Adresse_Membre where Nom_Complet = '" + valeur + "'";
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    identifiant = Convert.ToInt32(rd["Id"].ToString());
+                    champ1.Text = rd["Matricule"].ToString();
+                    champ2.Text = rd["Nom"].ToString();
+                    champ3.Text = rd["Postnom"].ToString();
+                    champ4.Text = rd["Prenom"].ToString();
+                    champ5.Text = rd["Sexe"].ToString();
+                    champ6.Text = rd["Date_Naissance"].ToString();
+                    champ7.Text = rd["Lieu_Naissance"].ToString();
+                    champ8.Text = rd["Profession"].ToString();
+                    champ9.Text = rd["Noms"].ToString();
+
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+            }
+            return identifiant;
+            
         }
         public int retourStock(string champStock, string nomTable, string champCondition, string valeur)
         {

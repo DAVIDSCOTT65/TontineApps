@@ -1,9 +1,11 @@
 D:\DAVID\PROJETBDD\TontineSoft\MembreLib\bin\Debug\MembreLib.dll
 D:\DAVID\PROJETBDD\TontineSoft\MembreLib\bin\Debug\MembreLib.pdb
-D:\DAVID\PROJETBDD\TontineSoft\MembreLib\obj\Debug\MembreLib.csprojResolveAssemblyReference.cache
 D:\DAVID\PROJETBDD\TontineSoft\MembreLib\obj\Debug\MembreLib.dll
 D:\DAVID\PROJETBDD\TontineSoft\MembreLib\obj\Debug\MembreLib.pdb
 D:\DAVID\PROJETBDD\TontineSoft\MembreLib\bin\Debug\ManageSingleConnection.dll
 D:\DAVID\PROJETBDD\TontineSoft\MembreLib\bin\Debug\ParametreConnexionLib.dll
 D:\DAVID\PROJETBDD\TontineSoft\MembreLib\bin\Debug\ManageSingleConnection.pdb
 D:\DAVID\PROJETBDD\TontineSoft\MembreLib\bin\Debug\ParametreConnexionLib.pdb
+D:\DAVID\PROJETBDD\TontineSoft\MembreLib\obj\Debug\MembreLib.csprojAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\MembreLib\obj\Debug\MembreLib.csproj.CoreCompileInputs.cache
+D:\DAVID\PROJETBDD\TontineSoft\MembreLib\obj\Debug\MembreLib.csproj.CopyComplete

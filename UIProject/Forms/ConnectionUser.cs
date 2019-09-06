@@ -15,7 +15,7 @@ namespace UIProject.Forms
     public partial class ConnectionUser : Form
     {
         DynamicClasses dn = new DynamicClasses();
-        InstantRound ir = new InstantRound();
+        //InstantRound ir = new InstantRound();
         public ConnectionUser()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace UIProject.Forms
                 else
                 {
                     PubCon.testlog = DynamicClasses.GetInstance().loginTest(userTxt.Text, passTxt.Text);
-                    ir.Id = dn.retourId("Id", "TRound", "Designation", tontineCombo.Text);
+                    InstantRound.GetInstance().Id = dn.retourId("Id", "TRound", "Designation", tontineCombo.Text);
 
                     if (PubCon.testlog == 1)
                     {

@@ -6,6 +6,8 @@ D:\DAVID\PROJETBDD\TontineSoft\TontineUtilities\bin\Debug\ParametreConnexionLib.
 D:\DAVID\PROJETBDD\TontineSoft\TontineUtilities\bin\Debug\ManageSingleConnection.pdb
 D:\DAVID\PROJETBDD\TontineSoft\TontineUtilities\bin\Debug\MembreLib.pdb
 D:\DAVID\PROJETBDD\TontineSoft\TontineUtilities\bin\Debug\ParametreConnexionLib.pdb
-D:\DAVID\PROJETBDD\TontineSoft\TontineUtilities\obj\Debug\TontineUtilities.csprojResolveAssemblyReference.cache
 D:\DAVID\PROJETBDD\TontineSoft\TontineUtilities\obj\Debug\TontineUtilities.dll
 D:\DAVID\PROJETBDD\TontineSoft\TontineUtilities\obj\Debug\TontineUtilities.pdb
+D:\DAVID\PROJETBDD\TontineSoft\TontineUtilities\obj\Debug\TontineUtilities.csprojAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\TontineUtilities\obj\Debug\TontineUtilities.csproj.CoreCompileInputs.cache
+D:\DAVID\PROJETBDD\TontineSoft\TontineUtilities\obj\Debug\TontineUtilities.csproj.CopyComplete

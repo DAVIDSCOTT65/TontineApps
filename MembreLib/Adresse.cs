@@ -43,7 +43,7 @@ namespace MembreLib
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "INSEERT_ADRESSE";
+                cmd.CommandText = "INSERT_ADRESSE";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, Id));
@@ -54,7 +54,7 @@ namespace MembreLib
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         public void Supprimer(int id)
