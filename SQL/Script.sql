@@ -147,5 +147,5 @@ CREATE TABLE Cotisation
 )
 
 ALTER TABLE Semaine
-ADD CONSTRAINT fk_semaine_inscription 
-FOREIGN KEY(RefInscription) REFERENCES Inscription(Id)
+ADD CONSTRAINT fk_semaine_round 
+FOREIGN KEY(RefRound) REFERENCES TRound(Id)

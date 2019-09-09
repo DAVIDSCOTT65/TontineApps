@@ -111,7 +111,9 @@ namespace UIProject.Forms
 
         private void btnContrib_Click(object sender, EventArgs e)
         {
+            UC_Cotisation fr = new UC_Cotisation();
             MoveSidePanel(btnContrib);
+            ChargerUser(fr); 
         }
 
         private void btnRefund_Click(object sender, EventArgs e)

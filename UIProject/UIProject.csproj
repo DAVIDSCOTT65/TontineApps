@@ -88,6 +88,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UC_Cotisation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Cotisation.Designer.cs">
+      <DependentUpon>UC_Cotisation.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +131,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\UC_Cotisation.resx">
+      <DependentUpon>UC_Cotisation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </EmbeddedResource>

@@ -75,7 +75,7 @@
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(209, 788);
+            this.panelLeft.Size = new System.Drawing.Size(209, 749);
             this.panelLeft.TabIndex = 0;
             // 
             // btnParameters
@@ -259,7 +259,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(209, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1177, 41);
+            this.panel2.Size = new System.Drawing.Size(1161, 41);
             this.panel2.TabIndex = 1;
             // 
             // button8
@@ -272,7 +272,7 @@
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = global::UIProject.Properties.Resources.Shutdown_40pxB;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(1120, 0);
+            this.button8.Location = new System.Drawing.Point(1114, 0);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(45, 41);
             this.button8.TabIndex = 10;
@@ -302,7 +302,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(209, 41);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1177, 84);
+            this.panel3.Size = new System.Drawing.Size(1161, 84);
             this.panel3.TabIndex = 2;
             // 
             // labelTime
@@ -311,7 +311,7 @@
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.Color.White;
-            this.labelTime.Location = new System.Drawing.Point(986, 28);
+            this.labelTime.Location = new System.Drawing.Point(970, 28);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(83, 19);
             this.labelTime.TabIndex = 5;
@@ -374,7 +374,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(209, 125);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1177, 663);
+            this.panel1.Size = new System.Drawing.Size(1161, 624);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -382,7 +382,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

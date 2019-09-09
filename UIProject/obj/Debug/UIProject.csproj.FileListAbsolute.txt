@@ -34,3 +34,4 @@ D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csproj.CoreCompileI
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csproj.CopyComplete
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\ThoughtWorks.QRCode.dll
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.MiniFormAdresse.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Cotisation.resources

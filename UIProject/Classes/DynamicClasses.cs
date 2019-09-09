@@ -116,6 +116,29 @@ namespace UIProject.Classes
                 cmd.Dispose();
             }
         }
+        public void chargeNomsCombo(ComboBox cmb, string nomChamp,string procedure)
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = procedure;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 5, DbType.Int32, InstantRound.GetInstance().Id));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    string de = rd[nomChamp].ToString();
+                    cmb.Items.Add(de);
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+            }
+        }
 
         public int retourId(string champCode, string nomTable, string champCondition, string valeur)
         {
