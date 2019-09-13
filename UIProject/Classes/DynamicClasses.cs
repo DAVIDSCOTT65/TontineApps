@@ -194,6 +194,47 @@ namespace UIProject.Classes
             return identifiant;
             
         }
+        public string retourLastCotisationMembre(Label champ1, Label champ2, int valeur)
+        {
+            string identifiant = "En ordre";
+            DateTime dateco, datefin = new DateTime();
+
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = @"SELECT_LAST_COTISATION";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 5, DbType.Int32, valeur));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    dateco = Convert.ToDateTime(rd["Date_Concernee"].ToString());
+                    //identifiant = Convert.ToInt32(rd["Id"].ToString());
+                    champ1.Text = string.Format("{0}", dateco.ToString("dd/MM/yyyy"));
+                    champ2.Text = rd["Designation"].ToString();
+                    //champ3.Text = rd["Postnom"].ToString();
+                    if(champ1.Text==DateTime.Now.ToString("dd/MM/yyyy"))
+                    {
+                        identifiant = "En ordre";
+                    }
+                    else
+                    {
+                        identifiant = "En retard";
+                    }
+                    
+
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+            }
+            return identifiant;
+
+        }
         public int retourStock(string champStock, string nomTable, string champCondition, string valeur)
         {
             int identifiant = 0;

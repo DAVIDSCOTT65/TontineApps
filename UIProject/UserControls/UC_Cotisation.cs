@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CotisationLib;
 using UIProject.Classes;
+using TontineUtilities;
 
 namespace UIProject.UserControls
 {
@@ -141,17 +142,109 @@ namespace UIProject.UserControls
         {
             dn.chargeNomsCombo(membreCombo, "Nom_Complet", "SELECT_NOMS_INSCRIPTIONS_FROM_ONE_ROUND");
             dn.chargeCombo(fraisCombo, "Designation", "SELECT_DESIGNATION_FRAIS");
+            dn.chargeNomsCombo(weeksCombo, "DebutFin", "SELECT_SEMAINE_DEBUT_FIN");
             fraisCombo.SelectedIndex = 0;
         }
 
         private void MembreCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             idInscription = dn.retourId("Id", "Affichage_Details_Inscriptions", "Nom_Complet", membreCombo.Text);
+            situationLbl.Text = dn.retourLastCotisationMembre(lastLbl, fraisLbl, idInscription);
         }
 
         private void FraisCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             idFrais = dn.retourId("Id", "Type_Frais", "Designation", fraisCombo.Text);
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            SaveDatas();
+        }
+        void SaveDatas()
+        {
+            if (checkBox1.Checked == true)
+                SavePlusieur();
+            else
+                SaveOne();
+        }
+        private void SaveOne()
+        {
+            try
+            {
+                Cotisation cot = new Cotisation();
+                
+
+                cot.Id = idCotisation;
+                cot.RefInscription = idInscription;
+                cot.RefSemaine = InstantSemaine.GetInstance().IdSemaine;
+                cot.DateConcernee = Convert.ToDateTime(dateCotTxt.Text);
+                cot.RefFrais = idFrais;
+                cot.Montant = Convert.ToDecimal(montantTxt.Text);
+                cot.UserSession = UserSession.GetInstance().UserName;
+
+                cot.Enregistrer(cot);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
+        void SavePlusieur()
+        {
+            try
+            {
+
+                Cotisation cot = new Cotisation();
+
+                for (int i = 0; i < (dgManyCotisation.Rows.Count); i++)
+                {
+                   
+
+
+                    cot.Id = Convert.ToInt32(dgManyCotisation[0, i].Value.ToString());
+                    cot.RefInscription = idInscription;
+                    cot.RefSemaine = InstantSemaine.GetInstance().IdSemaine;
+                    cot.DateConcernee = Convert.ToDateTime(dgManyCotisation[1, i].Value.ToString());
+                    cot.RefFrais = idFrais;
+                    cot.Montant = Convert.ToDecimal(dgManyCotisation[2, i].Value.ToString());
+                    cot.UserSession = UserSession.GetInstance().UserName;
+
+                    cot.Enregistrer(cot);
+
+
+                }
+
+
+                dgManyCotisation.Rows.Clear();
+                nouveauBtn.Enabled = true;
+                saveBtn.Enabled = false;
+                //idEnteteSortie = 0;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private void CheckBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                //checkBox1.Checked = false;
+                weeksCombo.Visible = true;
+                weekLbl.Visible = true;
+            }
+
+            else if (checkBox2.Checked == false)
+            {
+                //checkBox1.Checked = true;
+                weeksCombo.Visible = false;
+                weekLbl.Visible = false;
+            }
         }
     }
 }

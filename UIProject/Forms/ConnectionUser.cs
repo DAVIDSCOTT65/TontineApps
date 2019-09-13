@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TontineUtilities;
 using UIProject.Classes;
+using UIProject.UserControls;
 
 namespace UIProject.Forms
 {
@@ -38,6 +39,8 @@ namespace UIProject.Forms
                     if (PubCon.testlog == 1)
                     {
                         this.Close();
+                        Principale_Form frm = new Principale_Form();
+                        frm.ChargerUser(new UC_Home());
                     }
                 }
             }

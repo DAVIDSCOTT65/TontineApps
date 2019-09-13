@@ -3,3 +3,4 @@ D:\DAVID\PROJETBDD\TontineSoft\ManageSingleConnection\bin\Debug\ManageSingleConn
 D:\DAVID\PROJETBDD\TontineSoft\ManageSingleConnection\obj\Debug\ManageSingleConnection.dll
 D:\DAVID\PROJETBDD\TontineSoft\ManageSingleConnection\obj\Debug\ManageSingleConnection.pdb
 D:\DAVID\PROJETBDD\TontineSoft\ManageSingleConnection\obj\Debug\ManageSingleConnection.csproj.CoreCompileInputs.cache
+D:\DAVID\PROJETBDD\TontineSoft\ManageSingleConnection\obj\Debug\ManageSingleConnection.csprojAssemblyReference.cache

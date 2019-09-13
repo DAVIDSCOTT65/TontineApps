@@ -15,7 +15,7 @@ namespace UIProject.Forms
     {
         int panelWidth;
         bool isColapsed;
-
+        UC_Home home = new UC_Home();
         public Principale_Form()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace UIProject.Forms
             panelWidth = panelLeft.Width;
             isColapsed = false;
         }
-        void ChargerUser(UserControl userc)
+        public void ChargerUser(UserControl userc)
         {
             try
             {
@@ -41,8 +41,11 @@ namespace UIProject.Forms
        
         private void Principale_Form_Load(object sender, EventArgs e)
         {
+            
             var form = new ConnectionUser();
             form.ShowDialog();
+
+            ShowHome(home);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -140,6 +143,14 @@ namespace UIProject.Forms
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        void ShowHome(object formF)
+        {
+            UC_Home home = formF as UC_Home;
+            home.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(home);
+            panel1.Show();
         }
     }
 }
