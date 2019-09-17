@@ -56,15 +56,15 @@ namespace UIProject.UserControls
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 ActionNouveau();
-            //}
-            //catch (Exception ex)
-            //{
+            }
+            catch (Exception ex)
+            {
 
-            //    MessageBox.Show("L'erreur suivant est survenue " + ex.Message);
-            //}
+                MessageBox.Show("L'erreur suivant est survenue " + ex.Message);
+            }
         }
         void SaveMandataire()
         {

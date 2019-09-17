@@ -65,10 +65,16 @@ namespace UIProject.Forms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            UC_Cotisation uc = new UC_Cotisation();
             if (isColapsed)
             {
+               
                 panelLeft.Width = panelLeft.Width + 10;
-                if (panelLeft.Width>=panelWidth)
+                
+
+               
+
+                if (panelLeft.Width>=panelWidth )
                 {
                     timer1.Stop();
                     isColapsed = false;
@@ -78,6 +84,7 @@ namespace UIProject.Forms
             else
             {
                 panelLeft.Width = panelLeft.Width - 10;
+                
                 if (panelLeft.Width <= 65)
                 {
                     timer1.Stop();

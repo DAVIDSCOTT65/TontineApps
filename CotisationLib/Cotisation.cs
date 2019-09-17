@@ -17,7 +17,7 @@ namespace CotisationLib
         public int RefSemaine { get; set; }
         public DateTime DateCotisation { get; set; }
         public DateTime DateConcernee { get; set; }
-        public decimal Montant { get; set; }
+        public string Montant { get; set; }
         public int RefFrais { get; set; }
         public int RefRound { get; set; }
         public string Matricule { get; set; }
@@ -61,7 +61,7 @@ namespace CotisationLib
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@ref_semaine", 4, DbType.Int32, RefSemaine));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@date_concerne", 20, DbType.Date, DateConcernee));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@ref_frais", 4, DbType.Int32, RefFrais));
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@montant", 4, DbType.Decimal, Montant));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@montant", 4, DbType.Decimal, Convert.ToDecimal(Montant)));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@usersession", 30, DbType.String, UserSession));
 
                 cmd.ExecuteNonQuery();
@@ -130,7 +130,7 @@ namespace CotisationLib
                 }
                 dr.Dispose();
             }
-            throw new NotImplementedException();
+            return lst;
         }
         private Cotisation GetDetailCotisation(IDataReader dr)
         {
@@ -138,7 +138,7 @@ namespace CotisationLib
             cot.Id = Convert.ToInt32(dr["Id"].ToString());
             cot.DateCotisation = Convert.ToDateTime(dr["Date_Cotisation"].ToString());
             cot.DateConcernee = Convert.ToDateTime(dr["Date_Concernee"].ToString());
-            cot.Montant = Convert.ToDecimal(dr["Montant"].ToString());
+            cot.Montant = dr["Montant"].ToString();
             cot.RefInscription = Convert.ToInt32(dr["IdInscription"].ToString());
             cot.RefRound = Convert.ToInt32(dr["IdRound"].ToString());
             cot.Matricule = dr["Matricule"].ToString();

@@ -116,7 +116,31 @@ namespace UIProject.Classes
                 cmd.Dispose();
             }
         }
-        public void chargeNomsCombo(ComboBox cmb, string nomChamp,string procedure)
+        public void chargeSemainesCombo(ComboBox cmb, string nomChamp,string procedure)
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = procedure;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@idRound", 5, DbType.Int32, InstantRound.GetInstance().Id));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 5, DbType.Int32, InstantSemaine.GetInstance().IdSemaine));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    string de = rd[nomChamp].ToString();
+                    cmb.Items.Add(de);
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+            }
+        }
+        public void chargeNomsCombo(ComboBox cmb, string nomChamp, string procedure)
         {
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                 ImplementeConnexion.Instance.Conn.Open();
@@ -126,6 +150,7 @@ namespace UIProject.Classes
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 5, DbType.Int32, InstantRound.GetInstance().Id));
+                //cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 5, DbType.Int32, InstantSemaine.GetInstance().IdSemaine));
 
                 IDataReader rd = cmd.ExecuteReader();
 
@@ -154,6 +179,48 @@ namespace UIProject.Classes
                 if (rd.Read())
                 {
                     identifiant = int.Parse(rd[champCode].ToString());
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+            }
+            return identifiant;
+        }
+        public int retourIdM(string valeur1)
+        {
+            int identifiant = 0;
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = @"select Id  from Affichage_Details_Inscriptions where Nom_Complet = '" + valeur1 + "' And IdRound = '" + InstantRound.GetInstance().Id + "'";
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    identifiant = int.Parse(rd["Id"].ToString());
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+            }
+            return identifiant;
+        }
+        public int retourIdSemaine(string valeur1)
+        {
+            int identifiant = 0;
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = @"select Id  from Affichage_Details_Semaine where DebutFin = '" + valeur1 + "' And IdRound = '" + InstantRound.GetInstance().Id + "'";
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    identifiant = int.Parse(rd["Id"].ToString());
                 }
                 rd.Close();
                 rd.Dispose();
@@ -197,7 +264,8 @@ namespace UIProject.Classes
         public string retourLastCotisationMembre(Label champ1, Label champ2, int valeur)
         {
             string identifiant = "En ordre";
-            DateTime dateco, datefin = new DateTime();
+            DateTime dateco, datenow = new DateTime();
+            datenow = DateTime.Now;
 
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                 ImplementeConnexion.Instance.Conn.Open();
@@ -207,6 +275,7 @@ namespace UIProject.Classes
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 5, DbType.Int32, valeur));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@idRound", 5, DbType.Int32, InstantRound.GetInstance().Id));
 
                 IDataReader rd = cmd.ExecuteReader();
 
@@ -217,13 +286,18 @@ namespace UIProject.Classes
                     champ1.Text = string.Format("{0}", dateco.ToString("dd/MM/yyyy"));
                     champ2.Text = rd["Designation"].ToString();
                     //champ3.Text = rd["Postnom"].ToString();
-                    if(champ1.Text==DateTime.Now.ToString("dd/MM/yyyy"))
+                    if(Convert.ToDateTime(champ1.Text)==datenow.Date)
                     {
                         identifiant = "En ordre";
                     }
-                    else
+                    else if(Convert.ToDateTime(champ1.Text) < datenow.Date  )
                     {
                         identifiant = "En retard";
+                    }
+                    else if(Convert.ToDateTime(champ1.Text) > datenow.Date)
+                    {
+                        identifiant = "En avance";
+                        
                     }
                     
 

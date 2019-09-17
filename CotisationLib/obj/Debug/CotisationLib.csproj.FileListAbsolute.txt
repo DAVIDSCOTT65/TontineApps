@@ -8,6 +8,4 @@ D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\TontineUtilities.dll
 D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\ManageSingleConnection.pdb
 D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\ParametreConnexionLib.pdb
 D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\TontineUtilities.pdb
-D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\obj\Debug\CotisationLib.csprojAssemblyReference.cache
-D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\obj\Debug\CotisationLib.csproj.CoreCompileInputs.cache
-D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\obj\Debug\CotisationLib.csproj.CopyComplete
+D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\obj\Debug\CotisationLib.csprojResolveAssemblyReference.cache

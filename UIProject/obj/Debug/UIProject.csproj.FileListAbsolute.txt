@@ -29,9 +29,7 @@ D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.Splash_Form.r
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.Principale_Form.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Home.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Member.resources
-D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csprojAssemblyReference.cache
-D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csproj.CoreCompileInputs.cache
-D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csproj.CopyComplete
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\ThoughtWorks.QRCode.dll
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.MiniFormAdresse.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Cotisation.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csprojResolveAssemblyReference.cache

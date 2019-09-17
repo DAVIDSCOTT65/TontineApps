@@ -54,6 +54,10 @@ namespace UIProject.UserControls
                     datefin = Convert.ToDateTime(dr["Date_Fin"].ToString());
 
                     InstantSemaine.GetInstance().IdSemaine = Convert.ToInt32(dr["Id"].ToString());
+                    InstantSemaine.GetInstance().DateDebut= Convert.ToDateTime(dr["Date_Debut"].ToString());
+                    InstantSemaine.GetInstance().DateFin = Convert.ToDateTime(dr["Date_Fin"].ToString());
+                    InstantSemaine.GetInstance().NomComplet= dr["Nom_Complet"].ToString();
+
                     lblDebut.Text = string.Format("{0}", dateco.ToString("dd/MM/yyyy"));
                     lblFin.Text = string.Format("{0}", datefin.ToString("dd/MM/yyyy"));
                     lblNom.Text = dr["Nom_Complet"].ToString();

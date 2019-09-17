@@ -43,10 +43,10 @@ namespace UIProject.Forms
                     fr.Show();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
         }
     }

@@ -45,16 +45,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblFin = new System.Windows.Forms.Label();
+            this.lblDebut = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblNom = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.chartWeek = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblDebut = new System.Windows.Forms.Label();
-            this.lblFin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -200,13 +200,57 @@
             this.panel3.ForeColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(631, 112);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(316, 100);
+            this.panel3.Size = new System.Drawing.Size(403, 100);
             this.panel3.TabIndex = 5;
+            // 
+            // lblFin
+            // 
+            this.lblFin.AutoSize = true;
+            this.lblFin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFin.ForeColor = System.Drawing.Color.White;
+            this.lblFin.Location = new System.Drawing.Point(108, 68);
+            this.lblFin.Name = "lblFin";
+            this.lblFin.Size = new System.Drawing.Size(95, 19);
+            this.lblFin.TabIndex = 7;
+            this.lblFin.Text = "16/09/2019";
+            // 
+            // lblDebut
+            // 
+            this.lblDebut.AutoSize = true;
+            this.lblDebut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDebut.ForeColor = System.Drawing.Color.White;
+            this.lblDebut.Location = new System.Drawing.Point(108, 44);
+            this.lblDebut.Name = "lblDebut";
+            this.lblDebut.Size = new System.Drawing.Size(95, 19);
+            this.lblDebut.TabIndex = 6;
+            this.lblDebut.Text = "09/09/2019";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(16, 68);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(86, 19);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "End date :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(13, 44);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 19);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Start date :";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::UIProject.Properties.Resources.Calendar_52px;
-            this.pictureBox3.Location = new System.Drawing.Point(226, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(308, 18);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(73, 64);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -276,50 +320,6 @@
             title1.Name = "Week chart";
             title1.Text = "Week chart";
             this.chartWeek.Titles.Add(title1);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(13, 44);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 19);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Start date :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(16, 68);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 19);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "End date :";
-            // 
-            // lblDebut
-            // 
-            this.lblDebut.AutoSize = true;
-            this.lblDebut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDebut.ForeColor = System.Drawing.Color.White;
-            this.lblDebut.Location = new System.Drawing.Point(108, 44);
-            this.lblDebut.Name = "lblDebut";
-            this.lblDebut.Size = new System.Drawing.Size(95, 19);
-            this.lblDebut.TabIndex = 6;
-            this.lblDebut.Text = "09/09/2019";
-            // 
-            // lblFin
-            // 
-            this.lblFin.AutoSize = true;
-            this.lblFin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFin.ForeColor = System.Drawing.Color.White;
-            this.lblFin.Location = new System.Drawing.Point(108, 68);
-            this.lblFin.Name = "lblFin";
-            this.lblFin.Size = new System.Drawing.Size(95, 19);
-            this.lblFin.TabIndex = 7;
-            this.lblFin.Text = "16/09/2019";
             // 
             // UC_Home
             // 
