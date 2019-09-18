@@ -43,10 +43,24 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgCotisation = new System.Windows.Forms.DataGridView();
+            this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDateCo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDateCon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMontant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColRefInscrit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColRefRound = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMatricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPostnom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFrais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDesignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serchTxt = new System.Windows.Forms.TextBox();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button7 = new System.Windows.Forms.Button();
             this.panelAddCotisation = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.dgManyCotisation = new System.Windows.Forms.DataGridView();
@@ -72,21 +86,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.membreCombo = new System.Windows.Forms.ComboBox();
-            this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDateCo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDateCon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMontant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRefInscrit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRefRound = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMatricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPostnom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFrais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDesignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCotisation)).BeginInit();
             this.panelGrid.SuspendLayout();
@@ -237,8 +237,119 @@
             this.dgCotisation.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgCotisation.RowHeadersVisible = false;
             this.dgCotisation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgCotisation.Size = new System.Drawing.Size(1160, 474);
+            this.dgCotisation.Size = new System.Drawing.Size(1160, 471);
             this.dgCotisation.TabIndex = 59;
+            // 
+            // ColNum
+            // 
+            this.ColNum.DataPropertyName = "Id";
+            this.ColNum.HeaderText = "Numéro";
+            this.ColNum.Name = "ColNum";
+            this.ColNum.ReadOnly = true;
+            this.ColNum.Visible = false;
+            // 
+            // ColDateCo
+            // 
+            this.ColDateCo.DataPropertyName = "DateCotisation";
+            this.ColDateCo.HeaderText = "Date de Cotisation";
+            this.ColDateCo.Name = "ColDateCo";
+            this.ColDateCo.ReadOnly = true;
+            // 
+            // ColDateCon
+            // 
+            this.ColDateCon.DataPropertyName = "DateConcernee";
+            this.ColDateCon.HeaderText = "Date Concernée";
+            this.ColDateCon.Name = "ColDateCon";
+            this.ColDateCon.ReadOnly = true;
+            // 
+            // ColMontant
+            // 
+            this.ColMontant.DataPropertyName = "Montant";
+            this.ColMontant.HeaderText = "Montant";
+            this.ColMontant.Name = "ColMontant";
+            this.ColMontant.ReadOnly = true;
+            // 
+            // ColRefInscrit
+            // 
+            this.ColRefInscrit.DataPropertyName = "Id";
+            this.ColRefInscrit.HeaderText = "IdInscription";
+            this.ColRefInscrit.Name = "ColRefInscrit";
+            this.ColRefInscrit.ReadOnly = true;
+            this.ColRefInscrit.Visible = false;
+            // 
+            // ColRefRound
+            // 
+            this.ColRefRound.DataPropertyName = "RefRound";
+            this.ColRefRound.HeaderText = "IdRound";
+            this.ColRefRound.Name = "ColRefRound";
+            this.ColRefRound.ReadOnly = true;
+            this.ColRefRound.Visible = false;
+            // 
+            // ColMatricule
+            // 
+            this.ColMatricule.DataPropertyName = "Matricule";
+            this.ColMatricule.HeaderText = "Matricule";
+            this.ColMatricule.Name = "ColMatricule";
+            this.ColMatricule.ReadOnly = true;
+            // 
+            // ColNom
+            // 
+            this.ColNom.DataPropertyName = "Nom";
+            this.ColNom.HeaderText = "Nom";
+            this.ColNom.Name = "ColNom";
+            this.ColNom.ReadOnly = true;
+            // 
+            // ColPostnom
+            // 
+            this.ColPostnom.DataPropertyName = "Postnom";
+            this.ColPostnom.HeaderText = "Postnom";
+            this.ColPostnom.Name = "ColPostnom";
+            this.ColPostnom.ReadOnly = true;
+            // 
+            // ColPrenom
+            // 
+            this.ColPrenom.DataPropertyName = "Prenom";
+            this.ColPrenom.HeaderText = "Prénom";
+            this.ColPrenom.Name = "ColPrenom";
+            this.ColPrenom.ReadOnly = true;
+            // 
+            // ColSex
+            // 
+            this.ColSex.DataPropertyName = "Sexe";
+            this.ColSex.HeaderText = "Sexe";
+            this.ColSex.Name = "ColSex";
+            this.ColSex.ReadOnly = true;
+            // 
+            // ColSem
+            // 
+            this.ColSem.DataPropertyName = "RefSemaine";
+            this.ColSem.HeaderText = "IdSemaine";
+            this.ColSem.Name = "ColSem";
+            this.ColSem.ReadOnly = true;
+            this.ColSem.Visible = false;
+            // 
+            // ColFrais
+            // 
+            this.ColFrais.DataPropertyName = "RefFrais";
+            this.ColFrais.HeaderText = "IdFrais";
+            this.ColFrais.Name = "ColFrais";
+            this.ColFrais.ReadOnly = true;
+            this.ColFrais.Visible = false;
+            // 
+            // ColDesignation
+            // 
+            this.ColDesignation.DataPropertyName = "Designation";
+            this.ColDesignation.HeaderText = "Frais";
+            this.ColDesignation.Name = "ColDesignation";
+            this.ColDesignation.ReadOnly = true;
+            // 
+            // ColUser
+            // 
+            this.ColUser.DataPropertyName = "UserSession";
+            this.ColUser.HeaderText = "User Session";
+            this.ColUser.Name = "ColUser";
+            this.ColUser.ReadOnly = true;
+            this.ColUser.Visible = false;
             // 
             // serchTxt
             // 
@@ -256,30 +367,13 @@
             this.panelGrid.Controls.Add(this.serchTxt);
             this.panelGrid.Location = new System.Drawing.Point(3, 133);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(1171, 530);
+            this.panelGrid.Size = new System.Drawing.Size(1171, 527);
             this.panelGrid.TabIndex = 71;
             this.panelGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGrid_Paint);
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = global::UIProject.Properties.Resources.Menu_40px;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(1132, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 33);
-            this.button7.TabIndex = 10;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panelAddCotisation
             // 
@@ -581,116 +675,22 @@
             this.membreCombo.TabIndex = 93;
             this.membreCombo.SelectedIndexChanged += new System.EventHandler(this.membreCombo_SelectedIndexChanged_1);
             // 
-            // ColNum
+            // button7
             // 
-            this.ColNum.DataPropertyName = "Id";
-            this.ColNum.HeaderText = "Numéro";
-            this.ColNum.Name = "ColNum";
-            this.ColNum.ReadOnly = true;
-            this.ColNum.Visible = false;
-            // 
-            // ColDateCo
-            // 
-            this.ColDateCo.DataPropertyName = "DateCotisation";
-            this.ColDateCo.HeaderText = "Date de Cotisation";
-            this.ColDateCo.Name = "ColDateCo";
-            this.ColDateCo.ReadOnly = true;
-            // 
-            // ColDateCon
-            // 
-            this.ColDateCon.DataPropertyName = "DateConcernee";
-            this.ColDateCon.HeaderText = "Date Concernée";
-            this.ColDateCon.Name = "ColDateCon";
-            this.ColDateCon.ReadOnly = true;
-            // 
-            // ColMontant
-            // 
-            this.ColMontant.DataPropertyName = "Montant";
-            this.ColMontant.HeaderText = "Montant";
-            this.ColMontant.Name = "ColMontant";
-            this.ColMontant.ReadOnly = true;
-            // 
-            // ColRefInscrit
-            // 
-            this.ColRefInscrit.DataPropertyName = "Id";
-            this.ColRefInscrit.HeaderText = "IdInscription";
-            this.ColRefInscrit.Name = "ColRefInscrit";
-            this.ColRefInscrit.ReadOnly = true;
-            this.ColRefInscrit.Visible = false;
-            // 
-            // ColRefRound
-            // 
-            this.ColRefRound.DataPropertyName = "RefRound";
-            this.ColRefRound.HeaderText = "IdRound";
-            this.ColRefRound.Name = "ColRefRound";
-            this.ColRefRound.ReadOnly = true;
-            this.ColRefRound.Visible = false;
-            // 
-            // ColMatricule
-            // 
-            this.ColMatricule.DataPropertyName = "Matricule";
-            this.ColMatricule.HeaderText = "Matricule";
-            this.ColMatricule.Name = "ColMatricule";
-            this.ColMatricule.ReadOnly = true;
-            // 
-            // ColNom
-            // 
-            this.ColNom.DataPropertyName = "Nom";
-            this.ColNom.HeaderText = "Nom";
-            this.ColNom.Name = "ColNom";
-            this.ColNom.ReadOnly = true;
-            // 
-            // ColPostnom
-            // 
-            this.ColPostnom.DataPropertyName = "Postnom";
-            this.ColPostnom.HeaderText = "Postnom";
-            this.ColPostnom.Name = "ColPostnom";
-            this.ColPostnom.ReadOnly = true;
-            // 
-            // ColPrenom
-            // 
-            this.ColPrenom.DataPropertyName = "Prenom";
-            this.ColPrenom.HeaderText = "Prénom";
-            this.ColPrenom.Name = "ColPrenom";
-            this.ColPrenom.ReadOnly = true;
-            // 
-            // ColSex
-            // 
-            this.ColSex.DataPropertyName = "Sexe";
-            this.ColSex.HeaderText = "Sexe";
-            this.ColSex.Name = "ColSex";
-            this.ColSex.ReadOnly = true;
-            // 
-            // ColSem
-            // 
-            this.ColSem.DataPropertyName = "RefSemaine";
-            this.ColSem.HeaderText = "IdSemaine";
-            this.ColSem.Name = "ColSem";
-            this.ColSem.ReadOnly = true;
-            this.ColSem.Visible = false;
-            // 
-            // ColFrais
-            // 
-            this.ColFrais.DataPropertyName = "RefFrais";
-            this.ColFrais.HeaderText = "IdFrais";
-            this.ColFrais.Name = "ColFrais";
-            this.ColFrais.ReadOnly = true;
-            this.ColFrais.Visible = false;
-            // 
-            // ColDesignation
-            // 
-            this.ColDesignation.DataPropertyName = "Designation";
-            this.ColDesignation.HeaderText = "Frais";
-            this.ColDesignation.Name = "ColDesignation";
-            this.ColDesignation.ReadOnly = true;
-            // 
-            // ColUser
-            // 
-            this.ColUser.DataPropertyName = "UserSession";
-            this.ColUser.HeaderText = "User Session";
-            this.ColUser.Name = "ColUser";
-            this.ColUser.ReadOnly = true;
-            this.ColUser.Visible = false;
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = global::UIProject.Properties.Resources.Menu_40px;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(1132, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(45, 33);
+            this.button7.TabIndex = 10;
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // UC_Cotisation
             // 

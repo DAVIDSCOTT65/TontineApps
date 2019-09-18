@@ -66,6 +66,18 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgInscit = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMatri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPnom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -74,18 +86,6 @@
             this.membreCombo = new System.Windows.Forms.ComboBox();
             this.qrCode = new System.Windows.Forms.PictureBox();
             this.photo = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgInscit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qrCode)).BeginInit();
@@ -445,11 +445,11 @@
             this.Column11,
             this.Column2,
             this.idM,
-            this.Column4,
+            this.colMatri,
             this.NomComp,
-            this.Column5,
-            this.Column6,
-            this.Column7,
+            this.colNom,
+            this.colPnom,
+            this.colPrenom,
             this.Column8,
             this.Column9,
             this.Column10});
@@ -476,7 +476,99 @@
             this.dgInscit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgInscit.Size = new System.Drawing.Size(1152, 231);
             this.dgInscit.TabIndex = 38;
+            this.dgInscit.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgInscit_CellMouseClick);
             this.dgInscit.SelectionChanged += new System.EventHandler(this.DgInscit_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id";
+            this.Column1.HeaderText = "Numéro";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "UserSession";
+            this.Column11.HeaderText = "UserSession";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "DateInscrit";
+            this.Column2.HeaderText = "Date d\'inscription";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // idM
+            // 
+            this.idM.DataPropertyName = "RefMembre";
+            this.idM.HeaderText = "IdMembre";
+            this.idM.Name = "idM";
+            this.idM.ReadOnly = true;
+            this.idM.Visible = false;
+            // 
+            // colMatri
+            // 
+            this.colMatri.DataPropertyName = "Matricule";
+            this.colMatri.HeaderText = "Matricule";
+            this.colMatri.Name = "colMatri";
+            this.colMatri.ReadOnly = true;
+            // 
+            // NomComp
+            // 
+            this.NomComp.DataPropertyName = "NomComplet";
+            this.NomComp.HeaderText = "Nom Complet";
+            this.NomComp.Name = "NomComp";
+            this.NomComp.ReadOnly = true;
+            // 
+            // colNom
+            // 
+            this.colNom.DataPropertyName = "Nom";
+            this.colNom.HeaderText = "Nom";
+            this.colNom.Name = "colNom";
+            this.colNom.ReadOnly = true;
+            this.colNom.Visible = false;
+            // 
+            // colPnom
+            // 
+            this.colPnom.DataPropertyName = "Postnom";
+            this.colPnom.HeaderText = "Postnom";
+            this.colPnom.Name = "colPnom";
+            this.colPnom.ReadOnly = true;
+            this.colPnom.Visible = false;
+            // 
+            // colPrenom
+            // 
+            this.colPrenom.DataPropertyName = "Prenom";
+            this.colPrenom.HeaderText = "Prénom";
+            this.colPrenom.Name = "colPrenom";
+            this.colPrenom.ReadOnly = true;
+            this.colPrenom.Visible = false;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Sexe";
+            this.Column8.HeaderText = "Sexe";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "RefRound";
+            this.Column9.HeaderText = "IdRound";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "Designation";
+            this.Column10.HeaderText = "Round";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Visible = false;
             // 
             // label12
             // 
@@ -561,97 +653,6 @@
             this.photo.TabIndex = 36;
             this.photo.TabStop = false;
             this.photo.Click += new System.EventHandler(this.Photo_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Id";
-            this.Column1.HeaderText = "Numéro";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "UserSession";
-            this.Column11.HeaderText = "UserSession";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "DateInscrit";
-            this.Column2.HeaderText = "Date d\'inscription";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // idM
-            // 
-            this.idM.DataPropertyName = "RefMembre";
-            this.idM.HeaderText = "IdMembre";
-            this.idM.Name = "idM";
-            this.idM.ReadOnly = true;
-            this.idM.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Matricule";
-            this.Column4.HeaderText = "Matricule";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // NomComp
-            // 
-            this.NomComp.DataPropertyName = "NomComplet";
-            this.NomComp.HeaderText = "Nom Complet";
-            this.NomComp.Name = "NomComp";
-            this.NomComp.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Nom";
-            this.Column5.HeaderText = "Nom";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Visible = false;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Postnom";
-            this.Column6.HeaderText = "Postnom";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Visible = false;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "Prenom";
-            this.Column7.HeaderText = "Prénom";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Visible = false;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Sexe";
-            this.Column8.HeaderText = "Sexe";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "RefRound";
-            this.Column9.HeaderText = "IdRound";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Visible = false;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "Designation";
-            this.Column10.HeaderText = "Round";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Visible = false;
             // 
             // UC_Member
             // 
@@ -758,11 +759,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMatri;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomComp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPnom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrenom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;

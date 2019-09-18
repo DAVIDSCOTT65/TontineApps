@@ -128,7 +128,9 @@ namespace UIProject.Forms
 
         private void btnRefund_Click(object sender, EventArgs e)
         {
+            UC_Remboursement fr = new UC_Remboursement();
             MoveSidePanel(btnRefund);
+            ChargerUser(fr);
         }
 
         private void btnRound_Click(object sender, EventArgs e)

@@ -10,6 +10,4 @@ D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\ParametreConnexionLib.pd
 D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\TontineUtilities.pdb
 D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\MembreLib.dll
 D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\MembreLib.pdb
-D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\obj\Debug\InscriptionLib.csprojAssemblyReference.cache
-D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\obj\Debug\InscriptionLib.csproj.CoreCompileInputs.cache
-D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\obj\Debug\InscriptionLib.csproj.CopyComplete
+D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\obj\Debug\InscriptionLib.csprojResolveAssemblyReference.cache

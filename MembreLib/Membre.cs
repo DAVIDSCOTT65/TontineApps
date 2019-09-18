@@ -88,8 +88,8 @@ namespace MembreLib
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@date_naiss", 10, DbType.Date, DateNaiss));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@lieu_naiss", 20, DbType.String, LieuNaiss));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@profession", 50, DbType.String, Profession));
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@qrcode", 4, DbType.Binary, converttoByteImage(QrCode)));
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@photo", 4, DbType.Binary, converttoByteImage(Photo)));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@qrcode", int.MaxValue, DbType.Binary, converttoByteImage(QrCode)));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@photo", int.MaxValue, DbType.Binary, converttoByteImage(Photo)));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@ref_mandataire", 4, DbType.Int32, RefMandataire));
 
                 cmd.ExecuteNonQuery();

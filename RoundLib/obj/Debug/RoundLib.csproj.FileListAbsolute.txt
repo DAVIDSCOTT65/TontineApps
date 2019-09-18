@@ -8,6 +8,4 @@ D:\DAVID\PROJETBDD\TontineSoft\RoundLib\bin\Debug\ParametreConnexionLib.pdb
 D:\DAVID\PROJETBDD\TontineSoft\RoundLib\bin\Debug\TontineUtilities.pdb
 D:\DAVID\PROJETBDD\TontineSoft\RoundLib\obj\Debug\RoundLib.dll
 D:\DAVID\PROJETBDD\TontineSoft\RoundLib\obj\Debug\RoundLib.pdb
-D:\DAVID\PROJETBDD\TontineSoft\RoundLib\obj\Debug\RoundLib.csprojAssemblyReference.cache
-D:\DAVID\PROJETBDD\TontineSoft\RoundLib\obj\Debug\RoundLib.csproj.CoreCompileInputs.cache
-D:\DAVID\PROJETBDD\TontineSoft\RoundLib\obj\Debug\RoundLib.csproj.CopyComplete
+D:\DAVID\PROJETBDD\TontineSoft\RoundLib\obj\Debug\RoundLib.csprojResolveAssemblyReference.cache

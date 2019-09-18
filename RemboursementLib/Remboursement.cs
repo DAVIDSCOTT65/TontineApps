@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TontineUtilities;
 
 namespace RemboursementLib
 {
@@ -17,9 +18,8 @@ namespace RemboursementLib
         public int RefSemaine { get; set; }
         public int IdRound { get; set; }
         public string Matricule { get; set; }
-        public string Nom { get; set; }
-        public string Postnom { get; set; }
-        public string Prenom { get; set; }
+        public string Noms { get; set; }
+        public string Montant { get; set; }
         public string Sexe { get; set; }
         public int Nouveau()
         {
@@ -51,8 +51,8 @@ namespace RemboursementLib
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, Id));
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@ref_inscrit", 4, DbType.Int32, RefInscription));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@ref_semaine", 4, DbType.Int32, RefSemaine));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@usersession", 50, DbType.String, UserSession.GetInstance().UserName));
 
                 cmd.ExecuteNonQuery();
 
@@ -106,9 +106,8 @@ namespace RemboursementLib
             r.RefInscription = Convert.ToInt32(rd["IdInscription"].ToString());
             r.IdRound = Convert.ToInt32(rd["IdRound"].ToString());
             r.Matricule = rd["Matricule"].ToString();
-            r.Nom = rd["Nom"].ToString();
-            r.Postnom = rd["Postnom"].ToString();
-            r.Prenom = rd["Prenom"].ToString();
+            r.Noms = rd["Nom_Complet"].ToString();
+            r.Montant = rd["Montant"].ToString();
             r.Sexe = rd["Sexe"].ToString();
             r.RefSemaine = Convert.ToInt32(rd["IdSemaine"].ToString());
 

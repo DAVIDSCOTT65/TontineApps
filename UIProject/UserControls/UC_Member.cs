@@ -30,7 +30,34 @@ namespace UIProject.UserControls
         {
             InitializeComponent();
         }
+        void clic_grid()
+        {
+            try
+            {
+                int i;
+                i = dgInscit.CurrentRow.Index;
 
+                idMembre = Convert.ToInt32(dgInscit["idM", i].Value.ToString());
+                //txtid.Text = dataGridView1["ColId", i].Value.ToString();
+                matriculeTxt.Text = dgInscit["colMatri", i].Value.ToString();
+                nomTxt.Text = dgInscit["colNom", i].Value.ToString();
+                pnomTxt.Text = dgInscit["colpPnom", i].Value.ToString();
+                prenomTxt.Text = dgInscit["colPrenom", i].Value.ToString();
+                //naissTxt.Text = dgInscit["colNaiss", i].Value.ToString();
+                //lieuTxt.Text = dgInscit["colLieu", i].Value.ToString();
+                //professionTxt.Text = dgInscit["ColPseudo", i].Value.ToString();
+                //label19.Text = dgInscit["ColPassword", i].Value.ToString();
+                //label20.Text = dgInscit["ColNiveau", i].Value.ToString();
+                //label22.Text = dgInscit["ColFonction", i].Value.ToString();
+
+                //loadPhoto("photo", dataGridView1["ColId", i].Value.ToString(), pictureBox2);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
         private void UC_Member_Load(object sender, EventArgs e)
         {
             RefreshDatas(new Inscription());
@@ -280,6 +307,13 @@ namespace UIProject.UserControls
             {
                 MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
+        }
+
+   
+
+        private void dgInscit_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            clic_grid();
         }
     }
 }

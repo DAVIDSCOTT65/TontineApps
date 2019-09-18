@@ -63,7 +63,7 @@ namespace UIProject.Classes
             con.Close();
             return ds.Tables[0];
         }
-        public void retreivePhoto(string Valeur, PictureBox photo)
+        public void retreivePhoto2(string ChampPhoto, string nomTable, string ChampCode, string Valeur, PictureBox pic)
         {
             try
             {
@@ -71,7 +71,7 @@ namespace UIProject.Classes
                     ImplementeConnexion.Instance.Conn.Open();
                 using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
                 {
-                    cmd.CommandText = @"SELECT Photo from Affichage_Details_Adresse_Membre WHERE  Id = " + Valeur + "";
+                    cmd.CommandText = @"SELECT " + ChampPhoto + " from " + nomTable + " WHERE  " + ChampCode + " = '" + Valeur + "'";
                     dt = new SqlDataAdapter((SqlCommand)cmd);
                     Object resultat = cmd.ExecuteScalar();
                     if (DBNull.Value == (resultat))
@@ -82,18 +82,57 @@ namespace UIProject.Classes
                         Byte[] buffer = (Byte[])resultat;
                         MemoryStream ms = new MemoryStream(buffer);
                         Image image = Image.FromStream(ms);
-                        photo.Image = image;
-                        
+                        pic.Image = image;
                     }
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Cette erreur est survenue lors du chargement de la photo : " + ex.Message);
+                throw new Exception(ex.Message);
             }
 
         }
+        public void retreivePhoto(string valeur, PictureBox photo)
+        {
+            try
+            {
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT_PHOTO";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 50, DbType.Int32, valeur));
+
+                    dt = new SqlDataAdapter((SqlCommand)cmd);
+                    Object resultat = cmd.ExecuteScalar();
+                    if (DBNull.Value == (resultat))
+                    {
+                    }
+                    else
+                    {
+                        //Byte[] buffer = (Byte[])resultat;
+                        //MemoryStream ms = new MemoryStream(buffer);
+                        //Image image = Image.FromStream(ms);
+                        //photo.Image = image;
+
+                    Byte[] buffer = (Byte[])resultat;
+                    MemoryStream ms = new MemoryStream(buffer);
+                    Image image = Image.FromStream(ms);
+                    photo.Image = image;
+
+                }
+                }
+
+        }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cette erreur est survenue lors du chargement de la photo : " + ex.Message);
+            }
+
+}
 
         public void chargeCombo(ComboBox cmb, string nomChamp,string procedure)
         {
@@ -305,6 +344,46 @@ namespace UIProject.Classes
                 rd.Close();
                 rd.Dispose();
                 cmd.Dispose();
+            }
+            return identifiant;
+
+        }
+        public int retourInfoRembMembre(Label champ1, Label champ2, Label champ3, string valeur,PictureBox photo)
+        {
+            int identifiant = 0;
+            int id = 0;
+            
+
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_INFO_REMB";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@noms", 100, DbType.String, valeur));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 5, DbType.Int32, InstantRound.GetInstance().Id));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    
+                    champ1.Text = rd["DebutFin"].ToString();
+                    champ2.Text = rd["Matricule"].ToString();
+                    champ3.Text = rd["Mandataire"].ToString();
+                    identifiant = Convert.ToInt32(rd["Id"].ToString());
+                    id = Convert.ToInt32( rd["IdMembre"].ToString());
+
+
+
+
+
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+                retreivePhoto(id.ToString(), photo);
             }
             return identifiant;
 

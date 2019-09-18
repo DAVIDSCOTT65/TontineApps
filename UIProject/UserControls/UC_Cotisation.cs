@@ -21,7 +21,7 @@ namespace UIProject.UserControls
         int idFrais = 0;
         DynamicClasses dn = new DynamicClasses();
         int panelWidth;
-        int dataHeight;
+       
         bool isColapsed;
 
         public UC_Cotisation()

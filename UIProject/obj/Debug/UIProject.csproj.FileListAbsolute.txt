@@ -33,3 +33,4 @@ D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\ThoughtWorks.QRCode.dll
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.MiniFormAdresse.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Cotisation.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csprojResolveAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Remboursement.resources
