@@ -46,10 +46,11 @@
             this.button8 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.labelTime = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblRole = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerTime = new System.Windows.Forms.Timer(this.components);
@@ -272,7 +273,7 @@
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = global::UIProject.Properties.Resources.Shutdown_40pxB;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(1114, 0);
+            this.button8.Location = new System.Drawing.Point(1116, 0);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(45, 41);
             this.button8.TabIndex = 10;
@@ -294,10 +295,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.labelTime);
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.lblRole);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lblUser);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(209, 41);
@@ -305,28 +307,46 @@
             this.panel3.Size = new System.Drawing.Size(1161, 84);
             this.panel3.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::UIProject.Properties.Resources.decon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1113, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 41);
+            this.button1.TabIndex = 11;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // labelTime
             // 
             this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.Color.White;
-            this.labelTime.Location = new System.Drawing.Point(970, 28);
+            this.labelTime.Location = new System.Drawing.Point(813, 28);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(83, 19);
+            this.labelTime.Size = new System.Drawing.Size(236, 19);
             this.labelTime.TabIndex = 5;
             this.labelTime.Text = "HH:MM:SS";
+            this.labelTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label6
+            // lblRole
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(108, 47);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 19);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Admin";
+            this.lblRole.AutoSize = true;
+            this.lblRole.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.ForeColor = System.Drawing.Color.White;
+            this.lblRole.Location = new System.Drawing.Point(108, 47);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(62, 19);
+            this.lblRole.TabIndex = 4;
+            this.lblRole.Text = "Admin";
             // 
             // label7
             // 
@@ -339,16 +359,16 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Role : ";
             // 
-            // label5
+            // lblUser
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(108, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 19);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Salary Name";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(108, 28);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(110, 19);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "Salary Name";
             // 
             // label2
             // 
@@ -426,12 +446,13 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }

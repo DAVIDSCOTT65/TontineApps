@@ -29,11 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelAddCotisation = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.photo = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.mandataireLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.matriculeLbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.semaineLbl = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,29 +67,23 @@
             this.ColUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serchTxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.nouveauBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.matriculeLbl = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.mandataireLbl = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.photo = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panelAddCotisation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCotisation)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panelAddCotisation
             // 
@@ -101,6 +105,108 @@
             this.panelAddCotisation.Name = "panelAddCotisation";
             this.panelAddCotisation.Size = new System.Drawing.Size(1167, 264);
             this.panelAddCotisation.TabIndex = 76;
+            this.panelAddCotisation.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(204, 220);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(263, 19);
+            this.label11.TabIndex = 121;
+            this.label11.Text = "+243892003511";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(466, 190);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(281, 19);
+            this.label10.TabIndex = 120;
+            this.label10.Text = "davidscottmirindi65@gmail.com";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(54, 190);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 19);
+            this.label7.TabIndex = 119;
+            this.label7.Text = "Contact";
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(200, 190);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(267, 19);
+            this.label9.TabIndex = 118;
+            this.label9.Text = "+243971778161";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(988, 6);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 19);
+            this.label12.TabIndex = 117;
+            this.label12.Text = "Photo";
+            // 
+            // photo
+            // 
+            this.photo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.photo.Image = global::UIProject.Properties.Resources.Contacts_96px;
+            this.photo.Location = new System.Drawing.Point(925, 28);
+            this.photo.Name = "photo";
+            this.photo.Size = new System.Drawing.Size(191, 211);
+            this.photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.photo.TabIndex = 116;
+            this.photo.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(35, 147);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 19);
+            this.label5.TabIndex = 115;
+            this.label5.Text = "Mandataire";
+            // 
+            // mandataireLbl
+            // 
+            this.mandataireLbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mandataireLbl.Location = new System.Drawing.Point(138, 147);
+            this.mandataireLbl.Name = "mandataireLbl";
+            this.mandataireLbl.Size = new System.Drawing.Size(536, 19);
+            this.mandataireLbl.TabIndex = 114;
+            this.mandataireLbl.Text = "Banza Ramazani";
+            this.mandataireLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(54, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 19);
+            this.label1.TabIndex = 113;
+            this.label1.Text = "Matricule";
+            // 
+            // matriculeLbl
+            // 
+            this.matriculeLbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matriculeLbl.Location = new System.Drawing.Point(138, 113);
+            this.matriculeLbl.Name = "matriculeLbl";
+            this.matriculeLbl.Size = new System.Drawing.Size(536, 19);
+            this.matriculeLbl.TabIndex = 112;
+            this.matriculeLbl.Text = "RITRD001";
+            this.matriculeLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label8
             // 
@@ -152,7 +258,7 @@
             this.panelGrid.Controls.Add(this.serchTxt);
             this.panelGrid.Location = new System.Drawing.Point(3, 124);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(1171, 260);
+            this.panelGrid.Size = new System.Drawing.Size(1171, 527);
             this.panelGrid.TabIndex = 75;
             // 
             // dgCotisation
@@ -165,14 +271,14 @@
             this.dgCotisation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgCotisation.BackgroundColor = System.Drawing.Color.White;
             this.dgCotisation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCotisation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCotisation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgCotisation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCotisation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNum,
@@ -190,28 +296,28 @@
             this.ColFrais,
             this.ColDesignation,
             this.ColUser});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgCotisation.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgCotisation.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgCotisation.Location = new System.Drawing.Point(6, 45);
             this.dgCotisation.Name = "dgCotisation";
             this.dgCotisation.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCotisation.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCotisation.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgCotisation.RowHeadersVisible = false;
             this.dgCotisation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgCotisation.Size = new System.Drawing.Size(1160, 204);
+            this.dgCotisation.Size = new System.Drawing.Size(1160, 471);
             this.dgCotisation.TabIndex = 59;
             // 
             // ColNum
@@ -347,6 +453,23 @@
             this.panel1.Size = new System.Drawing.Size(1177, 61);
             this.panel1.TabIndex = 74;
             // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = global::UIProject.Properties.Resources.Menu_40px;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(1132, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(45, 33);
+            this.button7.TabIndex = 10;
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Red;
@@ -364,6 +487,7 @@
             // saveBtn
             // 
             this.saveBtn.BackColor = System.Drawing.Color.SeaGreen;
+            this.saveBtn.Enabled = false;
             this.saveBtn.FlatAppearance.BorderSize = 0;
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -374,6 +498,7 @@
             this.saveBtn.TabIndex = 3;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // nouveauBtn
             // 
@@ -388,6 +513,7 @@
             this.nouveauBtn.TabIndex = 2;
             this.nouveauBtn.Text = "+";
             this.nouveauBtn.UseVisualStyleBackColor = false;
+            this.nouveauBtn.Click += new System.EventHandler(this.nouveauBtn_Click);
             // 
             // panel3
             // 
@@ -417,123 +543,6 @@
             this.label3.TabIndex = 73;
             this.label3.Text = "Remboursement des membres";
             // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = global::UIProject.Properties.Resources.Menu_40px;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(1132, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 33);
-            this.button7.TabIndex = 10;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(54, 113);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 19);
-            this.label1.TabIndex = 113;
-            this.label1.Text = "Matricule";
-            // 
-            // matriculeLbl
-            // 
-            this.matriculeLbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matriculeLbl.Location = new System.Drawing.Point(138, 113);
-            this.matriculeLbl.Name = "matriculeLbl";
-            this.matriculeLbl.Size = new System.Drawing.Size(536, 19);
-            this.matriculeLbl.TabIndex = 112;
-            this.matriculeLbl.Text = "RITRD001";
-            this.matriculeLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(35, 147);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 19);
-            this.label5.TabIndex = 115;
-            this.label5.Text = "Mandataire";
-            // 
-            // mandataireLbl
-            // 
-            this.mandataireLbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mandataireLbl.Location = new System.Drawing.Point(138, 147);
-            this.mandataireLbl.Name = "mandataireLbl";
-            this.mandataireLbl.Size = new System.Drawing.Size(536, 19);
-            this.mandataireLbl.TabIndex = 114;
-            this.mandataireLbl.Text = "Banza Ramazani";
-            this.mandataireLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(988, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 19);
-            this.label12.TabIndex = 117;
-            this.label12.Text = "Photo";
-            // 
-            // photo
-            // 
-            this.photo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.photo.Image = global::UIProject.Properties.Resources.Contacts_96px;
-            this.photo.Location = new System.Drawing.Point(925, 28);
-            this.photo.Name = "photo";
-            this.photo.Size = new System.Drawing.Size(191, 211);
-            this.photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.photo.TabIndex = 116;
-            this.photo.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(54, 190);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 19);
-            this.label7.TabIndex = 119;
-            this.label7.Text = "Contact";
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(200, 190);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(267, 19);
-            this.label9.TabIndex = 118;
-            this.label9.Text = "+243971778161";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(466, 190);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(281, 19);
-            this.label10.TabIndex = 120;
-            this.label10.Text = "davidscottmirindi65@gmail.com";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(204, 220);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(263, 19);
-            this.label11.TabIndex = 121;
-            this.label11.Text = "+243892003511";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // UC_Remboursement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -545,17 +554,17 @@
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UC_Remboursement";
             this.Size = new System.Drawing.Size(1177, 663);
             this.Load += new System.EventHandler(this.UC_Remboursement_Load);
             this.panelAddCotisation.ResumeLayout(false);
             this.panelAddCotisation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
             this.panelGrid.ResumeLayout(false);
             this.panelGrid.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCotisation)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

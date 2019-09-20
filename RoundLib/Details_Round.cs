@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace RoundLib
 {
-    class Details_Round
+    public class Details_Round
     {
         public int Id { get; set; }
         public int Ecart_Jour { get; set; }
@@ -100,6 +100,27 @@ namespace RoundLib
             }
             return dr;
         }
+        public List<Details_Round> AllDetails()
+        {
+            List<Details_Round> dr = new List<Details_Round>();
+
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_DETAILS";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    dr.Add(GetDetailsRoundsV(rd));
+                }
+                rd.Dispose();
+            }
+            return dr;
+        }
         private Details_Round GetDetailsRounds(IDataReader rd)
         {
             Details_Round dr = new Details_Round();
@@ -107,12 +128,25 @@ namespace RoundLib
             dr.IdRound = Convert.ToInt32(rd["Id"].ToString());
             dr.Designation = rd["Designation"].ToString();
             dr.DateDebut = Convert.ToDateTime(rd["Date_Debut"].ToString());
-            dr.DateFin = Convert.ToDateTime(rd["Date_Debut"].ToString());
+            dr.DateFin = Convert.ToDateTime(rd["Date_Fin"].ToString());
             dr.Id= Convert.ToInt32(rd["IdDetail"].ToString());
-            dr.Montant_Jour= Convert.ToDecimal(rd["Montant"].ToString());
+            dr.Montant_Jour= Convert.ToDecimal(rd["Montant_Jour"].ToString());
             dr.Devise = rd["Devise"].ToString();
             dr.Ecart_Jour= Convert.ToInt32(rd["Ecart_Jour"].ToString());
             dr.Limite= Convert.ToInt32(rd["Limite"].ToString());
+
+            return dr;
+        }
+        private Details_Round GetDetailsRoundsV(IDataReader rd)
+        {
+            Details_Round dr = new Details_Round();
+
+            
+            dr.Id = Convert.ToInt32(rd["Id"].ToString());
+            dr.Montant_Jour = Convert.ToDecimal(rd["Montant_Jour"].ToString());
+            dr.Devise = rd["Devise"].ToString();
+            dr.Ecart_Jour = Convert.ToInt32(rd["Ecart_Jour"].ToString());
+            dr.Limite = Convert.ToInt32(rd["Limite"].ToString());
 
             return dr;
         }

@@ -18,6 +18,7 @@ namespace CotisationLib
         public DateTime DateCotisation { get; set; }
         public DateTime DateConcernee { get; set; }
         public string Montant { get; set; }
+        public double Mont { get; set; }
         public int RefFrais { get; set; }
         public int RefRound { get; set; }
         public string Matricule { get; set; }
@@ -139,6 +140,7 @@ namespace CotisationLib
             cot.DateCotisation = Convert.ToDateTime(dr["Date_Cotisation"].ToString());
             cot.DateConcernee = Convert.ToDateTime(dr["Date_Concernee"].ToString());
             cot.Montant = dr["Montant"].ToString();
+            cot.Mont = Convert.ToDouble(dr["Mont"].ToString());
             cot.RefInscription = Convert.ToInt32(dr["IdInscription"].ToString());
             cot.RefRound = Convert.ToInt32(dr["IdRound"].ToString());
             cot.Matricule = dr["Matricule"].ToString();

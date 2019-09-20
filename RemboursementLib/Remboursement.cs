@@ -21,6 +21,7 @@ namespace RemboursementLib
         public string Noms { get; set; }
         public string Montant { get; set; }
         public string Sexe { get; set; }
+        
         public int Nouveau()
         {
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)

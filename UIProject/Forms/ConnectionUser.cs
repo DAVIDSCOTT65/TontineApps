@@ -16,11 +16,24 @@ namespace UIProject.Forms
     public partial class ConnectionUser : Form
     {
         DynamicClasses dn = new DynamicClasses();
+        public Principale_Form form1;
+        public delegate void Sendata(string text);
         //InstantRound ir = new InstantRound();
         public ConnectionUser()
         {
             InitializeComponent();
+            userTxt.Focus();
         }
+        public void FundForm1(Principale_Form form1)
+        {
+            this.form1 = form1;
+        }
+        void Envoyer()
+        {
+            Sendata send = new Sendata(form1.FundDataLogin);
+            send(UserSession.GetInstance().UserName);
+        }
+        
         private void ChargementTontine()
         {
 
@@ -35,12 +48,13 @@ namespace UIProject.Forms
                 {
                     PubCon.testlog = DynamicClasses.GetInstance().loginTest(userTxt.Text, passTxt.Text);
                     InstantRound.GetInstance().Id = dn.retourId("Id", "TRound", "Designation", tontineCombo.Text);
-
+                    //Envoyer();
                     if (PubCon.testlog == 1)
                     {
                         this.Close();
                         Principale_Form frm = new Principale_Form();
                         frm.ChargerUser(new UC_Home());
+                        //frm.Show();
                     }
                 }
             }

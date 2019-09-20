@@ -60,38 +60,52 @@ namespace UIProject.UserControls
         }
         private void UC_Member_Load(object sender, EventArgs e)
         {
+            ActionLancement();
+        }
+        void ActionLancement()
+        {
             RefreshDatas(new Inscription());
+            lblMax.Text = InstantRound.GetInstance().LimiteInscription().ToString() + " Membres";
+            lblDeja.Text = InstantRound.GetInstance().CountInscription().ToString() + " Membres";
+
+            if (lblDeja.Text == lblMax.Text)
+            {
+                lblEtat.Visible = true;
+            }
         }
         void RefreshDatas(IInscription insc)
         {
             dgInscit.DataSource = insc.AllInscriptionsRound(InstantRound.GetInstance().Id);
             sexeTxt.DataSource = Enum.GetNames(typeof(Sexe));
             dn.chargeCombo(membreCombo, "Nom_Complet", "SELECT_NOM_COMPLET_MEMBRE");
+
         }
         void ActionNouveau()
         {
-            Mandataire mandataire = new Mandataire();
-           idMandataire = mandataire.Nouveau();
-            IMembre membre = new Membre();
-            idMembre = membre.Nouveau();
-            Telephone phone = new Telephone();
-            idPhone = phone.Nouveau();
-            IInscription insc = new Inscription();
-            idInscription = insc.Nouveau();
-
-            nouveauBtn.Enabled = false;
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
             try
             {
-                ActionNouveau();
+                Mandataire mandataire = new Mandataire();
+                idMandataire = mandataire.Nouveau();
+                IMembre membre = new Membre();
+                idMembre = membre.Nouveau();
+                Telephone phone = new Telephone();
+                idPhone = phone.Nouveau();
+                IInscription insc = new Inscription();
+                idInscription = insc.Nouveau();
+
+                nouveauBtn.Enabled = false;
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show("L'erreur suivant est survenue " + ex.Message);
             }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+
+            frm.ShowDialog();
         }
         void SaveMandataire()
         {
@@ -153,27 +167,49 @@ namespace UIProject.UserControls
         {
             try
             {
-                if(idInscription==0 || idMembre==0 || idPhone==0 || idMandataire==0 || nomTxt.Text=="" || pnomTxt.Text==""|| prenomTxt.Text=="" || dateNaissTxt.Text == "" || lieuTxt.Text == "" || sexeTxt.Text == "" || professionTxt.Text=="" || initial.Text=="" || phoneTxt.Text=="" || nomsTxt.Text=="" || contactTxt.Text==""|| profTxt.Text=="" || naissTxt.Text=="")
+                if (lblMax.Text == lblDeja.Text)
                 {
-                    MessageBox.Show("Veuillez remplir tous les champs avant de continuer svp !!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Impossible d'effectuer cette inscription, le nombre maximum est déjà atteint\nContacter un administrateu!!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
                 else
                 {
-                    if (membreCombo.Visible == true)
+                    ActionNouveau();
+                    if (membreCombo.Visible == true && idInscription != 0)
                     {
+                        
                         idMembre = dn.retourId("IdMembre", "Affichage_Details_Inscriptions", "Nom_Complet", membreCombo.Text);
                         SaveInscription();
+                        ActionLancement();
+                        idInscription = 0;
+                        nouveauBtn.Enabled = true;
+                        
+
                     }
                     else
                     {
-                        SaveMandataire();
-                        SaveMembre();
-                        SavePhone();
-                        SaveInscription();
+                        ActionNouveau();
+                        if (idInscription == 0 || idMembre == 0 || idPhone == 0 || idMandataire == 0 || nomTxt.Text == "" || pnomTxt.Text == "" || prenomTxt.Text == "" || dateNaissTxt.Text == "" || lieuTxt.Text == "" || sexeTxt.Text == "" || professionTxt.Text == "" || initial.Text == "" || phoneTxt.Text == "" || nomsTxt.Text == "" || contactTxt.Text == "" || profTxt.Text == "" || naissTxt.Text == "")
+                        {
+                            MessageBox.Show("Veuillez remplir tous les champs avant de continuer svp !!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            
+                            SaveMandataire();
+                            SaveMembre();
+                            SavePhone();
+                            SaveInscription();
+                            ActionLancement();
+                            idInscription = 0;
+                            nouveauBtn.Enabled = true;
+
+                        }
                     }
+
                 }
-                
-                
+
+
+
             }
             catch (Exception ex)
             {

@@ -56,8 +56,8 @@ namespace RemboursementLib
 
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, Id));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@numero", 4, DbType.Int32, RefInscrit));
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@refdetail", 4, DbType.Int32, RefDetail));
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@debut", 20, DbType.Date, DateDebut));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@refround", 4, DbType.Int32, IdRound));
+                
 
                 cmd.ExecuteNonQuery();
 

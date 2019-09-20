@@ -116,6 +116,7 @@ namespace UIProject.UserControls
         private void NouveauBtn_Click(object sender, EventArgs e)
         {
             ClicBtnNouveau();
+            timer1.Start();
         }
         void ClicBtnNouveau()
         {
@@ -352,7 +353,7 @@ namespace UIProject.UserControls
 
         private void button7_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            
         }
 
         private void panelGrid_Paint(object sender, PaintEventArgs e)

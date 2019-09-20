@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TontineUtilities;
 using UIProject.UserControls;
 
 namespace UIProject.Forms
@@ -16,6 +17,7 @@ namespace UIProject.Forms
         int panelWidth;
         bool isColapsed;
         UC_Home home = new UC_Home();
+        public delegate void SendId(Principale_Form form1);
         public Principale_Form()
         {
             InitializeComponent();
@@ -44,10 +46,15 @@ namespace UIProject.Forms
             
             var form = new ConnectionUser();
             form.ShowDialog();
-
             ShowHome(home);
+            //SendId send = new SendId(form.FundForm1);
+            lblUser.Text = UserSession.GetInstance().UserName.ToString();
+            lblRole.Text = UserSession.GetInstance().Fonction.ToString();
         }
-
+        public void FundDataLogin(string data)
+        {
+            lblUser.Text = data;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -135,7 +142,9 @@ namespace UIProject.Forms
 
         private void btnRound_Click(object sender, EventArgs e)
         {
+            UC_Round fr = new UC_Round();
             MoveSidePanel(btnRound);
+            ChargerUser(fr);
         }
 
         private void btnParameters_Click(object sender, EventArgs e)
@@ -146,7 +155,7 @@ namespace UIProject.Forms
         private void timerTime_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            labelTime.Text = dt.ToString("HH:MM:ss");
+            labelTime.Text = dt.ToString("dd/MM/yyyy HH:MM:ss");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -160,6 +169,12 @@ namespace UIProject.Forms
             panel1.Controls.Clear();
             panel1.Controls.Add(home);
             panel1.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //ConnectionUser cu = new ConnectionUser();
+            //cu.ShowDialog();
         }
     }
 }

@@ -34,3 +34,9 @@ D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.MiniFormAdres
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Cotisation.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.csprojResolveAssemblyReference.cache
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Remboursement.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\EntityFramework.dll
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\EntityFramework.SqlServer.dll
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\EntityFramework.xml
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\EntityFramework.SqlServer.xml
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Round.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.Form1.resources

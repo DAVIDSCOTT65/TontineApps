@@ -415,6 +415,7 @@ namespace UIProject.Classes
             int count = 0;
             string username = "";
             string niveau = "";
+            string fonction = "";
             try
             {
                 if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
@@ -431,6 +432,7 @@ namespace UIProject.Classes
                     {
                         niveau = dr["niveau_acces"].ToString();
                         username = dr["noms"].ToString();
+                        fonction = dr["fonction"].ToString();
                         count += 1;
                     }
                     if (count == 1)
@@ -438,6 +440,7 @@ namespace UIProject.Classes
                         MessageBox.Show("La connection a reussie !!!", "Message Serveur...", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         UserSession.GetInstance().AccessLevel = niveau;
                         UserSession.GetInstance().UserName = username;
+                        UserSession.GetInstance().Fonction = fonction;
                     }
                     else
                     {

@@ -86,7 +86,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.membreCombo = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCotisation)).BeginInit();
             this.panelGrid.SuspendLayout();
@@ -108,7 +107,6 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.saveBtn);
             this.panel1.Controls.Add(this.nouveauBtn);
@@ -675,23 +673,6 @@
             this.membreCombo.TabIndex = 93;
             this.membreCombo.SelectedIndexChanged += new System.EventHandler(this.membreCombo_SelectedIndexChanged_1);
             // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = global::UIProject.Properties.Resources.Menu_40px;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(1132, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 33);
-            this.button7.TabIndex = 10;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // UC_Cotisation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -732,7 +713,6 @@
         private System.Windows.Forms.TextBox serchTxt;
         public System.Windows.Forms.Panel panelGrid;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panelAddCotisation;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgManyCotisation;

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using TontineUtilities;
 using ManageSingleConnection;
 using ParametreConnexionLib;
+using CotisationLib;
+using System.Data.SqlClient;
 
 namespace UIProject.UserControls
 {
@@ -65,13 +67,73 @@ namespace UIProject.UserControls
 
                 dr.Dispose();
             }
+            OneInfoSemaine();
+
+            //return semaine;
+        }
+        void ChartCotisation()
+        {
+            try
+            {
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                SqlDataAdapter ad = new SqlDataAdapter("SELECT Date_Concernee, SUM(Mont) as Montant FROM Affichage_Details_Cotisation WHERE IdSemaine='" + InstantSemaine.GetInstance().IdSemaine + "' GROUP BY Date_Concernee", (SqlConnection) ImplementeConnexion.Instance.Conn);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                chartWeek.DataSource = dt;
+
+
+
+
+                chartWeek.ChartAreas["ChartAreas1"].AxisX.Title = "Date";
+                chartWeek.ChartAreas["ChartAreas1"].AxisX.Title = "Montant";
+
+                chartWeek.Series["Cotisation"].XValueMember = "Date_Concernee";
+                chartWeek.Series["Cotisation"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
+                chartWeek.Series["Cotisation"].YValueMembers = "Montant";
+                chartWeek.Series["Cotisation"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Une erreur est survenue : "+ex.Message);
+            }
+        }
+        private void OneInfoSemaine()
+        {
+
+
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_CAISSE_RESTE";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, InstantSemaine.GetInstance().IdSemaine));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@idRound", 4, DbType.Int32, InstantRound.GetInstance().Id));
+
+                IDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    lblCaisse.Text = dr["En_Caisse"].ToString();
+                    lblReste.Text = dr["Dette"].ToString();
+                    
+                }
+
+                dr.Dispose();
+            }
 
             //return semaine;
         }
         private void UC_Home_Load(object sender, EventArgs e)
         {
             OneSemaine(InstantRound.GetInstance().Id);
-            LoadChart();
+            ChartCotisation();
         }
         private void LoadChart()
         {
@@ -83,6 +145,11 @@ namespace UIProject.UserControls
             chartWeek.Series["Week"].Points.AddXY("Day6", 3000);
             chartWeek.Series["Week"].Points.AddXY("Day7", 7000);
             chartWeek.Series["Week"].Points.AddXY("Day8", 4000);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ChartCotisation();
         }
     }
 }

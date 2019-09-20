@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Affichage_Details_Cotisation">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Montant" />
+      <PropertyRef Name="IdInscription" />
+      <PropertyRef Name="IdRound" />
+      <PropertyRef Name="IdSemaine" />
+      <PropertyRef Name="IdFrais" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Date_Cotisation" Type="DateTime" Precision="3" />
+    <Property Name="Date_Concernee" Type="DateTime" Precision="0" />
+    <Property Name="Montant" Type="String" MaxLength="44" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mont" Type="Double" />
+    <Property Name="IdInscription" Type="Int32" Nullable="false" />
+    <Property Name="IdRound" Type="Int32" Nullable="false" />
+    <Property Name="Matricule" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Postnom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sexe" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="IdSemaine" Type="Int32" Nullable="false" />
+    <Property Name="IdFrais" Type="Int32" Nullable="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="CotisationEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Affichage_Details_Cotisation" EntityType="Self.Affichage_Details_Cotisation" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChartModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TONTINE_TEST.dbo.Affichage_Details_Cotisation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Affichage_Details_Cotisation">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Montant" />
+      <PropertyRef Name="IdInscription" />
+      <PropertyRef Name="IdRound" />
+      <PropertyRef Name="IdSemaine" />
+      <PropertyRef Name="IdFrais" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Date_Cotisation" Type="datetime" />
+    <Property Name="Date_Concernee" Type="date" />
+    <Property Name="Montant" Type="varchar" MaxLength="44" Nullable="false" />
+    <Property Name="Mont" Type="float" />
+    <Property Name="IdInscription" Type="int" Nullable="false" />
+    <Property Name="IdRound" Type="int" Nullable="false" />
+    <Property Name="Matricule" Type="varchar" MaxLength="30" />
+    <Property Name="Nom" Type="varchar" MaxLength="50" />
+    <Property Name="Postnom" Type="varchar" MaxLength="50" />
+    <Property Name="Prenom" Type="varchar" MaxLength="50" />
+    <Property Name="Sexe" Type="varchar" MaxLength="1" />
+    <Property Name="IdSemaine" Type="int" Nullable="false" />
+    <Property Name="IdFrais" Type="int" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ChartModelStoreContainer">
+    <EntitySet Name="Affichage_Details_Cotisation" EntityType="Self.Affichage_Details_Cotisation" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Affichage_Details_Cotisation].[Id] AS [Id], 
+    [Affichage_Details_Cotisation].[Date_Cotisation] AS [Date_Cotisation], 
+    [Affichage_Details_Cotisation].[Date_Concernee] AS [Date_Concernee], 
+    [Affichage_Details_Cotisation].[Montant] AS [Montant], 
+    [Affichage_Details_Cotisation].[Mont] AS [Mont], 
+    [Affichage_Details_Cotisation].[IdInscription] AS [IdInscription], 
+    [Affichage_Details_Cotisation].[IdRound] AS [IdRound], 
+    [Affichage_Details_Cotisation].[Matricule] AS [Matricule], 
+    [Affichage_Details_Cotisation].[Nom] AS [Nom], 
+    [Affichage_Details_Cotisation].[Postnom] AS [Postnom], 
+    [Affichage_Details_Cotisation].[Prenom] AS [Prenom], 
+    [Affichage_Details_Cotisation].[Sexe] AS [Sexe], 
+    [Affichage_Details_Cotisation].[IdSemaine] AS [IdSemaine], 
+    [Affichage_Details_Cotisation].[IdFrais] AS [IdFrais], 
+    [Affichage_Details_Cotisation].[Designation] AS [Designation]
+    FROM [dbo].[Affichage_Details_Cotisation] AS [Affichage_Details_Cotisation]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

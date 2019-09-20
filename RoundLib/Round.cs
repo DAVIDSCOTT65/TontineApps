@@ -23,7 +23,7 @@ namespace RoundLib
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd=ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT MAX(Id) as LastId FROM Round";
+                cmd.CommandText = "SELECT MAX(Id) as LastId FROM TRound";
                 IDataReader dr = cmd.ExecuteReader();
 
                 if (dr.Read())
@@ -48,8 +48,8 @@ namespace RoundLib
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, Id));
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@designation", 20, DbType.String, Designation));
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@datedebut", 20, DbType.Date, Date_Debut));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@designation", 50, DbType.String, Designation));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@date_debut", 20, DbType.Date, Date_Debut));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@ref_detail", 4, DbType.Int32, RefDetail));
 
                 cmd.ExecuteNonQuery();

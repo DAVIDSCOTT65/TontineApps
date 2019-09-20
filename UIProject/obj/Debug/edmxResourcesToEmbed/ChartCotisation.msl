@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ChartModelStoreContainer" CdmEntityContainer="CotisationEntities">
+    <EntitySetMapping Name="Affichage_Details_Cotisation">
+      <EntityTypeMapping TypeName="ChartModel.Affichage_Details_Cotisation">
+        <MappingFragment StoreEntitySet="Affichage_Details_Cotisation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date_Cotisation" ColumnName="Date_Cotisation" />
+          <ScalarProperty Name="Date_Concernee" ColumnName="Date_Concernee" />
+          <ScalarProperty Name="Montant" ColumnName="Montant" />
+          <ScalarProperty Name="Mont" ColumnName="Mont" />
+          <ScalarProperty Name="IdInscription" ColumnName="IdInscription" />
+          <ScalarProperty Name="IdRound" ColumnName="IdRound" />
+          <ScalarProperty Name="Matricule" ColumnName="Matricule" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Postnom" ColumnName="Postnom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Sexe" ColumnName="Sexe" />
+          <ScalarProperty Name="IdSemaine" ColumnName="IdSemaine" />
+          <ScalarProperty Name="IdFrais" ColumnName="IdFrais" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

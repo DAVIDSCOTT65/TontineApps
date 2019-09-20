@@ -86,6 +86,11 @@
             this.membreCombo = new System.Windows.Forms.ComboBox();
             this.qrCode = new System.Windows.Forms.PictureBox();
             this.photo = new System.Windows.Forms.PictureBox();
+            this.lblMax = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.lblDeja = new System.Windows.Forms.Label();
+            this.lblEtat = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgInscit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qrCode)).BeginInit();
@@ -348,6 +353,11 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.lblEtat);
+            this.panel1.Controls.Add(this.lblDeja);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.lblMax);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -654,6 +664,60 @@
             this.photo.TabStop = false;
             this.photo.Click += new System.EventHandler(this.Photo_Click);
             // 
+            // lblMax
+            // 
+            this.lblMax.AutoSize = true;
+            this.lblMax.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblMax.ForeColor = System.Drawing.Color.Red;
+            this.lblMax.Location = new System.Drawing.Point(711, 23);
+            this.lblMax.Name = "lblMax";
+            this.lblMax.Size = new System.Drawing.Size(15, 16);
+            this.lblMax.TabIndex = 48;
+            this.lblMax.Text = "0";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(568, 23);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(137, 16);
+            this.label18.TabIndex = 48;
+            this.label18.Text = "Maximum à inscrire";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(369, 23);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(81, 16);
+            this.label19.TabIndex = 49;
+            this.label19.Text = "Déjà inscrit";
+            // 
+            // lblDeja
+            // 
+            this.lblDeja.AutoSize = true;
+            this.lblDeja.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblDeja.ForeColor = System.Drawing.Color.Red;
+            this.lblDeja.Location = new System.Drawing.Point(456, 23);
+            this.lblDeja.Name = "lblDeja";
+            this.lblDeja.Size = new System.Drawing.Size(15, 16);
+            this.lblDeja.TabIndex = 50;
+            this.lblDeja.Text = "0";
+            // 
+            // lblEtat
+            // 
+            this.lblEtat.AutoSize = true;
+            this.lblEtat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblEtat.ForeColor = System.Drawing.Color.Red;
+            this.lblEtat.Location = new System.Drawing.Point(861, 23);
+            this.lblEtat.Name = "lblEtat";
+            this.lblEtat.Size = new System.Drawing.Size(118, 16);
+            this.lblEtat.TabIndex = 51;
+            this.lblEtat.Text = "Incription arreter";
+            this.lblEtat.Visible = false;
+            // 
             // UC_Member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -703,6 +767,7 @@
             this.Size = new System.Drawing.Size(1177, 663);
             this.Load += new System.EventHandler(this.UC_Member_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgInscit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qrCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
@@ -767,5 +832,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.Label lblMax;
+        private System.Windows.Forms.Label lblDeja;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblEtat;
     }
 }

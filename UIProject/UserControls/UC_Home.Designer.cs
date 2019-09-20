@@ -29,20 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Home));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCaisse = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblReste = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblFin = new System.Windows.Forms.Label();
@@ -79,8 +77,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblCaisse);
             this.panel1.Controls.Add(this.label2);
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(99, 112);
@@ -98,27 +95,15 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // label4
+            // lblCaisse
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(75, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 19);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "FC";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(17, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 19);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "80000";
+            this.lblCaisse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaisse.ForeColor = System.Drawing.Color.White;
+            this.lblCaisse.Location = new System.Drawing.Point(17, 54);
+            this.lblCaisse.Name = "lblCaisse";
+            this.lblCaisse.Size = new System.Drawing.Size(104, 19);
+            this.lblCaisse.TabIndex = 1;
+            this.lblCaisse.Text = "80000";
             // 
             // label2
             // 
@@ -135,8 +120,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Crimson;
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.lblReste);
             this.panel2.Controls.Add(this.label7);
             this.panel2.ForeColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(365, 112);
@@ -154,27 +138,15 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // label5
+            // lblReste
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(51, 54);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 19);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "FC";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(26, 54);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(18, 19);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "0";
+            this.lblReste.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReste.ForeColor = System.Drawing.Color.White;
+            this.lblReste.Location = new System.Drawing.Point(26, 54);
+            this.lblReste.Name = "lblReste";
+            this.lblReste.Size = new System.Drawing.Size(86, 19);
+            this.lblReste.TabIndex = 1;
+            this.lblReste.Text = "0";
             // 
             // label7
             // 
@@ -284,7 +256,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label8.Location = new System.Drawing.Point(55, 252);
+            this.label8.Location = new System.Drawing.Point(100, 230);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(148, 23);
             this.label8.TabIndex = 6;
@@ -300,26 +272,29 @@
             this.button1.Size = new System.Drawing.Size(52, 37);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // chartWeek
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartWeek.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartWeek.Legends.Add(legend1);
+            this.chartWeek.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea2.Name = "ChartAreas1";
+            this.chartWeek.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartWeek.Legends.Add(legend2);
             this.chartWeek.Location = new System.Drawing.Point(48, 278);
             this.chartWeek.Name = "chartWeek";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Week";
-            this.chartWeek.Series.Add(series1);
-            this.chartWeek.Size = new System.Drawing.Size(392, 335);
+            this.chartWeek.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series2.ChartArea = "ChartAreas1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series2.Legend = "Legend1";
+            series2.Name = "Cotisation";
+            this.chartWeek.Series.Add(series2);
+            this.chartWeek.Size = new System.Drawing.Size(999, 335);
             this.chartWeek.TabIndex = 8;
             this.chartWeek.Text = "chart1";
-            title1.Name = "Week chart";
-            title1.Text = "Week chart";
-            this.chartWeek.Titles.Add(title1);
+            title2.Name = "Week chart";
+            title2.Text = "Week chart";
+            this.chartWeek.Titles.Add(title2);
             // 
             // UC_Home
             // 
@@ -358,13 +333,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCaisse;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblReste;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;

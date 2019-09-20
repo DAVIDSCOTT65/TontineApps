@@ -12,6 +12,7 @@ namespace TontineUtilities
 
         private string _userName;
         private string _accessLevel;
+        private string _fonction;
 
 
         public string UserName
@@ -37,6 +38,19 @@ namespace TontineUtilities
             set
             {
                 _accessLevel = value;
+            }
+        }
+
+        public string Fonction
+        {
+            get
+            {
+                return _fonction;
+            }
+
+            set
+            {
+                _fonction = value;
             }
         }
 
