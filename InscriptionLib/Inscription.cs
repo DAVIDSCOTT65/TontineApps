@@ -13,6 +13,8 @@ namespace InscriptionLib
 {
     public class Inscription : IInscription
     {
+        int i;
+        public int Num { get; set; }
         public int Id { get; set; }
         public int RefRound { get; set; }
 
@@ -120,6 +122,9 @@ namespace InscriptionLib
         {
             IInscription ins = new Inscription();
 
+            i = i + 1;
+
+            ins.Num = i;
             ins.Id = Convert.ToInt32(rd["Id"].ToString());
             ins.DateInscrit = Convert.ToDateTime(rd["Date_Inscription"].ToString());
             ins.RefMembre= Convert.ToInt32(rd["IdMembre"].ToString());

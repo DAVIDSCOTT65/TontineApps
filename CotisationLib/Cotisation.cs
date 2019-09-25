@@ -12,6 +12,8 @@ namespace CotisationLib
 {
     public class Cotisation
     {
+        int i = 0;
+        public int Num { get; set; }
         public int Id { get; set; }
         public int RefInscription { get; set; }
         public int RefSemaine { get; set; }
@@ -112,6 +114,7 @@ namespace CotisationLib
         }
         public List<Cotisation> AllCotisationSemaine(int idSemaine, int idRound)
         {
+            //Cotisation cot = new Cotisation();
             List<Cotisation> lst = new List<Cotisation>();
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                 ImplementeConnexion.Instance.Conn.Open();
@@ -127,7 +130,10 @@ namespace CotisationLib
 
                 while (dr.Read())
                 {
+                    
+                    
                     lst.Add(GetDetailCotisation(dr));
+                    
                 }
                 dr.Dispose();
             }
@@ -136,6 +142,10 @@ namespace CotisationLib
         private Cotisation GetDetailCotisation(IDataReader dr)
         {
             Cotisation cot = new Cotisation();
+
+            i = i + 1;
+
+            cot.Num = i;
             cot.Id = Convert.ToInt32(dr["Id"].ToString());
             cot.DateCotisation = Convert.ToDateTime(dr["Date_Cotisation"].ToString());
             cot.DateConcernee = Convert.ToDateTime(dr["Date_Concernee"].ToString());

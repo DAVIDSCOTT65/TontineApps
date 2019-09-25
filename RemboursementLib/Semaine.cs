@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TontineUtilities;
 
 namespace RemboursementLib
 {
@@ -56,12 +57,12 @@ namespace RemboursementLib
 
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, Id));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@numero", 4, DbType.Int32, RefInscrit));
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@refround", 4, DbType.Int32, IdRound));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@refround", 4, DbType.Int32, InstantRound.GetInstance().Id));
                 
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         public void Supprimer(int id)

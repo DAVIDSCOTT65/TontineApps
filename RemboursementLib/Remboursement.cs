@@ -13,6 +13,8 @@ namespace RemboursementLib
 {
    public  class Remboursement
     {
+        int i;
+        public int Num { get; set; }
         public int Id { get; set; }
         public int RefInscription { get; set; }
         public int RefSemaine { get; set; }
@@ -21,7 +23,9 @@ namespace RemboursementLib
         public string Noms { get; set; }
         public string Montant { get; set; }
         public string Sexe { get; set; }
-        
+        public DateTime Date_Debut { get; set; }
+        public DateTime Date_Fin { get; set; }
+        public DateTime Date_Remboursement { get; set; }
         public int Nouveau()
         {
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
@@ -76,9 +80,10 @@ namespace RemboursementLib
                 MessageBox.Show("Suppression reussie", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        public List<Remboursement> AllRemboursements(int id)
+        public List<Remboursement> AllRemboursements()
         {
             List<Remboursement> r = new List<Remboursement>();
+            //Num = 0;
 
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                 ImplementeConnexion.Instance.Conn.Open();
@@ -87,12 +92,13 @@ namespace RemboursementLib
                 cmd.CommandText = "SELECT_REMBOURSEMENTS_FROM_ROUND";
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, id));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, InstantRound.GetInstance().Id));
 
                 IDataReader rd = cmd.ExecuteReader();
 
                 while (rd.Read())
                 {
+                    
                     r.Add(GetDetailsRemboursement(rd));
                 }
                 rd.Dispose();
@@ -103,6 +109,11 @@ namespace RemboursementLib
         {
             Remboursement r = new Remboursement();
 
+            i = i + 1;
+
+            
+
+            r.Num = i;
             r.Id = Convert.ToInt32(rd["Id"].ToString());
             r.RefInscription = Convert.ToInt32(rd["IdInscription"].ToString());
             r.IdRound = Convert.ToInt32(rd["IdRound"].ToString());
@@ -111,7 +122,9 @@ namespace RemboursementLib
             r.Montant = rd["Montant"].ToString();
             r.Sexe = rd["Sexe"].ToString();
             r.RefSemaine = Convert.ToInt32(rd["IdSemaine"].ToString());
-
+            r.Date_Debut = Convert.ToDateTime(rd["Date_Debut"].ToString());
+            r.Date_Fin = Convert.ToDateTime(rd["Date_Fin"].ToString());
+            r.Date_Remboursement = Convert.ToDateTime(rd["Date_Remboursement"].ToString());
             return r;
             
         }

@@ -20,16 +20,29 @@ namespace UIProject.UserControls
         int panelWidth;
 
         bool isColapsed;
+        int rowCount;
         public UC_Remboursement()
         {
             InitializeComponent();
             panelWidth = panelGrid.Height;
             isColapsed = false;
+
+            
+            
         }
 
         private void UC_Remboursement_Load(object sender, EventArgs e)
         {
             ChargemenCombos();
+            Refresh(new Remboursement());
+        }
+        void Refresh(Remboursement remb)
+        {
+            
+            dgRemboursement.DataSource = remb.AllRemboursements();
+            //rowCount = dgRemboursement.Rows.Count;
+            //rowCount = rowCount + 1;
+            //dgRemboursement.Rows.Add(rowCount);
         }
         void ChargemenCombos()
         {
@@ -86,7 +99,7 @@ namespace UIProject.UserControls
                     remb.RefSemaine = idSemaine;
 
                     remb.Enregistrer(remb);
-
+                    Refresh(new Remboursement());
                     nouveauBtn.Enabled = true;
                     saveBtn.Enabled = false;
                 }

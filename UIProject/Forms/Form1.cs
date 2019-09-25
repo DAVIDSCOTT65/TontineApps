@@ -18,6 +18,7 @@ namespace UIProject.UserControls
         DynamicClasses dn = new DynamicClasses();
         int idInscription=0;
         int idSemaine = 0;
+        int num = 0;
         public Form1()
         {
             InitializeComponent();
@@ -47,44 +48,22 @@ namespace UIProject.UserControls
                     {
                         
                         idSemaine = sem.Nouveau();
+                        num = num + 1;
 
-                        //sem.Id = idSemaine;
-                        //sem.RefInscrit = idInscription;
-                        //sem.IdRound = InstantRound.GetInstance().Id;
-                        //sem.Enregistrer(sem);
+                        dgTirage.Rows.Add(num,idSemaine.ToString(), membreCombo.Text, idInscription);
 
-                        dgTirage.Rows.Add(idSemaine.ToString(), membreCombo.Text, idInscription);
-                        membreCombo.Items.Clear();
-                        dn.chargeNomsCombo(membreCombo, "Nom_Complet", "SELECT_MEMBRE_NON_TIRER");
+                        membreCombo.Items.Remove(membreCombo.Text);
                         membreCombo.Text = "";
                     }
                     else
                     {
-                        for (int i = 0; i < dgTirage.Rows.Count; i++)
-                        {
-                            if (membreCombo.Text == dgTirage.Rows[i].Cells[1].Value.ToString())
-                            {
-                                MessageBox.Show("Ce membre existe déjà","Terminer");
-                                
-                            }
-                            else
-                            {
-                                idSemaine = idSemaine + 1;
+                        idSemaine = idSemaine + 1;
+                        num = num + 1;
 
-                                //sem.Id = idSemaine;
-                                //sem.RefInscrit = idInscription;
-                                //sem.IdRound = InstantRound.GetInstance().Id;
-                                //sem.Enregistrer(sem);
+                        dgTirage.Rows.Add(num,idSemaine.ToString(), membreCombo.Text, idInscription);
 
-                                dgTirage.Rows.Add(idSemaine.ToString(), membreCombo.Text, idInscription);
-                                membreCombo.Items.Clear();
-                                dn.chargeNomsCombo(membreCombo, "Nom_Complet", "SELECT_MEMBRE_NON_TIRER");
-                                membreCombo.Text = "";
-                                
-                            }
-                        }
-
-                        
+                        membreCombo.Items.Remove(membreCombo.Text);
+                        membreCombo.Text = "";
 
                     }
                 }
@@ -108,6 +87,72 @@ namespace UIProject.UserControls
         private void button2_Click(object sender, EventArgs e)
         {
             Ajouter();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int rowCount ;
+            rowCount = dgTirage.Rows.Count;
+            if (rowCount==0)
+            {
+                addBtn.Enabled = true;
+            }
+            else
+            {
+                for (int i = 0; i < rowCount; i++)
+                {
+
+                    if (membreCombo.Text != dgTirage.Rows[i].Cells[1].Value.ToString())
+                    {
+                        MessageBox.Show("Ce membre n'a pas encore effectuer de tirage", "Attention");
+
+                        addBtn.Enabled = true;
+                    }
+                }
+                
+            }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveDatas();
+        }
+        void SaveDatas()
+        {
+            try
+            {
+                Semaine sem = new Semaine();
+                for (int i = 0; i < (dgTirage.Rows.Count); i++)
+                {
+
+                    sem.Id = Convert.ToInt32(dgTirage[1, i].Value.ToString());
+                    sem.RefInscrit = Convert.ToInt32(dgTirage[3, i].Value.ToString());
+                    
+
+                    sem.Enregistrer(sem);
+
+                }
+                MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dgTirage.Rows.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

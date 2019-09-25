@@ -9,6 +9,7 @@ namespace InscriptionLib
 {
     public interface IInscription
     {
+        int Num { get; set; }
         int Id { get; set; }
         int RefMembre { get; set; }
         int RefRound { get; set; }

@@ -60,13 +60,27 @@
             this.label15 = new System.Windows.Forms.Label();
             this.profTxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblEtat = new System.Windows.Forms.Label();
+            this.lblDeja = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lblMax = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgInscit = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.naissTxt = new System.Windows.Forms.MaskedTextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.membreCombo = new System.Windows.Forms.ComboBox();
+            this.qrCode = new System.Windows.Forms.PictureBox();
+            this.photo = new System.Windows.Forms.PictureBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,19 +92,6 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.naissTxt = new System.Windows.Forms.MaskedTextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.membreCombo = new System.Windows.Forms.ComboBox();
-            this.qrCode = new System.Windows.Forms.PictureBox();
-            this.photo = new System.Windows.Forms.PictureBox();
-            this.lblMax = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.lblDeja = new System.Windows.Forms.Label();
-            this.lblEtat = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgInscit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qrCode)).BeginInit();
@@ -369,6 +370,60 @@
             this.panel1.Size = new System.Drawing.Size(1177, 61);
             this.panel1.TabIndex = 35;
             // 
+            // lblEtat
+            // 
+            this.lblEtat.AutoSize = true;
+            this.lblEtat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblEtat.ForeColor = System.Drawing.Color.Red;
+            this.lblEtat.Location = new System.Drawing.Point(861, 23);
+            this.lblEtat.Name = "lblEtat";
+            this.lblEtat.Size = new System.Drawing.Size(118, 16);
+            this.lblEtat.TabIndex = 51;
+            this.lblEtat.Text = "Incription arreter";
+            this.lblEtat.Visible = false;
+            // 
+            // lblDeja
+            // 
+            this.lblDeja.AutoSize = true;
+            this.lblDeja.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblDeja.ForeColor = System.Drawing.Color.Red;
+            this.lblDeja.Location = new System.Drawing.Point(456, 23);
+            this.lblDeja.Name = "lblDeja";
+            this.lblDeja.Size = new System.Drawing.Size(15, 16);
+            this.lblDeja.TabIndex = 50;
+            this.lblDeja.Text = "0";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(369, 23);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(81, 16);
+            this.label19.TabIndex = 49;
+            this.label19.Text = "Déjà inscrit";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(568, 23);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(137, 16);
+            this.label18.TabIndex = 48;
+            this.label18.Text = "Maximum à inscrire";
+            // 
+            // lblMax
+            // 
+            this.lblMax.AutoSize = true;
+            this.lblMax.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblMax.ForeColor = System.Drawing.Color.Red;
+            this.lblMax.Location = new System.Drawing.Point(711, 23);
+            this.lblMax.Name = "lblMax";
+            this.lblMax.Size = new System.Drawing.Size(15, 16);
+            this.lblMax.TabIndex = 48;
+            this.lblMax.Text = "0";
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.DodgerBlue;
@@ -452,6 +507,7 @@
             this.dgInscit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgInscit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column3,
             this.Column11,
             this.Column2,
             this.idM,
@@ -488,97 +544,6 @@
             this.dgInscit.TabIndex = 38;
             this.dgInscit.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgInscit_CellMouseClick);
             this.dgInscit.SelectionChanged += new System.EventHandler(this.DgInscit_SelectionChanged);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Id";
-            this.Column1.HeaderText = "Numéro";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "UserSession";
-            this.Column11.HeaderText = "UserSession";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "DateInscrit";
-            this.Column2.HeaderText = "Date d\'inscription";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // idM
-            // 
-            this.idM.DataPropertyName = "RefMembre";
-            this.idM.HeaderText = "IdMembre";
-            this.idM.Name = "idM";
-            this.idM.ReadOnly = true;
-            this.idM.Visible = false;
-            // 
-            // colMatri
-            // 
-            this.colMatri.DataPropertyName = "Matricule";
-            this.colMatri.HeaderText = "Matricule";
-            this.colMatri.Name = "colMatri";
-            this.colMatri.ReadOnly = true;
-            // 
-            // NomComp
-            // 
-            this.NomComp.DataPropertyName = "NomComplet";
-            this.NomComp.HeaderText = "Nom Complet";
-            this.NomComp.Name = "NomComp";
-            this.NomComp.ReadOnly = true;
-            // 
-            // colNom
-            // 
-            this.colNom.DataPropertyName = "Nom";
-            this.colNom.HeaderText = "Nom";
-            this.colNom.Name = "colNom";
-            this.colNom.ReadOnly = true;
-            this.colNom.Visible = false;
-            // 
-            // colPnom
-            // 
-            this.colPnom.DataPropertyName = "Postnom";
-            this.colPnom.HeaderText = "Postnom";
-            this.colPnom.Name = "colPnom";
-            this.colPnom.ReadOnly = true;
-            this.colPnom.Visible = false;
-            // 
-            // colPrenom
-            // 
-            this.colPrenom.DataPropertyName = "Prenom";
-            this.colPrenom.HeaderText = "Prénom";
-            this.colPrenom.Name = "colPrenom";
-            this.colPrenom.ReadOnly = true;
-            this.colPrenom.Visible = false;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Sexe";
-            this.Column8.HeaderText = "Sexe";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "RefRound";
-            this.Column9.HeaderText = "IdRound";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Visible = false;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "Designation";
-            this.Column10.HeaderText = "Round";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Visible = false;
             // 
             // label12
             // 
@@ -664,59 +629,112 @@
             this.photo.TabStop = false;
             this.photo.Click += new System.EventHandler(this.Photo_Click);
             // 
-            // lblMax
+            // Column1
             // 
-            this.lblMax.AutoSize = true;
-            this.lblMax.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblMax.ForeColor = System.Drawing.Color.Red;
-            this.lblMax.Location = new System.Drawing.Point(711, 23);
-            this.lblMax.Name = "lblMax";
-            this.lblMax.Size = new System.Drawing.Size(15, 16);
-            this.lblMax.TabIndex = 48;
-            this.lblMax.Text = "0";
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.DataPropertyName = "Num";
+            this.Column1.HeaderText = "N°";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 53;
             // 
-            // label18
+            // Column3
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(568, 23);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(137, 16);
-            this.label18.TabIndex = 48;
-            this.label18.Text = "Maximum à inscrire";
+            this.Column3.DataPropertyName = "Id";
+            this.Column3.HeaderText = "IdInscription";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
             // 
-            // label19
+            // Column11
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(369, 23);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(81, 16);
-            this.label19.TabIndex = 49;
-            this.label19.Text = "Déjà inscrit";
+            this.Column11.DataPropertyName = "UserSession";
+            this.Column11.HeaderText = "UserSession";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
             // 
-            // lblDeja
+            // Column2
             // 
-            this.lblDeja.AutoSize = true;
-            this.lblDeja.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblDeja.ForeColor = System.Drawing.Color.Red;
-            this.lblDeja.Location = new System.Drawing.Point(456, 23);
-            this.lblDeja.Name = "lblDeja";
-            this.lblDeja.Size = new System.Drawing.Size(15, 16);
-            this.lblDeja.TabIndex = 50;
-            this.lblDeja.Text = "0";
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.DataPropertyName = "DateInscrit";
+            this.Column2.HeaderText = "Date d\'inscription";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 156;
             // 
-            // lblEtat
+            // idM
             // 
-            this.lblEtat.AutoSize = true;
-            this.lblEtat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblEtat.ForeColor = System.Drawing.Color.Red;
-            this.lblEtat.Location = new System.Drawing.Point(861, 23);
-            this.lblEtat.Name = "lblEtat";
-            this.lblEtat.Size = new System.Drawing.Size(118, 16);
-            this.lblEtat.TabIndex = 51;
-            this.lblEtat.Text = "Incription arreter";
-            this.lblEtat.Visible = false;
+            this.idM.DataPropertyName = "RefMembre";
+            this.idM.HeaderText = "IdMembre";
+            this.idM.Name = "idM";
+            this.idM.ReadOnly = true;
+            this.idM.Visible = false;
+            // 
+            // colMatri
+            // 
+            this.colMatri.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colMatri.DataPropertyName = "Matricule";
+            this.colMatri.HeaderText = "Matricule";
+            this.colMatri.Name = "colMatri";
+            this.colMatri.ReadOnly = true;
+            this.colMatri.Width = 109;
+            // 
+            // NomComp
+            // 
+            this.NomComp.DataPropertyName = "NomComplet";
+            this.NomComp.HeaderText = "Nom Complet";
+            this.NomComp.Name = "NomComp";
+            this.NomComp.ReadOnly = true;
+            // 
+            // colNom
+            // 
+            this.colNom.DataPropertyName = "Nom";
+            this.colNom.HeaderText = "Nom";
+            this.colNom.Name = "colNom";
+            this.colNom.ReadOnly = true;
+            this.colNom.Visible = false;
+            // 
+            // colPnom
+            // 
+            this.colPnom.DataPropertyName = "Postnom";
+            this.colPnom.HeaderText = "Postnom";
+            this.colPnom.Name = "colPnom";
+            this.colPnom.ReadOnly = true;
+            this.colPnom.Visible = false;
+            // 
+            // colPrenom
+            // 
+            this.colPrenom.DataPropertyName = "Prenom";
+            this.colPrenom.HeaderText = "Prénom";
+            this.colPrenom.Name = "colPrenom";
+            this.colPrenom.ReadOnly = true;
+            this.colPrenom.Visible = false;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column8.DataPropertyName = "Sexe";
+            this.Column8.HeaderText = "Sexe";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 71;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "RefRound";
+            this.Column9.HeaderText = "IdRound";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "Designation";
+            this.Column10.HeaderText = "Round";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Visible = false;
             // 
             // UC_Member
             // 
@@ -820,7 +838,13 @@
         private System.Windows.Forms.MaskedTextBox naissTxt;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ComboBox membreCombo;
+        private System.Windows.Forms.Label lblMax;
+        private System.Windows.Forms.Label lblDeja;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblEtat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idM;
@@ -832,10 +856,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.Label lblMax;
-        private System.Windows.Forms.Label lblDeja;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label lblEtat;
     }
 }

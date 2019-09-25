@@ -49,22 +49,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.membreCombo = new System.Windows.Forms.ComboBox();
             this.panelGrid = new System.Windows.Forms.Panel();
-            this.dgCotisation = new System.Windows.Forms.DataGridView();
-            this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDateCo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDateCon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMontant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRefInscrit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRefRound = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMatricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPostnom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFrais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDesignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgRemboursement = new System.Windows.Forms.DataGridView();
             this.serchTxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -74,10 +59,22 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelAddCotisation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
             this.panelGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCotisation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRemboursement)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -254,23 +251,23 @@
             this.panelGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelGrid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelGrid.Controls.Add(this.dgCotisation);
+            this.panelGrid.Controls.Add(this.dgRemboursement);
             this.panelGrid.Controls.Add(this.serchTxt);
             this.panelGrid.Location = new System.Drawing.Point(3, 124);
             this.panelGrid.Name = "panelGrid";
             this.panelGrid.Size = new System.Drawing.Size(1171, 527);
             this.panelGrid.TabIndex = 75;
             // 
-            // dgCotisation
+            // dgRemboursement
             // 
-            this.dgCotisation.AllowUserToAddRows = false;
-            this.dgCotisation.AllowUserToDeleteRows = false;
-            this.dgCotisation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgRemboursement.AllowUserToAddRows = false;
+            this.dgRemboursement.AllowUserToDeleteRows = false;
+            this.dgRemboursement.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgCotisation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgCotisation.BackgroundColor = System.Drawing.Color.White;
-            this.dgCotisation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgRemboursement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgRemboursement.BackgroundColor = System.Drawing.Color.White;
+            this.dgRemboursement.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -278,24 +275,21 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCotisation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgCotisation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCotisation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColNum,
-            this.ColDateCo,
-            this.ColDateCon,
-            this.ColMontant,
-            this.ColRefInscrit,
-            this.ColRefRound,
-            this.ColMatricule,
-            this.ColNom,
-            this.ColPostnom,
-            this.ColPrenom,
-            this.ColSex,
-            this.ColSem,
-            this.ColFrais,
-            this.ColDesignation,
-            this.ColUser});
+            this.dgRemboursement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgRemboursement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgRemboursement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column12,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -303,10 +297,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgCotisation.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgCotisation.Location = new System.Drawing.Point(6, 45);
-            this.dgCotisation.Name = "dgCotisation";
-            this.dgCotisation.ReadOnly = true;
+            this.dgRemboursement.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgRemboursement.Location = new System.Drawing.Point(6, 45);
+            this.dgRemboursement.Name = "dgRemboursement";
+            this.dgRemboursement.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GrayText;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -314,122 +308,11 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCotisation.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgCotisation.RowHeadersVisible = false;
-            this.dgCotisation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgCotisation.Size = new System.Drawing.Size(1160, 471);
-            this.dgCotisation.TabIndex = 59;
-            // 
-            // ColNum
-            // 
-            this.ColNum.DataPropertyName = "Id";
-            this.ColNum.HeaderText = "Numéro";
-            this.ColNum.Name = "ColNum";
-            this.ColNum.ReadOnly = true;
-            this.ColNum.Visible = false;
-            // 
-            // ColDateCo
-            // 
-            this.ColDateCo.DataPropertyName = "DateCotisation";
-            this.ColDateCo.HeaderText = "Date de Cotisation";
-            this.ColDateCo.Name = "ColDateCo";
-            this.ColDateCo.ReadOnly = true;
-            // 
-            // ColDateCon
-            // 
-            this.ColDateCon.DataPropertyName = "DateConcernee";
-            this.ColDateCon.HeaderText = "Date Concernée";
-            this.ColDateCon.Name = "ColDateCon";
-            this.ColDateCon.ReadOnly = true;
-            // 
-            // ColMontant
-            // 
-            this.ColMontant.DataPropertyName = "Montant";
-            this.ColMontant.HeaderText = "Montant";
-            this.ColMontant.Name = "ColMontant";
-            this.ColMontant.ReadOnly = true;
-            // 
-            // ColRefInscrit
-            // 
-            this.ColRefInscrit.DataPropertyName = "Id";
-            this.ColRefInscrit.HeaderText = "IdInscription";
-            this.ColRefInscrit.Name = "ColRefInscrit";
-            this.ColRefInscrit.ReadOnly = true;
-            this.ColRefInscrit.Visible = false;
-            // 
-            // ColRefRound
-            // 
-            this.ColRefRound.DataPropertyName = "RefRound";
-            this.ColRefRound.HeaderText = "IdRound";
-            this.ColRefRound.Name = "ColRefRound";
-            this.ColRefRound.ReadOnly = true;
-            this.ColRefRound.Visible = false;
-            // 
-            // ColMatricule
-            // 
-            this.ColMatricule.DataPropertyName = "Matricule";
-            this.ColMatricule.HeaderText = "Matricule";
-            this.ColMatricule.Name = "ColMatricule";
-            this.ColMatricule.ReadOnly = true;
-            // 
-            // ColNom
-            // 
-            this.ColNom.DataPropertyName = "Nom";
-            this.ColNom.HeaderText = "Nom";
-            this.ColNom.Name = "ColNom";
-            this.ColNom.ReadOnly = true;
-            // 
-            // ColPostnom
-            // 
-            this.ColPostnom.DataPropertyName = "Postnom";
-            this.ColPostnom.HeaderText = "Postnom";
-            this.ColPostnom.Name = "ColPostnom";
-            this.ColPostnom.ReadOnly = true;
-            // 
-            // ColPrenom
-            // 
-            this.ColPrenom.DataPropertyName = "Prenom";
-            this.ColPrenom.HeaderText = "Prénom";
-            this.ColPrenom.Name = "ColPrenom";
-            this.ColPrenom.ReadOnly = true;
-            // 
-            // ColSex
-            // 
-            this.ColSex.DataPropertyName = "Sexe";
-            this.ColSex.HeaderText = "Sexe";
-            this.ColSex.Name = "ColSex";
-            this.ColSex.ReadOnly = true;
-            // 
-            // ColSem
-            // 
-            this.ColSem.DataPropertyName = "RefSemaine";
-            this.ColSem.HeaderText = "IdSemaine";
-            this.ColSem.Name = "ColSem";
-            this.ColSem.ReadOnly = true;
-            this.ColSem.Visible = false;
-            // 
-            // ColFrais
-            // 
-            this.ColFrais.DataPropertyName = "RefFrais";
-            this.ColFrais.HeaderText = "IdFrais";
-            this.ColFrais.Name = "ColFrais";
-            this.ColFrais.ReadOnly = true;
-            this.ColFrais.Visible = false;
-            // 
-            // ColDesignation
-            // 
-            this.ColDesignation.DataPropertyName = "Designation";
-            this.ColDesignation.HeaderText = "Frais";
-            this.ColDesignation.Name = "ColDesignation";
-            this.ColDesignation.ReadOnly = true;
-            // 
-            // ColUser
-            // 
-            this.ColUser.DataPropertyName = "UserSession";
-            this.ColUser.HeaderText = "User Session";
-            this.ColUser.Name = "ColUser";
-            this.ColUser.ReadOnly = true;
-            this.ColUser.Visible = false;
+            this.dgRemboursement.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgRemboursement.RowHeadersVisible = false;
+            this.dgRemboursement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgRemboursement.Size = new System.Drawing.Size(1160, 471);
+            this.dgRemboursement.TabIndex = 59;
             // 
             // serchTxt
             // 
@@ -543,6 +426,107 @@
             this.label3.TabIndex = 73;
             this.label3.Text = "Remboursement des membres";
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.DataPropertyName = "Num";
+            this.Column1.HeaderText = "N°";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 53;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Id";
+            this.Column2.HeaderText = "Id";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "RefInscription";
+            this.Column3.HeaderText = "IdInscription";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "IdRound";
+            this.Column4.HeaderText = "IdRound";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column5.DataPropertyName = "Matricule";
+            this.Column5.HeaderText = "Matricule";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 109;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Noms";
+            this.Column6.HeaderText = "Identité Complète";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column12.DataPropertyName = "Sexe";
+            this.Column12.HeaderText = "Sexe";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 71;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "RefSemaine";
+            this.Column7.HeaderText = "IdSemaine";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Visible = false;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.DataPropertyName = "Date_Debut";
+            this.Column8.HeaderText = "Date Debut Semaine";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column9.DataPropertyName = "Date_Fin";
+            this.Column9.HeaderText = "Date Fin Semaine";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 156;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column10.DataPropertyName = "Date_Remboursement";
+            this.Column10.HeaderText = "Date de Remboursement";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 212;
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column11.DataPropertyName = "Montant";
+            this.Column11.HeaderText = "Montant";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 105;
+            // 
             // UC_Remboursement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -563,7 +547,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
             this.panelGrid.ResumeLayout(false);
             this.panelGrid.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCotisation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRemboursement)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -579,22 +563,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox membreCombo;
         public System.Windows.Forms.Panel panelGrid;
-        public System.Windows.Forms.DataGridView dgCotisation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDateCo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDateCon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMontant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColRefInscrit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColRefRound;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMatricule;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPostnom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrenom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColFrais;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDesignation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColUser;
+        public System.Windows.Forms.DataGridView dgRemboursement;
         private System.Windows.Forms.TextBox serchTxt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button7;
@@ -614,5 +583,17 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox photo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }
