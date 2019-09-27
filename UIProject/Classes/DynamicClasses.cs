@@ -76,13 +76,20 @@ namespace UIProject.Classes
                     Object resultat = cmd.ExecuteScalar();
                     if (DBNull.Value == (resultat))
                     {
+                        MessageBox.Show("Vous devez d'abord effectuer le tirage ");
                     }
                     else
                     {
                         Byte[] buffer = (Byte[])resultat;
-                        MemoryStream ms = new MemoryStream(buffer);
-                        Image image = Image.FromStream(ms);
-                        pic.Image = image;
+                        if(buffer==null)
+                            MessageBox.Show("Impossible d'affichager la photo \nVérifier si la date de début du Round Selectionner est déjà arriver \nVérifier si le tirage est déjà fait. \nVérifier si chaque membre possede une photo. \nVérifier si la date d'aujourd'hui appartient à l'inervalle de la semaine encours","Attention",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(buffer);
+                            Image image = Image.FromStream(ms);
+                            pic.Image = image;
+                        }
+                        
                     }
                 }
 

@@ -93,6 +93,7 @@
             // 
             // passTxt
             // 
+            this.passTxt.AcceptsTab = true;
             this.passTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passTxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passTxt.Location = new System.Drawing.Point(36, 319);
@@ -105,6 +106,7 @@
             // 
             // userTxt
             // 
+            this.userTxt.AcceptsTab = true;
             this.userTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userTxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userTxt.Location = new System.Drawing.Point(36, 263);

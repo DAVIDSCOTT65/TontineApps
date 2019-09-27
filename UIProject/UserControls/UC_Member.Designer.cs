@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.nouveauBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,14 +71,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgInscit = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.naissTxt = new System.Windows.Forms.MaskedTextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.membreCombo = new System.Windows.Forms.ComboBox();
-            this.qrCode = new System.Windows.Forms.PictureBox();
-            this.photo = new System.Windows.Forms.PictureBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,6 +84,14 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.naissTxt = new System.Windows.Forms.MaskedTextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.membreCombo = new System.Windows.Forms.ComboBox();
+            this.qrCode = new System.Windows.Forms.PictureBox();
+            this.photo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgInscit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qrCode)).BeginInit();
@@ -426,6 +426,8 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.Color.DodgerBlue;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -496,14 +498,14 @@
             this.dgInscit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgInscit.BackgroundColor = System.Drawing.Color.White;
             this.dgInscit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgInscit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgInscit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgInscit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgInscit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -519,115 +521,31 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgInscit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgInscit.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgInscit.Location = new System.Drawing.Point(12, 432);
             this.dgInscit.Name = "dgInscit";
             this.dgInscit.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgInscit.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgInscit.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgInscit.RowHeadersVisible = false;
             this.dgInscit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgInscit.Size = new System.Drawing.Size(1152, 231);
             this.dgInscit.TabIndex = 38;
             this.dgInscit.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgInscit_CellMouseClick);
             this.dgInscit.SelectionChanged += new System.EventHandler(this.DgInscit_SelectionChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(832, 166);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 19);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Photo";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(1033, 163);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(70, 19);
-            this.label16.TabIndex = 40;
-            this.label16.Text = "QrCode";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(421, 388);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 19);
-            this.label17.TabIndex = 42;
-            this.label17.Text = "Né le ";
-            // 
-            // naissTxt
-            // 
-            this.naissTxt.Location = new System.Drawing.Point(476, 384);
-            this.naissTxt.Mask = "00/00/0000";
-            this.naissTxt.Name = "naissTxt";
-            this.naissTxt.Size = new System.Drawing.Size(273, 27);
-            this.naissTxt.TabIndex = 41;
-            this.naissTxt.ValidatingType = typeof(System.DateTime);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 133);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(459, 25);
-            this.checkBox1.TabIndex = 46;
-            this.checkBox1.Text = "Inscription d\'un membre existant dans un autre round ?";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
-            // 
-            // membreCombo
-            // 
-            this.membreCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.membreCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.membreCombo.FormattingEnabled = true;
-            this.membreCombo.Location = new System.Drawing.Point(475, 131);
-            this.membreCombo.Name = "membreCombo";
-            this.membreCombo.Size = new System.Drawing.Size(678, 29);
-            this.membreCombo.TabIndex = 47;
-            this.membreCombo.Visible = false;
-            this.membreCombo.SelectedIndexChanged += new System.EventHandler(this.MembreCombo_SelectedIndexChanged);
-            // 
-            // qrCode
-            // 
-            this.qrCode.Image = global::UIProject.Properties.Resources.mb_app;
-            this.qrCode.Location = new System.Drawing.Point(978, 185);
-            this.qrCode.Name = "qrCode";
-            this.qrCode.Size = new System.Drawing.Size(175, 214);
-            this.qrCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.qrCode.TabIndex = 37;
-            this.qrCode.TabStop = false;
-            // 
-            // photo
-            // 
-            this.photo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.photo.Image = global::UIProject.Properties.Resources.Contacts_96px;
-            this.photo.Location = new System.Drawing.Point(769, 188);
-            this.photo.Name = "photo";
-            this.photo.Size = new System.Drawing.Size(191, 211);
-            this.photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.photo.TabIndex = 36;
-            this.photo.TabStop = false;
-            this.photo.Click += new System.EventHandler(this.Photo_Click);
             // 
             // Column1
             // 
@@ -735,6 +653,96 @@
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             this.Column10.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(832, 166);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 19);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Photo";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(1026, 163);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 19);
+            this.label16.TabIndex = 40;
+            this.label16.Text = "QrCode";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(421, 388);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 19);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "Né le ";
+            // 
+            // naissTxt
+            // 
+            this.naissTxt.Location = new System.Drawing.Point(476, 384);
+            this.naissTxt.Mask = "00/00/0000";
+            this.naissTxt.Name = "naissTxt";
+            this.naissTxt.Size = new System.Drawing.Size(273, 27);
+            this.naissTxt.TabIndex = 41;
+            this.naissTxt.ValidatingType = typeof(System.DateTime);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(7, 133);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(459, 25);
+            this.checkBox1.TabIndex = 46;
+            this.checkBox1.Text = "Inscription d\'un membre existant dans un autre round ?";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            // 
+            // membreCombo
+            // 
+            this.membreCombo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.membreCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.membreCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.membreCombo.FormattingEnabled = true;
+            this.membreCombo.Location = new System.Drawing.Point(475, 131);
+            this.membreCombo.Name = "membreCombo";
+            this.membreCombo.Size = new System.Drawing.Size(678, 29);
+            this.membreCombo.TabIndex = 47;
+            this.membreCombo.Visible = false;
+            this.membreCombo.SelectedIndexChanged += new System.EventHandler(this.MembreCombo_SelectedIndexChanged);
+            // 
+            // qrCode
+            // 
+            this.qrCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.qrCode.Image = global::UIProject.Properties.Resources.mb_app;
+            this.qrCode.Location = new System.Drawing.Point(978, 185);
+            this.qrCode.Name = "qrCode";
+            this.qrCode.Size = new System.Drawing.Size(175, 214);
+            this.qrCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.qrCode.TabIndex = 37;
+            this.qrCode.TabStop = false;
+            // 
+            // photo
+            // 
+            this.photo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.photo.Image = global::UIProject.Properties.Resources.Contacts_96px;
+            this.photo.Location = new System.Drawing.Point(769, 188);
+            this.photo.Name = "photo";
+            this.photo.Size = new System.Drawing.Size(191, 211);
+            this.photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.photo.TabIndex = 36;
+            this.photo.TabStop = false;
+            this.photo.Click += new System.EventHandler(this.Photo_Click);
             // 
             // UC_Member
             // 

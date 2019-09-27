@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Home));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -277,24 +277,24 @@
             // chartWeek
             // 
             this.chartWeek.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartAreas1";
-            this.chartWeek.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartWeek.Legends.Add(legend2);
+            chartArea1.Name = "ChartAreas1";
+            this.chartWeek.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartWeek.Legends.Add(legend1);
             this.chartWeek.Location = new System.Drawing.Point(48, 278);
             this.chartWeek.Name = "chartWeek";
             this.chartWeek.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series2.ChartArea = "ChartAreas1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series2.Legend = "Legend1";
-            series2.Name = "Cotisation";
-            this.chartWeek.Series.Add(series2);
+            series1.ChartArea = "ChartAreas1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series1.Legend = "Legend1";
+            series1.Name = "Cotisation";
+            this.chartWeek.Series.Add(series1);
             this.chartWeek.Size = new System.Drawing.Size(999, 335);
             this.chartWeek.TabIndex = 8;
             this.chartWeek.Text = "chart1";
-            title2.Name = "Week chart";
-            title2.Text = "Week chart";
-            this.chartWeek.Titles.Add(title2);
+            title1.Name = "Week chart";
+            title1.Text = "Week chart";
+            this.chartWeek.Titles.Add(title1);
             // 
             // UC_Home
             // 

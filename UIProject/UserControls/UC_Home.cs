@@ -12,11 +12,13 @@ using ManageSingleConnection;
 using ParametreConnexionLib;
 using CotisationLib;
 using System.Data.SqlClient;
+using UIProject.Classes;
 
 namespace UIProject.UserControls
 {
     public partial class UC_Home : UserControl
     {
+        DynamicClasses dn = new DynamicClasses();
         public UC_Home()
         {
             InitializeComponent();
@@ -68,6 +70,7 @@ namespace UIProject.UserControls
                 dr.Dispose();
             }
             OneInfoSemaine();
+            dn.retreivePhoto2("Photo", "Affichage_Details_Semaine", "Id", InstantSemaine.GetInstance().IdSemaine.ToString(), pictureBox3);
 
             //return semaine;
         }
