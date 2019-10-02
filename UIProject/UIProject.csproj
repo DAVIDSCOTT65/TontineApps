@@ -47,6 +47,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -79,6 +80,12 @@
     <Compile Include="Forms\ConfigForms.Designer.cs">
       <DependentUpon>ConfigForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmEnvoieSMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEnvoieSMS.Designer.cs">
+      <DependentUpon>FrmEnvoieSMS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MiniFormAdresse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +111,12 @@
     </Compile>
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Messagerie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Messagerie.Designer.cs">
+      <DependentUpon>Messagerie.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_Cotisation.cs">
       <SubType>UserControl</SubType>
@@ -141,6 +154,9 @@
     <EmbeddedResource Include="Forms\ConfigForms.resx">
       <DependentUpon>ConfigForms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEnvoieSMS.resx">
+      <DependentUpon>FrmEnvoieSMS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MiniFormAdresse.resx">
       <DependentUpon>MiniFormAdresse.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +178,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Messagerie.resx">
+      <DependentUpon>Messagerie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Cotisation.resx">
       <DependentUpon>UC_Cotisation.cs</DependentUpon>
@@ -294,6 +313,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\decon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Bleupx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drop Down_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up Squared_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up Squared_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Message Filled_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -23,12 +23,15 @@ namespace InscriptionLib
         string Postnom { get; set; }
         string Prenom { get; set; }
         Sexe Sexe { get; set; }
+        String Contact { get; set; }
         string Designation { get; set; }
         string UserSession { get; set; }
         int Nouveau();
         void Enregistrer(IInscription membre);
         void Supprimer(int id);
+        List<IInscription> Research(string recherche);
         List<IInscription> AllInscriptionsRound(int idround);
-        
+        List<IInscription> AllAgent();
+
     }
 }

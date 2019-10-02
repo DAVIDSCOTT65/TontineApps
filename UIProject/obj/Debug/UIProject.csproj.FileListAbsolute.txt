@@ -40,3 +40,5 @@ D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\EntityFramework.xml
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\EntityFramework.SqlServer.xml
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Round.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.Form1.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.Messagerie.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.FrmEnvoieSMS.resources

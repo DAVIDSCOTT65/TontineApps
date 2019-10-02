@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TontineUtilities;
 
 namespace CotisationLib
 {
@@ -69,7 +70,7 @@ namespace CotisationLib
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }
@@ -109,6 +110,72 @@ namespace CotisationLib
                     lst.Add(GetDetailCotisation(rd));
                 }
                 rd.Dispose();
+            }
+            return lst;
+        }
+        public List<Cotisation> AllDettes()
+        {
+            List<Cotisation> lst = new List<Cotisation>();
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_ALL_DETTE_ROUND";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, InstantRound.GetInstance().Id));
+                IDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    lst.Add(GetDetailDettes(rd));
+                }
+                rd.Dispose();
+            }
+            return lst;
+        }
+        public List<Cotisation> Research(string recherche)
+        {
+            List<Cotisation> lst = new List<Cotisation>();
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT * FROM Affichage_Details_Cotisation WHERE IdRound=" + InstantRound.GetInstance().Id + " AND IdSemaine=" + InstantSemaine.GetInstance().IdSemaine + " AND (Nom LIKE '%" + recherche + "%' OR Postnom LIKE '%" + recherche + "' OR Prenom LIKE '%" + recherche + "')";
+                //cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    lst.Add(GetDetailCotisation(rd));
+                }
+                rd.Dispose();
+                rd.Close();
+            }
+            return lst;
+        }
+        public List<Cotisation> ResearchDette(string recherche)
+        {
+            List<Cotisation> lst = new List<Cotisation>();
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SEARCH_DETTE_ROUND";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 5, DbType.Int32, InstantRound.GetInstance().Id));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@idSemaine", 5, DbType.Int32, InstantSemaine.GetInstance().IdSemaine));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@text", 200, DbType.String, recherche));
+
+                IDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    Matricule.ToUpper();
+                    lst.Add(GetDetailDettes(rd));
+                }
+                rd.Dispose();
+                rd.Close();
             }
             return lst;
         }
@@ -154,6 +221,7 @@ namespace CotisationLib
             cot.RefInscription = Convert.ToInt32(dr["IdInscription"].ToString());
             cot.RefRound = Convert.ToInt32(dr["IdRound"].ToString());
             cot.Matricule = dr["Matricule"].ToString();
+            
             cot.Nom = dr["Nom"].ToString();
             cot.Postnom = dr["Postnom"].ToString();
             cot.Prenom = dr["Prenom"].ToString();
@@ -161,6 +229,21 @@ namespace CotisationLib
             cot.RefSemaine = Convert.ToInt32(dr["IdSemaine"].ToString());
             cot.RefFrais = Convert.ToInt32(dr["IdFrais"].ToString());
             cot.Designation = dr["Designation"].ToString();
+
+            return cot;
+        }
+        private Cotisation GetDetailDettes(IDataReader dr)
+        {
+            Cotisation cot = new Cotisation();
+
+            i = i + 1;
+
+            cot.Num = i;
+            cot.RefInscription = Convert.ToInt32(dr["IdInscription"].ToString());
+            cot.Matricule = dr["Matricule"].ToString();
+            cot.Nom = dr["Nom_Complet"].ToString();
+            cot.Sexe = dr["Sexe"].ToString();
+
 
             return cot;
         }

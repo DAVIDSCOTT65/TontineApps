@@ -176,5 +176,12 @@ namespace UIProject.Forms
             //ConnectionUser cu = new ConnectionUser();
             //cu.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Messagerie fr = new Messagerie();
+            MoveSidePanel(btnSms);
+            ChargerUser(fr);
+        }
     }
 }

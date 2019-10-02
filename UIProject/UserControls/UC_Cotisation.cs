@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CotisationLib;
 using UIProject.Classes;
 using TontineUtilities;
+using System.IO;
 
 namespace UIProject.UserControls
 {
@@ -21,15 +22,21 @@ namespace UIProject.UserControls
         int idFrais = 0;
         DynamicClasses dn = new DynamicClasses();
         int panelWidth;
+        DateTime dateCotise = new DateTime();
+        int inc = 0;
+        
        
         bool isColapsed;
 
         public UC_Cotisation()
         {
             InitializeComponent();
+            dateCotise = DateTime.Now;
             //timerTime.Start();
             panelWidth = panelGrid.Height;
             isColapsed = false;
+            lastLbl.Text = InstantSemaine.GetInstance().DateDebut.ToString("dd/MM/yyyy");
+            saveBtn.Enabled = false;
         }
         void Ajouter()
         {
@@ -52,6 +59,10 @@ namespace UIProject.UserControls
                 {
                     rowCount = dgManyCotisation.Rows.Count;
                     datenow = Convert.ToDateTime(dateCotTxt.Text);
+
+                    dateCotise = Convert.ToDateTime(dateCotTxt.Text);
+                    
+
                     if (lastLbl.Text == "Dernière contribution")
                     {
                         if (datenow.Date > InstantSemaine.GetInstance().DateFin.Date || datenow.Date < InstantSemaine.GetInstance().DateDebut.Date)
@@ -64,18 +75,20 @@ namespace UIProject.UserControls
                             {
                                 idCotisation = cot.Nouveau();
                                 dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text);
+                                dateCotTxt.Text = dateCotise.AddDays(1).ToString();
                             }
                             else
                             {
                                 idCotisation = idCotisation + 1;
                                 dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text);
+                                dateCotTxt.Text = dateCotise.AddDays(1).ToString();
 
                             }
                         }
                     }
                     else
                     {
-                        if (datenow.Date <= Convert.ToDateTime(lastLbl.Text))
+                        if (datenow.Date <= Convert.ToDateTime(lastLbl.Text) && situationLbl.Text != "Prémière Cotisation")
                         {
                             MessageBox.Show("Vérifier votre date svp, elle ne doit pas etre inférieure ou égale à la dernière contribution");
                         }
@@ -89,11 +102,13 @@ namespace UIProject.UserControls
                             {
                                 idCotisation = cot.Nouveau();
                                 dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text);
+                                dateCotTxt.Text = dateCotise.AddDays(1).ToString();
                             }
                             else
                             {
                                 idCotisation = idCotisation + 1;
                                 dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text);
+                                dateCotTxt.Text = dateCotise.AddDays(1).ToString();
 
                             }
                         }
@@ -116,7 +131,7 @@ namespace UIProject.UserControls
         private void NouveauBtn_Click(object sender, EventArgs e)
         {
             ClicBtnNouveau();
-            timer1.Start();
+            
         }
         void ClicBtnNouveau()
         {
@@ -127,6 +142,7 @@ namespace UIProject.UserControls
                 idCotisation = cot.Nouveau();
 
                 nouveauBtn.Enabled = false;
+                saveBtn.Enabled = true;
 
 
             }
@@ -180,12 +196,23 @@ namespace UIProject.UserControls
         {
             SaveDatas();
         }
+        void Initialise()
+        {
+            checkBox1.Checked = false;
+            idCotisation = 0;
+            membreCombo.Text = "";
+            membreCombo.Enabled = true;
+            dateCotTxt.Text = "";
+            montantTxt.Text = "0";
+            fraisCombo.Text = "";
+            
+        }
         void SaveDatas()
         {
             if (checkBox1.Checked == true)
                 SavePlusieur();
-            else
-                SaveOne();
+            //else
+            //    SaveOne();
         }
         private void SaveOne()
         {
@@ -211,6 +238,8 @@ namespace UIProject.UserControls
                         cot.UserSession = UserSession.GetInstance().UserName;
 
                         cot.Enregistrer(cot);
+
+                        Initialise();
                     }
 
                 }
@@ -233,6 +262,8 @@ namespace UIProject.UserControls
                             cot.UserSession = UserSession.GetInstance().UserName;
 
                             cot.Enregistrer(cot);
+
+                            Initialise();
                         }
 
                     }
@@ -270,6 +301,10 @@ namespace UIProject.UserControls
                         cot.UserSession = UserSession.GetInstance().UserName;
 
                         cot.Enregistrer(cot);
+
+                        
+
+                        
                     }
                     else
                     {
@@ -282,15 +317,22 @@ namespace UIProject.UserControls
                         cot.UserSession = UserSession.GetInstance().UserName;
 
                         cot.Enregistrer(cot);
+
+                        //MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //Initialise();
                     }
 
 
                 }
+                
 
-
+                MessageBox.Show("Enregistrement reussie", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
                 dgManyCotisation.Rows.Clear();
                 nouveauBtn.Enabled = true;
                 saveBtn.Enabled = false;
+                Initialise();
                 //idEnteteSortie = 0;
 
             }
@@ -351,11 +393,6 @@ namespace UIProject.UserControls
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void panelGrid_Paint(object sender, PaintEventArgs e)
         {
 
@@ -363,10 +400,68 @@ namespace UIProject.UserControls
 
         private void membreCombo_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            SelectCombo();
+        }
+        void SelectCombo()
+        {
             idInscription = dn.retourIdM(membreCombo.Text);
             situationLbl.Text = dn.retourLastCotisationMembre(lastLbl, fraisLbl, idInscription);
-        }
 
+            if (situationLbl.Text == "Prémière Cotisation")
+            {
+                lastLbl.Text = InstantSemaine.GetInstance().DateDebut.ToString("dd/MM/yyyy");
+                dateCotise = Convert.ToDateTime(lastLbl.Text);
+                dateCotTxt.Text = lastLbl.Text;
+                membreCombo.Enabled = false;
+                addBtn.Visible = true;
+                checkBox1.Checked = true;
+                situationLbl.Text = "Prémière Cotisation";
+
+                //situationLbl.Text = "Deuxième Cotisation";
+                inc = 1;
+            }
+            else
+            {
+                if (dateCotise.ToString("dd/MM/yyyy") == lastLbl.Text && situationLbl.Text == "Prémière Cotisation")
+                {
+                    if (inc == 0)
+                    {
+
+                        dateCotise = Convert.ToDateTime(lastLbl.Text);
+                        dateCotTxt.Text = lastLbl.Text;
+                        membreCombo.Enabled = false;
+                        addBtn.Visible = true;
+                        checkBox1.Checked = true;
+                        situationLbl.Text = "Prémière Cotisation";
+                        inc = 1;
+                    }
+                    else
+                    {
+                        //idInscription = dn.retourIdM(membreCombo.Text);
+                        //situationLbl.Text = dn.retourLastCotisationMembre(lastLbl, fraisLbl, idInscription);
+                        dateCotise = Convert.ToDateTime(lastLbl.Text);
+                        dateCotTxt.Text = dateCotise.AddDays(1).ToString();
+                        membreCombo.Enabled = false;
+                        addBtn.Visible = true;
+                        situationLbl.Text = "Deuxième Cotisation";
+                        checkBox1.Checked = true;
+                    }
+
+                }
+                else
+                {
+                    //idInscription = dn.retourIdM(membreCombo.Text);
+                    //situationLbl.Text = dn.retourLastCotisationMembre(lastLbl, fraisLbl, idInscription);
+                    dateCotise = Convert.ToDateTime(lastLbl.Text);
+                    dateCotTxt.Text = dateCotise.AddDays(1).ToString();
+                    membreCombo.Enabled = false;
+                    addBtn.Visible = true;
+                    checkBox1.Checked = true;
+                }
+            }
+           
+            
+        }
         private void fraisCombo_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             idFrais = dn.retourId("Id", "Type_Frais", "Designation", fraisCombo.Text);
@@ -423,6 +518,35 @@ namespace UIProject.UserControls
                 MessageBox.Show("Veuillez selectionner un membre avant de cliquer ici");
                 checkBox1.Checked = false;
             }
+        }
+
+        private void serchTxt_TextChanged(object sender, EventArgs e)
+        {
+            Search(new Cotisation());
+        }
+        void Search(Cotisation cot)
+        {
+            dgCotisation.DataSource = cot.Research(serchTxt.Text);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+            using (FileStream fs = new FileStream(@"C:\cheminBdTontine\Ico\Up.png", FileMode.Open))
+            {
+                if (panelGrid.Height >= 260)
+                {
+                    FileStream f = new FileStream(@"C:\cheminBdTontine\Ico\Down.png", FileMode.Open);
+                    button7.Image = Image.FromStream(f);
+                    f.Close();
+                }
+                else
+                {
+                    button7.Image = Image.FromStream(fs);
+                }
+
+            }
+            timer1.Start();
         }
     }
 }

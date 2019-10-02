@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UIProject.Classes;
 using RemboursementLib;
+using System.IO;
 
 namespace UIProject.UserControls
 {
@@ -158,6 +159,20 @@ namespace UIProject.UserControls
 
         private void button7_Click(object sender, EventArgs e)
         {
+            using (FileStream fs = new FileStream(@"C:\cheminBdTontine\Ico\Up.png", FileMode.Open))
+            {
+                if (panelGrid.Height >= 260)
+                {
+                    FileStream f = new FileStream(@"C:\cheminBdTontine\Ico\Down.png", FileMode.Open);
+                    button7.Image = Image.FromStream(f);
+                    f.Close();
+                }
+                else
+                {
+                    button7.Image = Image.FromStream(fs);
+                }
+
+            }
             timer1.Start();
         }
     }

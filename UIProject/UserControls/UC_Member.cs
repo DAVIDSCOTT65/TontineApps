@@ -224,6 +224,7 @@ namespace UIProject.UserControls
         {
             SaveDatas();
         }
+        
 
         private void Button1_Click_1(object sender, EventArgs e)
         {

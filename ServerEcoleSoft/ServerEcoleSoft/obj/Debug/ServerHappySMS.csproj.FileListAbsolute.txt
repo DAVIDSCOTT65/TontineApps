@@ -1,0 +1,173 @@
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.exe.config
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.exe
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.pdb
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.exe
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.pdb
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Data.v15.2.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Printing.v15.2.Core.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Utils.v15.2.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.XtraEditors.v15.2.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Data.v15.2.xml
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Printing.v15.2.Core.xml
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Utils.v15.2.xml
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.XtraEditors.v15.2.xml
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerHappySMS.csprojResolveAssemblyReference.cache
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.EnregistrerMessage.resources
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Form1.resources
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormConfig.resources
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormPrincipale.resources
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormRestauration.resources
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormSauvegarde.resources
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Properties.Resources.resources
+C:\Users\Dan\Documents\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerHappySMS.csproj.GenerateResource.Cache
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.exe.config
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.exe
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.pdb
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.exe
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.pdb
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Data.v15.2.xml
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Printing.v15.2.Core.xml
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Utils.v15.2.xml
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.XtraEditors.v15.2.xml
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerHappySMS.csprojResolveAssemblyReference.cache
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.EnregistrerMessage.resources
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Form1.resources
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormConfig.resources
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormPrincipale.resources
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormRestauration.resources
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormSauvegarde.resources
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Properties.Resources.resources
+E:\mes trucs\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerHappySMS.csproj.GenerateResource.Cache
+G:\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.exe.config
+G:\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.exe
+G:\Projet Grand Daniel\CommunicationSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.pdb
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.exe.config
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.exe
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.pdb
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerHappySMS.csprojResolveAssemblyReference.cache
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.EnregistrerMessage.resources
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Form1.resources
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormConfig.resources
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormPrincipale.resources
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormRestauration.resources
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormSauvegarde.resources
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Properties.Resources.resources
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerHappySMS.csproj.GenerateResource.Cache
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.exe
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.pdb
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Data.v15.2.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Printing.v15.2.Core.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Utils.v15.2.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.XtraEditors.v15.2.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Data.v15.2.xml
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Printing.v15.2.Core.xml
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Utils.v15.2.xml
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.XtraEditors.v15.2.xml
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TP GENIE LOGICIEL\GestionUniversite\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.exe.config
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.exe
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.pdb
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.exe
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ServerEcoleSoft.pdb
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Data.v15.2.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Printing.v15.2.Core.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Utils.v15.2.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.XtraEditors.v15.2.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Data.v15.2.xml
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Printing.v15.2.Core.xml
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.Utils.v15.2.xml
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\DevExpress.XtraEditors.v15.2.xml
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.EnregistrerMessage.resources
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Form1.resources
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormConfig.resources
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormPrincipale.resources
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormRestauration.resources
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormSauvegarde.resources
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Properties.Resources.resources
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerHappySMS.csproj.GenerateResource.Cache

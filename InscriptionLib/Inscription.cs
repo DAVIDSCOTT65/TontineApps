@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TontineUtilities;
 
 namespace InscriptionLib
 {
@@ -31,6 +32,7 @@ namespace InscriptionLib
         public string Postnom { get; set; }
 
         public Sexe Sexe { get; set; }
+        public String Contact { get; set; }
 
         public string Designation { get; set; }
 
@@ -53,6 +55,28 @@ namespace InscriptionLib
                 while (dr.Read())
                 {
                     lst.Add(GetAllDetailsInscription(dr));
+                }
+                dr.Dispose();
+            }
+            return lst;
+        }
+        public List<IInscription> AllAgent()
+        {
+            List<IInscription> lst = new List<IInscription>();
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_AGENT";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                
+
+                IDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    lst.Add(GetAgent(dr));
                 }
                 dr.Dispose();
             }
@@ -118,6 +142,26 @@ namespace InscriptionLib
                 MessageBox.Show("Suppression reussie", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        public List<IInscription> Research(string recherche)
+        {
+            List<IInscription> lst = new List<IInscription>();
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT * FROM Affichage_Details_Inscriptions WHERE IdRound=" + InstantRound.GetInstance().Id + " AND Nom_Complet LIKE '%" + recherche + "%'";
+                //cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    lst.Add(GetAllDetailsInscription(rd));
+                }
+                rd.Dispose();
+                rd.Close();
+            }
+            return lst;
+        }
         private IInscription GetAllDetailsInscription(IDataReader rd)
         {
             IInscription ins = new Inscription();
@@ -136,7 +180,20 @@ namespace InscriptionLib
             ins.Sexe = rd["Sexe"].ToString().Equals("M") ? Sexe.Masculin : Sexe.Féminin;
             ins.RefRound= Convert.ToInt32(rd["IdRound"].ToString());
             ins.Designation = rd["Designation"].ToString();
+            ins.Contact = rd["Contact"].ToString();
+            return ins;
+        }
+        private IInscription GetAgent(IDataReader rd)
+        {
+            IInscription ins = new Inscription();
 
+            i = i + 1;
+
+            ins.Num = i;
+           
+            ins.NomComplet = rd["Noms"].ToString();
+            
+            ins.Contact = rd["Contact"].ToString();
             return ins;
         }
     }

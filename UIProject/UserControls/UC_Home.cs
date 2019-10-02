@@ -13,15 +13,20 @@ using ParametreConnexionLib;
 using CotisationLib;
 using System.Data.SqlClient;
 using UIProject.Classes;
+using System.IO;
 
 namespace UIProject.UserControls
 {
     public partial class UC_Home : UserControl
     {
         DynamicClasses dn = new DynamicClasses();
+        int panelWidth;
+        bool isColapsed;
         public UC_Home()
         {
             InitializeComponent();
+            isColapsed = false;
+            panelWidth = panelGrid.Height;
         }
         private void LoadSemaine()
         {
@@ -135,8 +140,15 @@ namespace UIProject.UserControls
         }
         private void UC_Home_Load(object sender, EventArgs e)
         {
+            
             OneSemaine(InstantRound.GetInstance().Id);
             ChartCotisation();
+            RefreshData(new Cotisation());
+            lblMax.Text = dgCotisation.Rows.Count.ToString();
+        }
+        void RefreshData(Cotisation cot)
+        {
+            dgCotisation.DataSource = cot.AllDettes();
         }
         private void LoadChart()
         {
@@ -153,6 +165,84 @@ namespace UIProject.UserControls
         private void button1_Click(object sender, EventArgs e)
         {
             ChartCotisation();
+        }
+
+        private void panelGrid_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            if (isColapsed)
+            {
+
+                panelGrid.Height = panelGrid.Height - 10;
+
+                //panelAddCotisation.Visible = false;
+
+                if (panelGrid.Height <= panelWidth)
+                {
+                    timer1.Stop();
+                    isColapsed = false;
+                    this.Refresh();
+
+                }
+
+
+
+            }
+            else
+            {
+
+
+
+                panelGrid.Height = panelGrid.Height + 10;
+
+
+                if (panelGrid.Height >= 417)
+                {
+                    timer1.Stop();
+                    isColapsed = true;
+                    this.Refresh();
+                    //panelAddCotisation.Visible = true;
+                }
+
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            using (FileStream fs = new FileStream(@"C:\cheminBdTontine\Ico\Up.png",FileMode.Open))
+            {
+                if (panelGrid.Height >= 417)
+                {
+                    FileStream f = new FileStream(@"C:\cheminBdTontine\Ico\Down.png", FileMode.Open);
+                    button7.Image = Image.FromStream(f);
+                    f.Close();
+                }
+                else 
+                {
+                    button7.Image = Image.FromStream(fs);
+                }
+                
+            }
+            timer1.Start();
+        }
+
+        private void serchTxt_TextChanged(object sender, EventArgs e)
+        {
+            SearchDette(new Cotisation());
+        }
+        void SearchDette(Cotisation cot)
+        {
+            dgCotisation.DataSource = cot.ResearchDette(serchTxt.Text);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            SearchDette(new Cotisation());
         }
     }
 }

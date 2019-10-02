@@ -136,6 +136,12 @@
   <data name="05400728543080160" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\05400728543080160.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Box_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Box_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Up Squared_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Up Squared_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Money Bag_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Money Bag_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,6 +150,9 @@
   </data>
   <data name="Settings_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_Shutdown_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_Shutdown_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="User Groups_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User Groups_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,11 +163,8 @@
   <data name="Contacts_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Contacts_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Donate_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Donate_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Shutdown_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Shutdown_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Drop Down_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Drop Down_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,19 +175,28 @@
   <data name="Refund_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refund_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="decon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\decon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Up Squared_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Up Squared_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Debt_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Debt_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Box_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Box_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Donate_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Donate_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Calendar_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calendar_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="decon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\decon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Menu_Bleupx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Bleupx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Message Filled_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Message Filled_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

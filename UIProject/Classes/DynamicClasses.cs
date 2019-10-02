@@ -309,9 +309,10 @@ namespace UIProject.Classes
         }
         public string retourLastCotisationMembre(Label champ1, Label champ2, int valeur)
         {
-            string identifiant = "En ordre";
+            string identifiant = "Prémière Cotisation";
             DateTime dateco, datenow = new DateTime();
             datenow = DateTime.Now;
+            
 
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                 ImplementeConnexion.Instance.Conn.Open();
@@ -327,24 +328,34 @@ namespace UIProject.Classes
 
                 if (rd.Read())
                 {
-                    dateco = Convert.ToDateTime(rd["Date_Concernee"].ToString());
-                    //identifiant = Convert.ToInt32(rd["Id"].ToString());
-                    champ1.Text = string.Format("{0}", dateco.ToString("dd/MM/yyyy"));
-                    champ2.Text = rd["Designation"].ToString();
-                    //champ3.Text = rd["Postnom"].ToString();
-                    if(Convert.ToDateTime(champ1.Text)==datenow.Date)
-                    {
-                        identifiant = "En ordre";
-                    }
-                    else if(Convert.ToDateTime(champ1.Text) < datenow.Date  )
-                    {
-                        identifiant = "En retard";
-                    }
-                    else if(Convert.ToDateTime(champ1.Text) > datenow.Date)
-                    {
-                        identifiant = "En avance";
-                        
-                    }
+                    //if (rd.IsDBNull(1))
+                    //{
+                    //    dateco = InstantSemaine.GetInstance().DateDebut;
+                    //    identifiant = "Début Round";
+
+                    //}
+                    //else
+                    //{
+                        dateco = Convert.ToDateTime(rd["Date_Concernee"].ToString());
+                        //identifiant = Convert.ToInt32(rd["Id"].ToString());
+                        champ1.Text = string.Format("{0}", dateco.ToString("dd/MM/yyyy"));
+                        champ2.Text = rd["Designation"].ToString();
+                        //champ3.Text = rd["Postnom"].ToString();
+                        if (Convert.ToDateTime(champ1.Text) == datenow.Date)
+                        {
+                            identifiant = "En ordre";
+                        }
+                        else if (Convert.ToDateTime(champ1.Text) < datenow.Date)
+                        {
+                            identifiant = "En retard";
+                        }
+                        else if (Convert.ToDateTime(champ1.Text) > datenow.Date)
+                        {
+                            identifiant = "En avance";
+
+                        }
+                    //}
+                    
                     
 
                 }
@@ -465,6 +476,36 @@ namespace UIProject.Classes
             }
             return count;
         }
+        public void insert_Messagerie(ClsSMS cb)
+        {
+            try
+            {
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "INSERT_MESSAGE";
+                    cmd.CommandType = CommandType.StoredProcedure;
 
+                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@num", 25, DbType.String, cb.NumeroTutaire1));
+                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@corpsMessage", 255, DbType.String, cb.CorpsMessage1));
+                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@etatSms", 30, DbType.String, cb.EtatSms1));
+                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@userSession", 30, DbType.String, cb.Utilisateur1));
+
+
+                    cmd.ExecuteNonQuery();
+                }
+              
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                
+            }
+        }
     }
 }
