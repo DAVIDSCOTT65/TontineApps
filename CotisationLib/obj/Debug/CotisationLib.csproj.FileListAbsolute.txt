@@ -9,3 +9,6 @@ D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\ManageSingleConnection.pd
 D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\ParametreConnexionLib.pdb
 D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\TontineUtilities.pdb
 D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\obj\Debug\CotisationLib.csprojResolveAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\GSMCommunication.dll
+D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\PDUConverter.dll
+D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\GSMCommShared.dll

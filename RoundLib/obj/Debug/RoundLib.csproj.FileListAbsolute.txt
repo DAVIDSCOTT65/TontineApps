@@ -9,3 +9,6 @@ D:\DAVID\PROJETBDD\TontineSoft\RoundLib\bin\Debug\TontineUtilities.pdb
 D:\DAVID\PROJETBDD\TontineSoft\RoundLib\obj\Debug\RoundLib.dll
 D:\DAVID\PROJETBDD\TontineSoft\RoundLib\obj\Debug\RoundLib.pdb
 D:\DAVID\PROJETBDD\TontineSoft\RoundLib\obj\Debug\RoundLib.csprojResolveAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\RoundLib\bin\Debug\GSMCommunication.dll
+D:\DAVID\PROJETBDD\TontineSoft\RoundLib\bin\Debug\PDUConverter.dll
+D:\DAVID\PROJETBDD\TontineSoft\RoundLib\bin\Debug\GSMCommShared.dll

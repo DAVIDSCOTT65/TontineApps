@@ -73,6 +73,26 @@ namespace UIProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap About_40px {
+            get {
+                object obj = ResourceManager.GetObject("About_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap About_48px {
+            get {
+                object obj = ResourceManager.GetObject("About_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Box_50px {
             get {
                 object obj = ResourceManager.GetObject("Box_50px", resourceCulture);
@@ -106,6 +126,36 @@ namespace UIProject.Properties {
         internal static System.Drawing.Bitmap Contacts_96px {
             get {
                 object obj = ResourceManager.GetObject("Contacts_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Data_Backup_100px {
+            get {
+                object obj = ResourceManager.GetObject("Data Backup_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Data_Backup_52px {
+            get {
+                object obj = ResourceManager.GetObject("Data Backup_52px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Database_48px {
+            get {
+                object obj = ResourceManager.GetObject("Database_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +336,16 @@ namespace UIProject.Properties {
         internal static System.Drawing.Bitmap Settings_40px {
             get {
                 object obj = ResourceManager.GetObject("Settings_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Settings_Backup_Restore_100px {
+            get {
+                object obj = ResourceManager.GetObject("Settings Backup Restore_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -11,3 +11,6 @@ D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\TontineUtilities.pdb
 D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\MembreLib.dll
 D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\MembreLib.pdb
 D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\obj\Debug\InscriptionLib.csprojResolveAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\GSMCommunication.dll
+D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\PDUConverter.dll
+D:\DAVID\PROJETBDD\TontineSoft\InscriptionLib\bin\Debug\GSMCommShared.dll

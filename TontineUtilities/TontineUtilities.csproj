@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GSMCommShared">
+      <HintPath>..\..\..\..\GSMCommShared.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMCommunication">
+      <HintPath>..\..\..\..\GSMCommunication.dll</HintPath>
+    </Reference>
+    <Reference Include="PDUConverter">
+      <HintPath>..\..\..\..\PDUConverter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
@@ -44,11 +53,13 @@
     <Compile Include="ClsConnection.cs" />
     <Compile Include="ClsConstantes.cs" />
     <Compile Include="ClsGetdatas.cs" />
+    <Compile Include="ClsMessages.cs" />
     <Compile Include="ClsSMS.cs" />
     <Compile Include="DatabaseBackupOrRestor.cs" />
     <Compile Include="InstantRound.cs" />
     <Compile Include="InstantSemaine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pubCon.cs" />
     <Compile Include="UserSession.cs" />
   </ItemGroup>
   <ItemGroup>

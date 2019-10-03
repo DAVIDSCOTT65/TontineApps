@@ -183,5 +183,13 @@ namespace UIProject.Forms
             MoveSidePanel(btnSms);
             ChargerUser(fr);
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+            UC_Back_Restore fr = new UC_Back_Restore();
+            MoveSidePanel(button2);
+            ChargerUser(fr);
+        }
     }
 }

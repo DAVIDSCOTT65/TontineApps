@@ -40,8 +40,17 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="GSMCommShared">
+      <HintPath>..\..\..\..\GSMCommShared.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMCommunication">
+      <HintPath>..\..\..\..\GSMCommunication.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PDUConverter">
+      <HintPath>..\..\..\..\PDUConverter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -118,6 +127,12 @@
     <Compile Include="UserControls\Messagerie.Designer.cs">
       <DependentUpon>Messagerie.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Back_Restore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Back_Restore.Designer.cs">
+      <DependentUpon>UC_Back_Restore.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Cotisation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -181,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Messagerie.resx">
       <DependentUpon>Messagerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Back_Restore.resx">
+      <DependentUpon>UC_Back_Restore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Cotisation.resx">
       <DependentUpon>UC_Cotisation.cs</DependentUpon>
@@ -328,6 +346,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Message Filled_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Backup_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Backup_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings Backup Restore_100px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

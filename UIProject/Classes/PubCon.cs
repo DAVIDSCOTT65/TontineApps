@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GsmComm.GsmCommunication;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,6 +22,8 @@ namespace UIProject.Classes
         public static int testlog;
         public static String codfact;
         public static string codrec;
+        //public static GsmCommMain comm;
+        
 
         public static void testFile()
         {

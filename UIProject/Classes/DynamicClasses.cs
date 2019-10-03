@@ -507,5 +507,162 @@ namespace UIProject.Classes
                 
             }
         }
+        public void SendMessages()
+        {
+            bool envoie = true;
+            string numero = "";
+            string message = "";
+            string codeMs = "";
+            string utilisateur = "";
+            string dateEnvoie = "";
+            string Etat = "";
+            int count = 0;
+            try
+            {
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT_SMS_ETAT_0";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@user", 35, DbType.String, UserSession.GetInstance().UserName));
+
+                    IDataReader rd = cmd.ExecuteReader();
+
+                    while (rd.Read())
+                    {
+                        numero = rd["NumeroTutaire"].ToString();
+                        message = rd["CorpsMessage"].ToString();
+                        codeMs = rd["id"].ToString();
+                        dateEnvoie = rd["DateEnvoie"].ToString();
+                        utilisateur = rd["UserSession"].ToString();
+                        Etat = rd["EtatSms"].ToString();
+
+                        if (numero != "" && message != "" && count != 1)
+                        {
+                            ClsMessages ms = new ClsMessages();
+                            if (message.Length <= 140)
+                            {
+                                update_Valmsg(codeMs);
+                                if (ms.sendshortMsg(numero, message) == false)
+                                {
+                                    if (ms.sendlongMsg(numero, message + "                                                   ") == false)
+                                    {
+                                        envoie = false;
+                                        ClsSMS msInsert = new ClsSMS();
+                                        msInsert.NumeroTutaire1 = numero;
+                                        msInsert.CorpsMessage1 = message;
+                                        msInsert.DateEnvoie1 = dateEnvoie;
+                                        msInsert.EtatSms1 = 0;
+                                        msInsert.Utilisateur1 = utilisateur;
+                                        insert_Messagerie(msInsert);
+
+                                        numero = "";
+                                        message = "";
+                                        codeMs = "";
+                                        dateEnvoie = "";
+                                        utilisateur = "";
+                                        Etat = "";
+                                    }
+
+                                }
+                                else
+                                {
+                                    envoie = true;
+                                    numero = "";
+                                    message = "";
+                                    codeMs = "";
+                                    dateEnvoie = "";
+                                    utilisateur = "";
+                                    Etat = "";
+                                }
+
+
+                            }
+                            else
+                            {
+                                update_Valmsg(codeMs);
+                                if (ms.sendlongMsg(numero, message) == true)
+                                {
+                                    numero = "";
+                                    message = "";
+                                    envoie = true;
+                                }
+                                else
+                                {
+                                    envoie = false;
+
+                                    ClsSMS msInsert = new ClsSMS();
+                                    msInsert.CorpsMessage1 = message;
+                                    msInsert.DateEnvoie1 = dateEnvoie;
+                                    msInsert.EtatSms1 = 0;
+                                    msInsert.Utilisateur1 = utilisateur;
+                                    insert_Messagerie(msInsert);
+                                }
+
+                            }
+                            //update set statutMessage='non'
+
+
+                        }
+                    }
+                    rd.Dispose();
+                }
+                
+                
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                envoie = false;
+
+                ClsSMS msInsert = new ClsSMS();
+                msInsert.CorpsMessage1 = message;
+                //msInsert.DateEvoie1 = DateTime.Parse(dateEnvoie);
+                msInsert.EtatSms1 = 0;
+                msInsert.Utilisateur1 = utilisateur;
+                insert_Messagerie(msInsert);
+            }
+
+            finally
+            {
+                con.Close();
+                
+            }
+            
+
+            //return envoie;
+        }
+        public void update_Valmsg(string code)
+        {
+            try
+            {
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "DELETE_SMS";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 5, DbType.Int32, code));
+
+                    cmd.ExecuteNonQuery();
+                }
+                
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                
+                ImplementeConnexion.Instance.Conn.Close();
+            }
+        }
     }
 }

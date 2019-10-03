@@ -42,3 +42,7 @@ D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Rou
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.Form1.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.Messagerie.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.FrmEnvoieSMS.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\GSMCommShared.dll
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\GSMCommunication.dll
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\PDUConverter.dll
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Back_Restore.resources

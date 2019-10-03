@@ -47,6 +47,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnSms = new System.Windows.Forms.Button();
             this.btnParameters = new System.Windows.Forms.Button();
             this.btnRound = new System.Windows.Forms.Button();
@@ -66,6 +68,8 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panelLeft.Controls.Add(this.button3);
+            this.panelLeft.Controls.Add(this.button2);
             this.panelLeft.Controls.Add(this.btnSms);
             this.panelLeft.Controls.Add(this.btnParameters);
             this.panelLeft.Controls.Add(this.btnRound);
@@ -270,6 +274,39 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::UIProject.Properties.Resources.Settings_40px;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(3, 657);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(198, 60);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "  Parameters";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::UIProject.Properties.Resources.Database_48px;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(8, 525);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(198, 60);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "  Database";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // btnSms
             // 
             this.btnSms.FlatAppearance.BorderSize = 0;
@@ -293,13 +330,13 @@
             this.btnParameters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnParameters.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnParameters.ForeColor = System.Drawing.Color.White;
-            this.btnParameters.Image = global::UIProject.Properties.Resources.Settings_40px;
+            this.btnParameters.Image = global::UIProject.Properties.Resources.About_40px;
             this.btnParameters.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnParameters.Location = new System.Drawing.Point(12, 525);
+            this.btnParameters.Location = new System.Drawing.Point(8, 591);
             this.btnParameters.Name = "btnParameters";
             this.btnParameters.Size = new System.Drawing.Size(198, 60);
             this.btnParameters.TabIndex = 8;
-            this.btnParameters.Text = "  Parameters";
+            this.btnParameters.Text = "  A propos";
             this.btnParameters.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnParameters.UseVisualStyleBackColor = true;
             this.btnParameters.Click += new System.EventHandler(this.btnParameters_Click);
@@ -474,5 +511,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSms;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
