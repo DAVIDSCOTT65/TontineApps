@@ -38,6 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnconnect = new System.Windows.Forms.Button();
             this.label_statut = new System.Windows.Forms.Label();
@@ -55,11 +56,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label5 = new System.Windows.Forms.Label();
+            this.reseauPic = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSms)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reseauPic)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,6 +129,15 @@
             this.panel5.Size = new System.Drawing.Size(249, 678);
             this.panel5.TabIndex = 57;
             // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(238, 83);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Selectionner votre modem dans la liste ci-dessous :";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -144,7 +155,7 @@
             this.btnconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnconnect.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnconnect.ForeColor = System.Drawing.Color.White;
-            this.btnconnect.Location = new System.Drawing.Point(62, 371);
+            this.btnconnect.Location = new System.Drawing.Point(44, 263);
             this.btnconnect.Name = "btnconnect";
             this.btnconnect.Size = new System.Drawing.Size(142, 33);
             this.btnconnect.TabIndex = 29;
@@ -167,37 +178,40 @@
             // 
             this.portnumber.AutoSize = true;
             this.portnumber.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.portnumber.Location = new System.Drawing.Point(118, 289);
+            this.portnumber.Location = new System.Drawing.Point(17, 519);
             this.portnumber.Name = "portnumber";
             this.portnumber.Size = new System.Drawing.Size(28, 21);
             this.portnumber.TabIndex = 27;
             this.portnumber.Text = "19";
+            this.portnumber.Visible = false;
             // 
             // cboTimeout
             // 
             this.cboTimeout.AutoSize = true;
             this.cboTimeout.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.cboTimeout.Location = new System.Drawing.Point(118, 259);
+            this.cboTimeout.Location = new System.Drawing.Point(17, 489);
             this.cboTimeout.Name = "cboTimeout";
             this.cboTimeout.Size = new System.Drawing.Size(37, 21);
             this.cboTimeout.TabIndex = 26;
             this.cboTimeout.Text = "600";
+            this.cboTimeout.Visible = false;
             // 
             // cboBaudRate
             // 
             this.cboBaudRate.AutoSize = true;
             this.cboBaudRate.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.cboBaudRate.Location = new System.Drawing.Point(118, 238);
+            this.cboBaudRate.Location = new System.Drawing.Point(17, 468);
             this.cboBaudRate.Name = "cboBaudRate";
             this.cboBaudRate.Size = new System.Drawing.Size(46, 21);
             this.cboBaudRate.TabIndex = 25;
             this.cboBaudRate.Text = "9600";
+            this.cboBaudRate.Visible = false;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(-2, 170);
+            this.label26.Location = new System.Drawing.Point(-2, 204);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(71, 21);
             this.label26.TabIndex = 24;
@@ -208,14 +222,16 @@
             this.cboPort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPort.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cboPort.FormattingEnabled = true;
-            this.cboPort.Location = new System.Drawing.Point(2, 194);
+            this.cboPort.Location = new System.Drawing.Point(2, 228);
             this.cboPort.Name = "cboPort";
-            this.cboPort.Size = new System.Drawing.Size(239, 29);
+            this.cboPort.Size = new System.Drawing.Size(242, 29);
             this.cboPort.TabIndex = 23;
+            this.cboPort.SelectedIndexChanged += new System.EventHandler(this.cboPort_SelectedIndexChanged);
             // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.reseauPic);
             this.panel6.Controls.Add(this.dgSms);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Location = new System.Drawing.Point(276, 54);
@@ -342,14 +358,16 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label5
+            // reseauPic
             // 
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(238, 83);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Selectionner votre modem dans la liste ci-dessous :";
+            this.reseauPic.Image = global::UIProject.Properties.Resources.Medium_Connection_50px;
+            this.reseauPic.Location = new System.Drawing.Point(415, 2);
+            this.reseauPic.Name = "reseauPic";
+            this.reseauPic.Size = new System.Drawing.Size(56, 27);
+            this.reseauPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.reseauPic.TabIndex = 41;
+            this.reseauPic.TabStop = false;
+            this.reseauPic.Visible = false;
             // 
             // FrmEnvoieSMS
             // 
@@ -380,6 +398,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgSms)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reseauPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,5 +430,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox reseauPic;
     }
 }

@@ -253,6 +253,16 @@ namespace UIProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Medium_Connection_50px {
+            get {
+                object obj = ResourceManager.GetObject("Medium Connection_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Menu_40px {
             get {
                 object obj = ResourceManager.GetObject("Menu_40px", resourceCulture);

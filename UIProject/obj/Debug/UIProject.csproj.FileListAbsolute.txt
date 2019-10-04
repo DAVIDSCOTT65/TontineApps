@@ -46,3 +46,4 @@ D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\GSMCommShared.dll
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\GSMCommunication.dll
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\PDUConverter.dll
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Back_Restore.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\RS232.dll

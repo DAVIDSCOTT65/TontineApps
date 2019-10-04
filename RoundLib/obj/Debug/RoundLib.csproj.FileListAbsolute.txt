@@ -12,3 +12,4 @@ D:\DAVID\PROJETBDD\TontineSoft\RoundLib\obj\Debug\RoundLib.csprojResolveAssembly
 D:\DAVID\PROJETBDD\TontineSoft\RoundLib\bin\Debug\GSMCommunication.dll
 D:\DAVID\PROJETBDD\TontineSoft\RoundLib\bin\Debug\PDUConverter.dll
 D:\DAVID\PROJETBDD\TontineSoft\RoundLib\bin\Debug\GSMCommShared.dll
+D:\DAVID\PROJETBDD\TontineSoft\RoundLib\bin\Debug\RS232.dll

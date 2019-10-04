@@ -122,10 +122,11 @@ namespace UIProject.Forms
                     Output("Successfully connected to the phone.\n");
                     MessageBox.Show(this, "Successfully connected to the phone.", "Connection setup", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     pubCon.comm.Close();
-                    label_statut.BackColor = Color.Yellow;
+                    //label_statut.BackColor = Color.Yellow;
                     //ControlMsg();
                     label_statut.Text = "Connecté";
-                    timer1.Start();
+                    reseauPic.Visible = true;
+                    //timer1.Start();
                     //btnconnect.Enabled = false;
                     //btndeconnect.Enabled = true;
                 }
@@ -137,7 +138,9 @@ namespace UIProject.Forms
                     return;
                 }
             }
-            catch { }
+            catch (Exception ex) {
+                MessageBox.Show(this, "Connection error: " + ex.Message, "Connection setup", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         private void Output(string text)
         {
@@ -203,6 +206,18 @@ namespace UIProject.Forms
             pubCon.port = port;
             pubCon.baudRate = baudRate;
             pubCon.timeout = timeout;
+        }
+
+        private void cboPort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboPort.Text == "19")
+            {
+                portnumber.Text = "19";
+            }
+            else
+            {
+                portnumber.Text = cboPort.Text.Substring(3, 2);
+            }
         }
     }
 }

@@ -51,6 +51,9 @@
     <Reference Include="PDUConverter">
       <HintPath>..\..\..\..\PDUConverter.dll</HintPath>
     </Reference>
+    <Reference Include="RS232">
+      <HintPath>..\..\..\..\RS232.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -364,6 +367,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Settings Backup Restore_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medium Connection_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,3 +12,4 @@ D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\obj\Debug\CotisationLib.csprojResol
 D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\GSMCommunication.dll
 D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\PDUConverter.dll
 D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\GSMCommShared.dll
+D:\DAVID\PROJETBDD\TontineSoft\CotisationLib\bin\Debug\RS232.dll

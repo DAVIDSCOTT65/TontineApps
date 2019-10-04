@@ -12,3 +12,4 @@ D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\obj\Debug\RemboursementLib.cspro
 D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\GSMCommunication.dll
 D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\PDUConverter.dll
 D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\GSMCommShared.dll
+D:\DAVID\PROJETBDD\TontineSoft\RemboursementLib\bin\Debug\RS232.dll

@@ -171,3 +171,4 @@ D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerE
 D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Formulaires.FormSauvegarde.resources
 D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerEcoleSoft.Properties.Resources.resources
 D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerHappySMS.csproj.GenerateResource.Cache
+D:\DAVID\PROJETBDD\TontineSoft\ServerEcoleSoft\ServerEcoleSoft\obj\Debug\ServerHappySMS.csprojResolveAssemblyReference.cache
