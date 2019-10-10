@@ -290,7 +290,7 @@ namespace ServerEcoleSoft.Classes
                     message = dr["CorpsMessage"].ToString();                    
                     codeMs = dr["id"].ToString();
                     dateEnvoie = dr["DateEnvoie"].ToString();
-                    utilisateur = dr["Utilisateur"].ToString();
+                    utilisateur = dr["UserSession"].ToString();
                     Etat = dr["EtatSms"].ToString();
 
                     if (numero != "" && message != "" && count!=1)

@@ -159,14 +159,14 @@
             // demarrerToolStripMenuItem
             // 
             this.demarrerToolStripMenuItem.Name = "demarrerToolStripMenuItem";
-            this.demarrerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.demarrerToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.demarrerToolStripMenuItem.Text = "Demarrer";
             this.demarrerToolStripMenuItem.Click += new System.EventHandler(this.demarrerToolStripMenuItem_Click);
             // 
             // arreterToolStripMenuItem
             // 
             this.arreterToolStripMenuItem.Name = "arreterToolStripMenuItem";
-            this.arreterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.arreterToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.arreterToolStripMenuItem.Text = "Arreter";
             this.arreterToolStripMenuItem.Click += new System.EventHandler(this.arreterToolStripMenuItem_Click);
             // 

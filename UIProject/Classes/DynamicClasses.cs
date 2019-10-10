@@ -19,12 +19,29 @@ namespace UIProject.Classes
         SqlDataReader dr = null;
 
         SqlDataAdapter dt = null;
-        SqlCommand sql = null;
+        SqlCommand cmd = null;
         SqlConnection con;
         DataSet ds;
+        IDataReader rd = null;
+        //IDbCommand cmd = null;
+        ClsConnection cnx = null;
 
         public static DynamicClasses _intance = null;
 
+        public void innitialiseConnect()
+        {
+            try
+            {
+                cnx = new ClsConnection();
+                cnx.connecter();
+                con = new SqlConnection(cnx.chemin);
+            }
+            catch (Exception)
+            {
+                throw new Exception("l'un de vos fichiers de configuration est incorrect");
+            }
+
+        }
         public static DynamicClasses GetInstance()
         {
             if (_intance == null)
@@ -55,9 +72,9 @@ namespace UIProject.Classes
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                 ImplementeConnexion.Instance.Conn.Open();
             con = (SqlConnection)ImplementeConnexion.Instance.Conn;
-            sql = new SqlCommand("select * from " + NomTable + " WHERE " + Nom + " LIKE '%" + recherche + "%' or " + Postnom + " LIKE '%" + recherche + "%' or " + Prenom + " LIKE '%" + recherche + "%' ", con);
+            cmd = new SqlCommand("select * from " + NomTable + " WHERE " + Nom + " LIKE '%" + recherche + "%' or " + Postnom + " LIKE '%" + recherche + "%' or " + Prenom + " LIKE '%" + recherche + "%' ", con);
             dt = null;
-            dt = new SqlDataAdapter(sql);
+            dt = new SqlDataAdapter(cmd);
             ds = new DataSet();
             dt.Fill(ds);
             con.Close();
@@ -480,31 +497,32 @@ namespace UIProject.Classes
         {
             try
             {
+                innitialiseConnect();
                 if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                     ImplementeConnexion.Instance.Conn.Open();
-                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
-                {
-                    cmd.CommandText = "INSERT_MESSAGE";
-                    cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@num", 25, DbType.String, cb.NumeroTutaire1));
-                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@corpsMessage", 255, DbType.String, cb.CorpsMessage1));
-                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@etatSms", 30, DbType.String, cb.EtatSms1));
-                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@userSession", 30, DbType.String, cb.Utilisateur1));
+                //cmd = new IDbCommand();
+                cmd = new SqlCommand( "INSERT_MESSAGE", (SqlConnection) ImplementeConnexion.Instance.Conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@num", 25, DbType.String, cb.NumeroTutaire1));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@corpsMessage", 255, DbType.String, cb.CorpsMessage1));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@etatSms", 30, DbType.String, cb.EtatSms1));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@userSession", 30, DbType.String, cb.Utilisateur1));
 
 
-                    cmd.ExecuteNonQuery();
-                }
-              
+                cmd.ExecuteNonQuery();
 
-            }
+
+
+        }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             finally
             {
-                
+               cmd.Dispose();
             }
         }
         public void SendMessages()
@@ -517,27 +535,30 @@ namespace UIProject.Classes
             string dateEnvoie = "";
             string Etat = "";
             int count = 0;
-            try
-            {
+            
+            //try
+            //{
+                innitialiseConnect();
                 if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                     ImplementeConnexion.Instance.Conn.Open();
-                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
-                {
-                    cmd.CommandText = "SELECT_SMS_ETAT_0";
-                    cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@user", 35, DbType.String, UserSession.GetInstance().UserName));
+                cmd = new SqlCommand("SELECT * FROM Messagerie WHERE EtatSms = 0 AND UserSession=@UserSession", (SqlConnection) ImplementeConnexion.Instance.Conn);
 
-                    IDataReader rd = cmd.ExecuteReader();
 
-                    while (rd.Read())
+                //sql.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@UserSession", UserSession.GetInstance().UserName);
+
+                    dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
                     {
-                        numero = rd["NumeroTutaire"].ToString();
-                        message = rd["CorpsMessage"].ToString();
-                        codeMs = rd["id"].ToString();
-                        dateEnvoie = rd["DateEnvoie"].ToString();
-                        utilisateur = rd["UserSession"].ToString();
-                        Etat = rd["EtatSms"].ToString();
+                        numero = dr["NumeroTutaire"].ToString();
+                        message = dr["CorpsMessage"].ToString();
+                        codeMs = dr["id"].ToString();
+                        dateEnvoie = dr["DateEnvoie"].ToString();
+                        utilisateur = dr["UserSession"].ToString();
+                        Etat = dr["EtatSms"].ToString();
 
                         if (numero != "" && message != "" && count != 1)
                         {
@@ -607,51 +628,49 @@ namespace UIProject.Classes
 
                         }
                     }
-                    rd.Dispose();
-                }
+                //dr.Dispose();
                 
                 
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                envoie = false;
-
-                ClsSMS msInsert = new ClsSMS();
-                msInsert.CorpsMessage1 = message;
-                //msInsert.DateEvoie1 = DateTime.Parse(dateEnvoie);
-                msInsert.EtatSms1 = 0;
-                msInsert.Utilisateur1 = utilisateur;
-                insert_Messagerie(msInsert);
-            }
-
-            finally
-            {
-                con.Close();
                 
-            }
+
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //    envoie = false;
+
+            //    ClsSMS msInsert = new ClsSMS();
+            //    msInsert.CorpsMessage1 = message;
+            //    //msInsert.DateEvoie1 = DateTime.Parse(dateEnvoie);
+            //    msInsert.EtatSms1 = 0;
+            //    msInsert.Utilisateur1 = utilisateur;
+            //    insert_Messagerie(msInsert);
+            //}
+
+            //finally
+            //{
+            //    con.Close();
+                
+            //}
             
 
             //return envoie;
         }
         public void update_Valmsg(string code)
         {
+            //rd.Dispose();
             try
             {
+                innitialiseConnect();
                 if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                     ImplementeConnexion.Instance.Conn.Open();
-                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
-                {
-                    cmd.CommandText = "DELETE_SMS";
-                    cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 5, DbType.Int32, code));
+                cmd = new SqlCommand("DELETE FROM Messagerie WHERE Id=@Id", (SqlConnection)ImplementeConnexion.Instance.Conn);
+                cmd.Parameters.AddWithValue("@Id", code);
+                cmd.ExecuteNonQuery();
 
-                    cmd.ExecuteNonQuery();
-                }
-                
+
 
             }
             catch (Exception ex)
@@ -660,8 +679,8 @@ namespace UIProject.Classes
             }
             finally
             {
-                
-                ImplementeConnexion.Instance.Conn.Close();
+                cmd.Dispose();
+                //ImplementeConnexion.Instance.Conn.Close();
             }
         }
     }

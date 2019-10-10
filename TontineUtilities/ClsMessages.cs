@@ -58,7 +58,7 @@ namespace TontineUtilities
                         }
                     }
                     
-                    if (pubCon.comm.IsOpen())comm.Open();
+                    if (!pubCon.comm.IsOpen())comm.Open();
                     pubCon.comm.SendMessages(pdus);
                     MessageBox.Show("Message envoye avec succes !!!!");
                     Retourne = true;
@@ -119,7 +119,7 @@ namespace TontineUtilities
                 // Send the same message multiple times if this is set
                 int times = true ? int.Parse("1") : 1;
 
-                if (pubCon.comm.IsOpen())
+                if (!pubCon.comm.IsOpen())
                     pubCon.comm.Open();
                 // Send the message the specified number of times
                 for (int i = 0; i < times; i++)

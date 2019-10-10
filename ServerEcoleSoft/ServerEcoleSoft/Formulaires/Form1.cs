@@ -175,7 +175,7 @@ namespace ServerEcoleSoft
                     label_statut.BackColor = Color.Yellow;
                     //ControlMsg();
                     label_statut.Text = "Connecté";
-                    //timer1.Start();
+                    timer1.Start();
                     //btnconnect.Enabled = false;
                     //btndeconnect.Enabled = true;
                 }

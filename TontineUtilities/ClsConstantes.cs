@@ -16,6 +16,8 @@ namespace TontineUtilities
             public static string user = "C:\\cheminBdTontine\\user.txt";
             public static string password = "C:\\cheminBdTontine\\password.txt";
             public static string cheminBackup = "C:\\BackupTontine";
+
+
         }
     }
 }

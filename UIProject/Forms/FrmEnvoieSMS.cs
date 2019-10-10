@@ -87,9 +87,9 @@ namespace UIProject.Forms
             catch (Exception ex)
             {
 
-                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+                //MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
-        }
+}
 
         private void button1_Click(object sender, EventArgs e)
         {

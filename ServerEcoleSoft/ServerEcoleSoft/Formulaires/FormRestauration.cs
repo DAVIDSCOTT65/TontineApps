@@ -59,5 +59,10 @@ namespace ServerEcoleSoft.Formulaires
                 MessageBox.Show("Erreur de " + exc);
             }
         }
+
+        private void btnParcourir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

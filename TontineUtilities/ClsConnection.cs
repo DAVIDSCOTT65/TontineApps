@@ -14,6 +14,7 @@ namespace TontineUtilities
         ConnexionType connectionType = new ConnexionType();
 
         public static ClsConnection _instance = null;
+        public string chemin;
 
         public static ClsConnection GetInstance()
         {
@@ -35,6 +36,8 @@ namespace TontineUtilities
                 ImplementeConnexion.Instance.Initialise(connexion, connectionType);
                 ImplementeConnexion.Instance.Conn.Open();
                 //MessageBox.Show("Connection Succefully !!!", "Succefully", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+
+                chemin = "server = " + connexion.Serveur + ";database = " + connexion.Database + ";uid =" + connexion.User + ";pwd = " + connexion.Password + ";";
             }
             catch (InvalidOperationException ex)
             {

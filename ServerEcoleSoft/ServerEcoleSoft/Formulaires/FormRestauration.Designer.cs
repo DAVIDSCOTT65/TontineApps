@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRestauration));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dbPath = new System.Windows.Forms.TextBox();
             this.btnParcourir = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnreset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -58,15 +58,6 @@
             this.groupBox2.Size = new System.Drawing.Size(365, 75);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(70, 95);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(308, 317);
-            this.panel2.TabIndex = 33;
             // 
             // label2
             // 
@@ -93,6 +84,16 @@
             this.btnParcourir.TabIndex = 3;
             this.btnParcourir.Text = "Parcourir";
             this.btnParcourir.UseVisualStyleBackColor = true;
+            this.btnParcourir.Click += new System.EventHandler(this.btnParcourir_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(70, 95);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(308, 317);
+            this.panel2.TabIndex = 33;
             // 
             // btnreset
             // 
