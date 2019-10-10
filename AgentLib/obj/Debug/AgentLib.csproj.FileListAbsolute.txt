@@ -1,0 +1,9 @@
+D:\DAVID\PROJETBDD\TontineSoft\AgentLib\bin\Debug\AgentLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\AgentLib\bin\Debug\AgentLib.pdb
+D:\DAVID\PROJETBDD\TontineSoft\AgentLib\bin\Debug\ManageSingleConnection.dll
+D:\DAVID\PROJETBDD\TontineSoft\AgentLib\bin\Debug\ParametreConnexionLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\AgentLib\bin\Debug\ManageSingleConnection.pdb
+D:\DAVID\PROJETBDD\TontineSoft\AgentLib\bin\Debug\ParametreConnexionLib.pdb
+D:\DAVID\PROJETBDD\TontineSoft\AgentLib\obj\Debug\AgentLib.csprojResolveAssemblyReference.cache
+D:\DAVID\PROJETBDD\TontineSoft\AgentLib\obj\Debug\AgentLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\AgentLib\obj\Debug\AgentLib.pdb

@@ -191,5 +191,17 @@ namespace UIProject.Forms
             MoveSidePanel(button2);
             ChargerUser(fr);
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            UC_Agent fr = new UC_Agent();
+            //MoveSidePanel(btnRound);
+            ChargerUser(fr);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

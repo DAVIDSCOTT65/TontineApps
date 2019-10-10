@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoundLib", "RoundLib\RoundL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIProject", "UIProject\UIProject.csproj", "{736A6366-A22A-4BF2-8145-A64D2E0B1F23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentLib", "AgentLib\AgentLib.csproj", "{2F32C794-894D-448D-A551-C6B29539D60E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{736A6366-A22A-4BF2-8145-A64D2E0B1F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{736A6366-A22A-4BF2-8145-A64D2E0B1F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{736A6366-A22A-4BF2-8145-A64D2E0B1F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F32C794-894D-448D-A551-C6B29539D60E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F32C794-894D-448D-A551-C6B29539D60E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F32C794-894D-448D-A551-C6B29539D60E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F32C794-894D-448D-A551-C6B29539D60E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

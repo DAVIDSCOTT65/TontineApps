@@ -47,3 +47,7 @@ D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\GSMCommunication.dll
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\PDUConverter.dll
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Back_Restore.resources
 D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\RS232.dll
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.UserControls.UC_Agent.resources
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\AgentLib.dll
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\bin\Debug\AgentLib.pdb
+D:\DAVID\PROJETBDD\TontineSoft\UIProject\obj\Debug\UIProject.Forms.FrmAgent.resources

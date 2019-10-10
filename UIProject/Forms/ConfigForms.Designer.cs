@@ -233,7 +233,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label7.Location = new System.Drawing.Point(110, 192);
+            this.label7.Location = new System.Drawing.Point(139, 192);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(181, 22);
             this.label7.TabIndex = 23;
@@ -242,7 +242,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UIProject.Properties.Resources.Money_Bag_40px;
-            this.pictureBox1.Location = new System.Drawing.Point(145, 73);
+            this.pictureBox1.Location = new System.Drawing.Point(174, 73);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(108, 96);

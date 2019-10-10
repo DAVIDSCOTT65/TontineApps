@@ -92,6 +92,12 @@
     <Compile Include="Forms\ConfigForms.Designer.cs">
       <DependentUpon>ConfigForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAgent.Designer.cs">
+      <DependentUpon>FrmAgent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmEnvoieSMS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     </Compile>
     <Compile Include="UserControls\Messagerie.Designer.cs">
       <DependentUpon>Messagerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Agent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Agent.Designer.cs">
+      <DependentUpon>UC_Agent.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_Back_Restore.cs">
       <SubType>UserControl</SubType>
@@ -172,6 +184,9 @@
     <EmbeddedResource Include="Forms\ConfigForms.resx">
       <DependentUpon>ConfigForms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAgent.resx">
+      <DependentUpon>FrmAgent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEnvoieSMS.resx">
       <DependentUpon>FrmEnvoieSMS.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Messagerie.resx">
       <DependentUpon>Messagerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Agent.resx">
+      <DependentUpon>UC_Agent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Back_Restore.resx">
       <DependentUpon>UC_Back_Restore.cs</DependentUpon>
@@ -236,6 +254,10 @@
     <None Include="Resources\Box_50px.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AgentLib\AgentLib.csproj">
+      <Project>{2f32c794-894d-448d-a551-c6b29539d60e}</Project>
+      <Name>AgentLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CotisationLib\CotisationLib.csproj">
       <Project>{9e018c7d-57e9-4122-8e69-22eca7158a40}</Project>
       <Name>CotisationLib</Name>
@@ -370,6 +392,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Medium Connection_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male User_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male User_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add User Male_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Group Man Man_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

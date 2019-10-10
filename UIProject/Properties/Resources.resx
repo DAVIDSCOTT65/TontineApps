@@ -121,6 +121,9 @@
   <data name="Debt_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Debt_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Menu_Bleupx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Bleupx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="decon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\decon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,12 +148,6 @@
   <data name="Donate_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Donate_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Money Bag_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Money Bag_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Shutdown_40pxB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Shutdown_40pxB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Money BagWhite_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Money BagWhite_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,8 +157,11 @@
   <data name="icons8_Shutdown_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Shutdown_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Box_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Box_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Shutdown_40pxB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shutdown_40pxB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Male User_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Male User_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="About_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\About_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +169,14 @@
   <data name="Database_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Database_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Settings Backup Restore_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Settings Backup Restore_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Medium Connection_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medium Connection_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Male User_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Male User_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add User Male_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add User Male_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rounded Rectangle Stroked_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rounded Rectangle Stroked_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,14 +193,20 @@
   <data name="More Details_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\More Details_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Up Squared_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Up Squared_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Box_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Box_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Settings Backup Restore_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings Backup Restore_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Calendar_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calendar_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Up Squared_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Up Squared_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Contacts_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Contacts_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,8 +217,8 @@
   <data name="Message Filled_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Message Filled_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Menu_Bleupx" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu_Bleupx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Money Bag_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Money Bag_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Refund_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refund_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +229,7 @@
   <data name="Data Backup_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Data Backup_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Medium Connection_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Medium Connection_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="User Group Man Man_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Group Man Man_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
