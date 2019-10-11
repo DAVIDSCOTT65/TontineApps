@@ -117,6 +117,36 @@ namespace UIProject.Classes
             }
 
         }
+        public void retreivePhoto(string ChampPhoto, string nomTable, string ChampCode, string Valeur, PictureBox pic)
+        {
+            try
+            {
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = @"SELECT " + ChampPhoto + " from " + nomTable + " WHERE  " + ChampCode + " = " + Valeur + "";
+                    dt = new SqlDataAdapter((SqlCommand)cmd);
+                    Object resultat = cmd.ExecuteScalar();
+                    if (DBNull.Value == (resultat))
+                    {
+                    }
+                    else
+                    {
+                        Byte[] buffer = (Byte[])resultat;
+                        MemoryStream ms = new MemoryStream(buffer);
+                        Image image = Image.FromStream(ms);
+                        pic.Image = image;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
         public void retreivePhoto(string valeur, PictureBox photo)
         {
             try
@@ -157,6 +187,46 @@ namespace UIProject.Classes
             }
 
 }
+        public void retreivePhotoAgent(string valeur, PictureBox photo)
+        {
+            try
+            {
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT_PHOTO_AGENT";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 50, DbType.Int32, valeur));
+
+                    dt = new SqlDataAdapter((SqlCommand)cmd);
+                    Object resultat = cmd.ExecuteScalar();
+                    if (DBNull.Value == (resultat))
+                    {
+                    }
+                    else
+                    {
+                        //Byte[] buffer = (Byte[])resultat;
+                        //MemoryStream ms = new MemoryStream(buffer);
+                        //Image image = Image.FromStream(ms);
+                        //photo.Image = image;
+
+                        Byte[] buffer = (Byte[])resultat;
+                        MemoryStream ms = new MemoryStream(buffer);
+                        Image image = Image.FromStream(ms);
+                        photo.Image = image;
+
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cette erreur est survenue lors du chargement de la photo : " + ex.Message);
+            }
+
+        }
 
         public void chargeCombo(ComboBox cmb, string nomChamp,string procedure)
         {
@@ -451,6 +521,8 @@ namespace UIProject.Classes
             string username = "";
             string niveau = "";
             string fonction = "";
+            string ability = "";
+            string etat = "";
             try
             {
                 if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
@@ -465,17 +537,26 @@ namespace UIProject.Classes
                     dr = comande.ExecuteReader();
                     while (dr.Read())
                     {
-                        niveau = dr["niveau_acces"].ToString();
-                        username = dr["noms"].ToString();
-                        fonction = dr["fonction"].ToString();
+                        niveau = dr["niveau_acces"].ToString().Trim();
+                        username = dr["noms"].ToString().Trim();
+                        fonction = dr["fonction"].ToString().Trim();
+                        ability = dr["abilite"].ToString().Trim();
+                        etat = dr["etat"].ToString().Trim();
                         count += 1;
                     }
                     if (count == 1)
                     {
-                        MessageBox.Show("La connection a reussie !!!", "Message Serveur...", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        UserSession.GetInstance().AccessLevel = niveau;
-                        UserSession.GetInstance().UserName = username;
-                        UserSession.GetInstance().Fonction = fonction;
+                        
+                            
+                        
+                            
+                            UserSession.GetInstance().AccessLevel = niveau;
+                            UserSession.GetInstance().UserName = username;
+                            UserSession.GetInstance().Fonction = fonction;
+                            UserSession.GetInstance().Ability = ability;
+                        UserSession.GetInstance().Etat = etat;
+                        
+                        
                     }
                     else
                     {

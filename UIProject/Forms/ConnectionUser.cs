@@ -51,9 +51,18 @@ namespace UIProject.Forms
                     //Envoyer();
                     if (PubCon.testlog == 1)
                     {
-                        this.Close();
-                        Principale_Form frm = new Principale_Form();
-                        frm.ChargerUser(new UC_Home());
+                        if (UserSession.GetInstance().Etat == "Bloquer")
+                        {
+                            MessageBox.Show("Vous n'etes pas autorisez à vous connecter veuillez contacter un administrateur", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        }
+                        else
+                        {
+                            MessageBox.Show("La connection a reussie !!!", "Message Serveur...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                            Principale_Form frm = new Principale_Form();
+                            frm.ChargerUser(new UC_Home());
+                        }
+                        
                         //frm.Show();
                     }
                 }

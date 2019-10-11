@@ -34,35 +34,39 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnParc = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.photo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbAgent = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.phoneTxt = new System.Windows.Forms.MaskedTextBox();
+            this.rbtnFem = new System.Windows.Forms.RadioButton();
+            this.rbtnMasc = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.adresseTxt = new System.Windows.Forms.TextBox();
+            this.fonctionTxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emailTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.nomsTxt = new System.Windows.Forms.TextBox();
+            this.passTxt = new System.Windows.Forms.TextBox();
+            this.userTxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cmbEtat = new System.Windows.Forms.ComboBox();
+            this.lblEtat = new System.Windows.Forms.Label();
+            this.passConfTxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbNiveau = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
             this.rbtn4 = new System.Windows.Forms.RadioButton();
             this.rbtn3 = new System.Windows.Forms.RadioButton();
             this.rbtn2 = new System.Windows.Forms.RadioButton();
@@ -86,16 +90,14 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
+            this.gbAgent.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gbNiveau.SuspendLayout();
             this.gbNiveau4.SuspendLayout();
             this.gbNiveau3.SuspendLayout();
             this.gbNiveau2.SuspendLayout();
@@ -149,41 +151,42 @@
             this.pictureBox6.TabIndex = 83;
             this.pictureBox6.TabStop = false;
             // 
-            // button3
+            // btnParc
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
-            this.button3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(63, 285);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 35);
-            this.button3.TabIndex = 84;
-            this.button3.Text = "Parcourrir";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnParc.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnParc.BackColor = System.Drawing.SystemColors.Control;
+            this.btnParc.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnParc.ForeColor = System.Drawing.Color.Black;
+            this.btnParc.Image = ((System.Drawing.Image)(resources.GetObject("btnParc.Image")));
+            this.btnParc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnParc.Location = new System.Drawing.Point(63, 285);
+            this.btnParc.Name = "btnParc";
+            this.btnParc.Size = new System.Drawing.Size(107, 35);
+            this.btnParc.TabIndex = 84;
+            this.btnParc.Text = "Parcourrir";
+            this.btnParc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnParc.UseVisualStyleBackColor = false;
+            this.btnParc.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.pictureBox2);
-            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.photo);
+            this.groupBox4.Controls.Add(this.btnParc);
             this.groupBox4.Location = new System.Drawing.Point(16, 82);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(243, 324);
             this.groupBox4.TabIndex = 85;
             this.groupBox4.TabStop = false;
             // 
-            // pictureBox2
+            // photo
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(7, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(230, 267);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
+            this.photo.Image = ((System.Drawing.Image)(resources.GetObject("photo.Image")));
+            this.photo.Location = new System.Drawing.Point(7, 12);
+            this.photo.Name = "photo";
+            this.photo.Size = new System.Drawing.Size(230, 267);
+            this.photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.photo.TabIndex = 36;
+            this.photo.TabStop = false;
             // 
             // label1
             // 
@@ -216,30 +219,30 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // groupBox1
+            // gbAgent
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gbAgent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(265, 82);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(548, 327);
-            this.groupBox1.TabIndex = 88;
-            this.groupBox1.TabStop = false;
+            this.gbAgent.Controls.Add(this.label12);
+            this.gbAgent.Controls.Add(this.phoneTxt);
+            this.gbAgent.Controls.Add(this.rbtnFem);
+            this.gbAgent.Controls.Add(this.rbtnMasc);
+            this.gbAgent.Controls.Add(this.label11);
+            this.gbAgent.Controls.Add(this.label10);
+            this.gbAgent.Controls.Add(this.adresseTxt);
+            this.gbAgent.Controls.Add(this.fonctionTxt);
+            this.gbAgent.Controls.Add(this.label9);
+            this.gbAgent.Controls.Add(this.emailTxt);
+            this.gbAgent.Controls.Add(this.label5);
+            this.gbAgent.Controls.Add(this.label4);
+            this.gbAgent.Controls.Add(this.label3);
+            this.gbAgent.Controls.Add(this.nomsTxt);
+            this.gbAgent.Location = new System.Drawing.Point(265, 82);
+            this.gbAgent.Name = "gbAgent";
+            this.gbAgent.Size = new System.Drawing.Size(548, 327);
+            this.gbAgent.TabIndex = 88;
+            this.gbAgent.TabStop = false;
             // 
             // label12
             // 
@@ -254,38 +257,38 @@
             this.label12.TabIndex = 27;
             this.label12.Text = "Informations sur l\'agent";
             // 
-            // maskedTextBox1
+            // phoneTxt
             // 
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.maskedTextBox1.Location = new System.Drawing.Point(166, 246);
-            this.maskedTextBox1.Mask = "+243000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(327, 27);
-            this.maskedTextBox1.TabIndex = 25;
+            this.phoneTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.phoneTxt.Location = new System.Drawing.Point(166, 246);
+            this.phoneTxt.Mask = "+243000000000";
+            this.phoneTxt.Name = "phoneTxt";
+            this.phoneTxt.Size = new System.Drawing.Size(327, 27);
+            this.phoneTxt.TabIndex = 25;
             // 
-            // radioButton2
+            // rbtnFem
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.radioButton2.Location = new System.Drawing.Point(263, 82);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(87, 25);
-            this.radioButton2.TabIndex = 24;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Féminin";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtnFem.AutoSize = true;
+            this.rbtnFem.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.rbtnFem.Location = new System.Drawing.Point(263, 82);
+            this.rbtnFem.Name = "rbtnFem";
+            this.rbtnFem.Size = new System.Drawing.Size(87, 25);
+            this.rbtnFem.TabIndex = 24;
+            this.rbtnFem.TabStop = true;
+            this.rbtnFem.Text = "Féminin";
+            this.rbtnFem.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbtnMasc
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.radioButton1.Location = new System.Drawing.Point(166, 82);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(96, 25);
-            this.radioButton1.TabIndex = 23;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Masculin";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtnMasc.AutoSize = true;
+            this.rbtnMasc.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.rbtnMasc.Location = new System.Drawing.Point(166, 82);
+            this.rbtnMasc.Name = "rbtnMasc";
+            this.rbtnMasc.Size = new System.Drawing.Size(96, 25);
+            this.rbtnMasc.TabIndex = 23;
+            this.rbtnMasc.TabStop = true;
+            this.rbtnMasc.Text = "Masculin";
+            this.rbtnMasc.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -313,23 +316,24 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "Phone";
             // 
-            // textBox3
+            // adresseTxt
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.textBox3.Location = new System.Drawing.Point(166, 113);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(327, 95);
-            this.textBox3.TabIndex = 15;
+            this.adresseTxt.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.adresseTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.adresseTxt.Location = new System.Drawing.Point(166, 113);
+            this.adresseTxt.Multiline = true;
+            this.adresseTxt.Name = "adresseTxt";
+            this.adresseTxt.Size = new System.Drawing.Size(327, 95);
+            this.adresseTxt.TabIndex = 15;
             // 
-            // textBox6
+            // fonctionTxt
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(166, 214);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(327, 27);
-            this.textBox6.TabIndex = 22;
+            this.fonctionTxt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fonctionTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.fonctionTxt.Location = new System.Drawing.Point(166, 214);
+            this.fonctionTxt.Name = "fonctionTxt";
+            this.fonctionTxt.Size = new System.Drawing.Size(327, 27);
+            this.fonctionTxt.TabIndex = 22;
             // 
             // label9
             // 
@@ -344,14 +348,14 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Fonction";
             // 
-            // textBox2
+            // emailTxt
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.textBox2.Location = new System.Drawing.Point(166, 279);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(327, 27);
-            this.textBox2.TabIndex = 12;
+            this.emailTxt.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.emailTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.emailTxt.Location = new System.Drawing.Point(166, 279);
+            this.emailTxt.Name = "emailTxt";
+            this.emailTxt.Size = new System.Drawing.Size(327, 27);
+            this.emailTxt.TabIndex = 12;
             // 
             // label5
             // 
@@ -392,33 +396,33 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Nom complet";
             // 
-            // textBox1
+            // nomsTxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.textBox1.Location = new System.Drawing.Point(166, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(327, 27);
-            this.textBox1.TabIndex = 7;
+            this.nomsTxt.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.nomsTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.nomsTxt.Location = new System.Drawing.Point(166, 46);
+            this.nomsTxt.Name = "nomsTxt";
+            this.nomsTxt.Size = new System.Drawing.Size(327, 27);
+            this.nomsTxt.TabIndex = 7;
             // 
-            // textBox7
+            // passTxt
             // 
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.textBox7.Location = new System.Drawing.Point(10, 112);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(328, 27);
-            this.textBox7.TabIndex = 25;
-            this.textBox7.UseSystemPasswordChar = true;
+            this.passTxt.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.passTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.passTxt.Location = new System.Drawing.Point(10, 112);
+            this.passTxt.Name = "passTxt";
+            this.passTxt.Size = new System.Drawing.Size(328, 27);
+            this.passTxt.TabIndex = 25;
+            this.passTxt.UseSystemPasswordChar = true;
             // 
-            // textBox5
+            // userTxt
             // 
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.textBox5.Location = new System.Drawing.Point(9, 58);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(329, 27);
-            this.textBox5.TabIndex = 21;
+            this.userTxt.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.userTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.userTxt.Location = new System.Drawing.Point(9, 58);
+            this.userTxt.Name = "userTxt";
+            this.userTxt.Size = new System.Drawing.Size(329, 27);
+            this.userTxt.TabIndex = 21;
             // 
             // label7
             // 
@@ -450,11 +454,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.cmbEtat);
+            this.groupBox2.Controls.Add(this.lblEtat);
+            this.groupBox2.Controls.Add(this.passConfTxt);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.passTxt);
+            this.groupBox2.Controls.Add(this.userTxt);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(23, 409);
@@ -463,15 +469,42 @@
             this.groupBox2.TabIndex = 89;
             this.groupBox2.TabStop = false;
             // 
-            // textBox4
+            // cmbEtat
             // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.textBox4.Location = new System.Drawing.Point(10, 171);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(328, 27);
-            this.textBox4.TabIndex = 28;
-            this.textBox4.UseSystemPasswordChar = true;
+            this.cmbEtat.FormattingEnabled = true;
+            this.cmbEtat.Items.AddRange(new object[] {
+            "Debloquer",
+            "Bloquer"});
+            this.cmbEtat.Location = new System.Drawing.Point(10, 222);
+            this.cmbEtat.Name = "cmbEtat";
+            this.cmbEtat.Size = new System.Drawing.Size(327, 29);
+            this.cmbEtat.TabIndex = 30;
+            this.cmbEtat.Visible = false;
+            // 
+            // lblEtat
+            // 
+            this.lblEtat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEtat.AutoSize = true;
+            this.lblEtat.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblEtat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.lblEtat.Location = new System.Drawing.Point(6, 201);
+            this.lblEtat.Name = "lblEtat";
+            this.lblEtat.Size = new System.Drawing.Size(44, 21);
+            this.lblEtat.TabIndex = 29;
+            this.lblEtat.Text = "Etat";
+            this.lblEtat.Visible = false;
+            // 
+            // passConfTxt
+            // 
+            this.passConfTxt.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.passConfTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.passConfTxt.Location = new System.Drawing.Point(9, 165);
+            this.passConfTxt.Name = "passConfTxt";
+            this.passConfTxt.Size = new System.Drawing.Size(328, 27);
+            this.passConfTxt.TabIndex = 28;
+            this.passConfTxt.UseSystemPasswordChar = true;
             // 
             // label8
             // 
@@ -481,7 +514,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label8.Location = new System.Drawing.Point(5, 147);
+            this.label8.Location = new System.Drawing.Point(4, 141);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(212, 21);
             this.label8.TabIndex = 27;
@@ -500,25 +533,54 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Informations de connexion";
             // 
-            // groupBox3
+            // gbNiveau
             // 
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.lbl1);
-            this.groupBox3.Controls.Add(this.rbtn4);
-            this.groupBox3.Controls.Add(this.rbtn3);
-            this.groupBox3.Controls.Add(this.rbtn2);
-            this.groupBox3.Controls.Add(this.rbtn1);
-            this.groupBox3.Controls.Add(this.gbNiveau4);
-            this.groupBox3.Controls.Add(this.gbNiveau3);
-            this.groupBox3.Controls.Add(this.gbNiveau2);
-            this.groupBox3.Controls.Add(this.gbNiveau1);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Location = new System.Drawing.Point(406, 412);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(407, 255);
-            this.groupBox3.TabIndex = 90;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            this.gbNiveau.Controls.Add(this.label14);
+            this.gbNiveau.Controls.Add(this.lbl1);
+            this.gbNiveau.Controls.Add(this.rbtn4);
+            this.gbNiveau.Controls.Add(this.rbtn3);
+            this.gbNiveau.Controls.Add(this.rbtn2);
+            this.gbNiveau.Controls.Add(this.rbtn1);
+            this.gbNiveau.Controls.Add(this.gbNiveau4);
+            this.gbNiveau.Controls.Add(this.gbNiveau3);
+            this.gbNiveau.Controls.Add(this.gbNiveau2);
+            this.gbNiveau.Controls.Add(this.gbNiveau1);
+            this.gbNiveau.Controls.Add(this.label13);
+            this.gbNiveau.Location = new System.Drawing.Point(406, 412);
+            this.gbNiveau.Name = "gbNiveau";
+            this.gbNiveau.Size = new System.Drawing.Size(407, 255);
+            this.gbNiveau.TabIndex = 90;
+            this.gbNiveau.TabStop = false;
+            this.gbNiveau.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label14.Location = new System.Drawing.Point(300, 23);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 16);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "Abilité :";
+            // 
+            // lbl1
+            // 
+            this.lbl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.ForeColor = System.Drawing.Color.Red;
+            this.lbl1.Location = new System.Drawing.Point(347, 23);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(29, 16);
+            this.lbl1.TabIndex = 38;
+            this.lbl1.Text = "VVV";
+            this.lbl1.Visible = false;
             // 
             // rbtn4
             // 
@@ -804,35 +866,6 @@
             this.label13.TabIndex = 29;
             this.label13.Text = "Niveau d\'abilité";
             // 
-            // lbl1
-            // 
-            this.lbl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.Red;
-            this.lbl1.Location = new System.Drawing.Point(347, 23);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(29, 16);
-            this.lbl1.TabIndex = 38;
-            this.lbl1.Text = "VVV";
-            this.lbl1.Visible = false;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label14.Location = new System.Drawing.Point(300, 23);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 16);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Abilité :";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
@@ -847,19 +880,20 @@
             this.button1.Text = "Effacer";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(183, 676);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 44);
-            this.button2.TabIndex = 91;
-            this.button2.Text = "Enregistrer";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(183, 676);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(208, 44);
+            this.btnSave.TabIndex = 91;
+            this.btnSave.Text = "Enregistrer";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmAgent
             // 
@@ -868,10 +902,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(834, 736);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.gbNiveau);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbAgent);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox4);
@@ -887,15 +921,16 @@
             this.Name = "FrmAgent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgent";
+            this.Load += new System.EventHandler(this.FrmAgent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
+            this.gbAgent.ResumeLayout(false);
+            this.gbAgent.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gbNiveau.ResumeLayout(false);
+            this.gbNiveau.PerformLayout();
             this.gbNiveau4.ResumeLayout(false);
             this.gbNiveau4.PerformLayout();
             this.gbNiveau3.ResumeLayout(false);
@@ -916,61 +951,63 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button btnParc;
         private System.Windows.Forms.GroupBox groupBox4;
-        public System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.PictureBox photo;
+        public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        public System.Windows.Forms.RadioButton radioButton2;
-        public System.Windows.Forms.RadioButton radioButton1;
+        public System.Windows.Forms.GroupBox gbAgent;
+        public System.Windows.Forms.MaskedTextBox phoneTxt;
+        public System.Windows.Forms.RadioButton rbtnFem;
+        public System.Windows.Forms.RadioButton rbtnMasc;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox adresseTxt;
+        public System.Windows.Forms.TextBox fonctionTxt;
         private System.Windows.Forms.Label label9;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox emailTxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox7;
-        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox nomsTxt;
+        public System.Windows.Forms.TextBox passTxt;
+        public System.Windows.Forms.TextBox userTxt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
-        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox passConfTxt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.GroupBox gbNiveau;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox gbNiveau1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.GroupBox gbNiveau3;
+        public System.Windows.Forms.GroupBox gbNiveau1;
+        public System.Windows.Forms.CheckBox checkBox2;
+        public System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.GroupBox gbNiveau3;
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.GroupBox gbNiveau2;
+        public System.Windows.Forms.GroupBox gbNiveau2;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.GroupBox gbNiveau4;
+        public System.Windows.Forms.CheckBox checkBox3;
+        public System.Windows.Forms.GroupBox gbNiveau4;
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.CheckBox checkBox13;
         private System.Windows.Forms.CheckBox checkBox14;
         private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.RadioButton rbtn4;
-        private System.Windows.Forms.RadioButton rbtn3;
-        private System.Windows.Forms.RadioButton rbtn2;
-        private System.Windows.Forms.RadioButton rbtn1;
-        private System.Windows.Forms.Label lbl1;
+        public System.Windows.Forms.RadioButton rbtn4;
+        public System.Windows.Forms.RadioButton rbtn3;
+        public System.Windows.Forms.RadioButton rbtn2;
+        public System.Windows.Forms.RadioButton rbtn1;
+        public System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.ComboBox cmbEtat;
+        public System.Windows.Forms.Label lblEtat;
     }
 }

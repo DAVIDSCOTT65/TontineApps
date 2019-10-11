@@ -291,7 +291,7 @@ namespace UIProject.UserControls
         void loadPhoto(string id, PictureBox pic)
         {
             DynamicClasses dn = new DynamicClasses();
-            dn.retreivePhoto(id,pic);
+            dn.retreivePhoto(id, pic);
         }
 
         private void Photo_Click(object sender, EventArgs e)

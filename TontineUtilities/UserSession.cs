@@ -13,6 +13,8 @@ namespace TontineUtilities
         private string _userName;
         private string _accessLevel;
         private string _fonction;
+        private string _ability;
+        private string _etat;
 
 
         public string UserName
@@ -53,7 +55,30 @@ namespace TontineUtilities
                 _fonction = value;
             }
         }
+        public string Ability
+        {
+            get
+            {
+                return _ability;
+            }
 
+            set
+            {
+                _ability = value;
+            }
+        }
+        public string Etat
+        {
+            get
+            {
+                return _etat;
+            }
+
+            set
+            {
+                _etat = value;
+            }
+        }
         public static UserSession GetInstance()
         {
             if (inst == null)
@@ -63,5 +88,6 @@ namespace TontineUtilities
 
             return inst;
         }
+
     }
 }

@@ -20,12 +20,13 @@ namespace AgentLib
         public string Fonction { get; set; }
         public int Id { get; set; }
         public string Niveau { get; set; }
+        public string Abilite { get; set; }
         public string Noms { get; set; }
         public string PassWord { get; set; }
         public Image Photo { get; set; }
         public string Pseudo { get; set; }
         public Sexe Sex { get; set; }
-
+        public string Etat { get; set; }
         public List<IAgent> AllAgents()
         {
             List<IAgent> lst = new List<IAgent>();
@@ -83,10 +84,12 @@ namespace AgentLib
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@pseudo", 100, DbType.String, Pseudo));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@password", 200, DbType.String, PassWord));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@nivau", 10, DbType.String, Niveau));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@abilite", 10, DbType.String, Abilite));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@sexe", 1, DbType.String, Sex == Sexe.Masculin ? "M" : "F"));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@email", 30, DbType.String, Email));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@fonction", 30, DbType.String, Fonction));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@photo", int.MaxValue, DbType.Binary, ConverttoByteImage(Photo)));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@etat", 30, DbType.String, Etat));
 
                 cmd.ExecuteNonQuery();
 
@@ -180,10 +183,11 @@ namespace AgentLib
             ag.Contact = rd["Contact"].ToString();
             ag.Pseudo = rd["Pseudo"].ToString();
             ag.Niveau = rd["niveau_acces"].ToString();
+            ag.Abilite = rd["abilite"].ToString();
             ag.Fonction = rd["fonction"].ToString();
             ag.PassWord = rd["pass_word"].ToString();
             ag.Email = rd["email"].ToString();
-
+            ag.Etat = rd["etat"].ToString();
 
             return ag;
         }

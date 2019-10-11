@@ -37,21 +37,25 @@
             this.serchTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblMail = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblNom = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblFonction = new System.Windows.Forms.Label();
+            this.lblAbilite = new System.Windows.Forms.Label();
+            this.lblNiveau = new System.Windows.Forms.Label();
+            this.lblPass = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblAdress = new System.Windows.Forms.Label();
+            this.lblSex = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -61,33 +65,33 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblEtat = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAdresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPseudo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNiveau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAbilite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFonction = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPhoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEtat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgAgent)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,17 +127,19 @@
             this.dgAgent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgAgent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgAgent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.NomComp,
-            this.Column9,
-            this.Column2,
-            this.Column3,
-            this.Column7,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column8,
-            this.Column10});
+            this.ColId,
+            this.ColNom,
+            this.ColSex,
+            this.ColAdresse,
+            this.ColContact,
+            this.ColEmail,
+            this.ColPseudo,
+            this.ColPassword,
+            this.ColNiveau,
+            this.ColAbilite,
+            this.ColFonction,
+            this.ColPhoto,
+            this.ColEtat});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -158,6 +164,8 @@
             this.dgAgent.Size = new System.Drawing.Size(703, 591);
             this.dgAgent.TabIndex = 39;
             this.dgAgent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInscit_CellContentClick);
+            this.dgAgent.SelectionChanged += new System.EventHandler(this.dgAgent_SelectionChanged);
+            this.dgAgent.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgAgent_MouseDoubleClick);
             // 
             // serchTxt
             // 
@@ -184,12 +192,12 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.lblMail);
+            this.groupBox2.Controls.Add(this.lblPhone);
             this.groupBox2.Controls.Add(this.pictureBox5);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.pictureBox3);
-            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.lblNom);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label4);
@@ -200,44 +208,77 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // label15
+            // lblMail
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblMail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(119, 187);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(236, 21);
-            this.label15.TabIndex = 43;
-            this.label15.Text = "davidscottmirindi65@gmail.com";
+            this.lblMail.AutoSize = true;
+            this.lblMail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMail.Location = new System.Drawing.Point(119, 187);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(236, 21);
+            this.lblMail.TabIndex = 43;
+            this.lblMail.Text = "davidscottmirindi65@gmail.com";
             // 
-            // label14
+            // lblPhone
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(119, 155);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(141, 21);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "+243 971 778 161";
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhone.Location = new System.Drawing.Point(119, 155);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(141, 21);
+            this.lblPhone.TabIndex = 40;
+            this.lblPhone.Text = "+243 971 778 161";
             // 
-            // label13
+            // pictureBox5
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(245, 107);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(41, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 42;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(198, 108);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(151, 108);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(41, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 39;
+            this.pictureBox3.TabStop = false;
+            // 
+            // lblNom
+            // 
+            this.lblNom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(146, 75);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(188, 25);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "MIRINDI DAVID Scott";
+            this.lblNom.AutoSize = true;
+            this.lblNom.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNom.Location = new System.Drawing.Point(146, 75);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(188, 25);
+            this.lblNom.TabIndex = 40;
+            this.lblNom.Text = "MIRINDI DAVID Scott";
             // 
             // groupBox4
             // 
@@ -247,6 +288,16 @@
             this.groupBox4.Size = new System.Drawing.Size(128, 137);
             this.groupBox4.TabIndex = 37;
             this.groupBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(7, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(115, 119);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
             // 
             // label10
             // 
@@ -278,14 +329,16 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.lblEtat);
+            this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.lblFonction);
+            this.groupBox3.Controls.Add(this.lblAbilite);
+            this.groupBox3.Controls.Add(this.lblNiveau);
+            this.groupBox3.Controls.Add(this.lblPass);
+            this.groupBox3.Controls.Add(this.lblUser);
+            this.groupBox3.Controls.Add(this.lblAdress);
+            this.groupBox3.Controls.Add(this.lblSex);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label9);
@@ -314,96 +367,102 @@
             this.label23.TabIndex = 48;
             this.label23.Text = "--------------------------------------------------------------------";
             // 
-            // label22
+            // lblFonction
             // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblFonction.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(153, 310);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(56, 21);
-            this.label22.TabIndex = 47;
-            this.label22.Text = "Admin";
+            this.lblFonction.AutoSize = true;
+            this.lblFonction.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFonction.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblFonction.Location = new System.Drawing.Point(153, 310);
+            this.lblFonction.Name = "lblFonction";
+            this.lblFonction.Size = new System.Drawing.Size(62, 21);
+            this.lblFonction.TabIndex = 47;
+            this.lblFonction.Text = "Admin";
             // 
-            // label21
+            // lblAbilite
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblAbilite.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(153, 275);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(81, 21);
-            this.label21.TabIndex = 46;
-            this.label21.Text = "Utilisateur";
+            this.lblAbilite.AutoSize = true;
+            this.lblAbilite.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbilite.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblAbilite.Location = new System.Drawing.Point(153, 275);
+            this.lblAbilite.Name = "lblAbilite";
+            this.lblAbilite.Size = new System.Drawing.Size(43, 21);
+            this.lblAbilite.TabIndex = 46;
+            this.lblAbilite.Text = "VVV";
             // 
-            // label20
+            // lblNiveau
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblNiveau.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(153, 241);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(19, 21);
-            this.label20.TabIndex = 45;
-            this.label20.Text = "4";
+            this.lblNiveau.AutoSize = true;
+            this.lblNiveau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNiveau.Location = new System.Drawing.Point(153, 241);
+            this.lblNiveau.Name = "lblNiveau";
+            this.lblNiveau.Size = new System.Drawing.Size(19, 21);
+            this.lblNiveau.TabIndex = 45;
+            this.lblNiveau.Text = "4";
             // 
-            // label19
+            // lblPass
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(153, 206);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(54, 21);
-            this.label19.TabIndex = 44;
-            this.label19.Text = "admin";
+            this.lblPass.AutoSize = true;
+            this.lblPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPass.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblPass.Location = new System.Drawing.Point(153, 206);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(60, 21);
+            this.lblPass.TabIndex = 44;
+            this.lblPass.Text = "admin";
             // 
-            // label18
+            // lblUser
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(153, 170);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(54, 21);
-            this.label18.TabIndex = 43;
-            this.label18.Text = "admin";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblUser.Location = new System.Drawing.Point(153, 170);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(60, 21);
+            this.lblUser.TabIndex = 43;
+            this.lblUser.Text = "admin";
             // 
-            // label17
+            // lblAdress
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(153, 137);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(216, 21);
-            this.label17.TabIndex = 42;
-            this.label17.Text = "Q. Katindo Av. Manièma N°14";
+            this.lblAdress.AutoSize = true;
+            this.lblAdress.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdress.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblAdress.Location = new System.Drawing.Point(153, 137);
+            this.lblAdress.Name = "lblAdress";
+            this.lblAdress.Size = new System.Drawing.Size(243, 21);
+            this.lblAdress.TabIndex = 42;
+            this.lblAdress.Text = "Q. Katindo Av. Manièma N°14";
             // 
-            // label16
+            // lblSex
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblSex.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(153, 102);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(72, 21);
-            this.label16.TabIndex = 41;
-            this.label16.Text = "Masculin";
+            this.lblSex.AutoSize = true;
+            this.lblSex.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSex.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblSex.Location = new System.Drawing.Point(153, 102);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(78, 21);
+            this.lblSex.TabIndex = 41;
+            this.lblSex.Text = "Masculin";
             // 
             // label12
             // 
@@ -414,9 +473,9 @@
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(31, 275);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 21);
+            this.label12.Size = new System.Drawing.Size(118, 21);
             this.label12.TabIndex = 39;
-            this.label12.Text = "Type de compte";
+            this.label12.Text = "Niveau d\'abilité";
             // 
             // label11
             // 
@@ -522,103 +581,6 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Detail";
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.DataPropertyName = "Id";
-            this.Column1.HeaderText = "N°";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 53;
-            // 
-            // NomComp
-            // 
-            this.NomComp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.NomComp.DataPropertyName = "Noms";
-            this.NomComp.HeaderText = "Nom Complet";
-            this.NomComp.Name = "NomComp";
-            this.NomComp.ReadOnly = true;
-            this.NomComp.Width = 145;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column9.DataPropertyName = "Sex";
-            this.Column9.HeaderText = "Sexe";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 71;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column2.DataPropertyName = "Adresse";
-            this.Column2.HeaderText = "Adresse";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 96;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column3.DataPropertyName = "Contact";
-            this.Column3.HeaderText = "Contact";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 103;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column7.DataPropertyName = "Email";
-            this.Column7.HeaderText = "Email";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 76;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column4.DataPropertyName = "Pseudo";
-            this.Column4.HeaderText = "Pseudo";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 91;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "PassWord";
-            this.Column5.HeaderText = "Pass";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Visible = false;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column6.DataPropertyName = "Niveau";
-            this.Column6.HeaderText = "Niveau";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 91;
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column8.DataPropertyName = "Fonction";
-            this.Column8.HeaderText = "Fonction";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 103;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "Photo";
-            this.Column10.HeaderText = "Photo";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Visible = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -630,49 +592,6 @@
             this.pictureBox6.TabIndex = 82;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(245, 107);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(41, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 42;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(198, 108);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(151, 108);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(41, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 39;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(7, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(115, 119);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -686,6 +605,148 @@
             this.pictureBox4.TabIndex = 78;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // lblEtat
+            // 
+            this.lblEtat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEtat.AutoSize = true;
+            this.lblEtat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEtat.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblEtat.Location = new System.Drawing.Point(153, 344);
+            this.lblEtat.Name = "lblEtat";
+            this.lblEtat.Size = new System.Drawing.Size(68, 21);
+            this.lblEtat.TabIndex = 50;
+            this.lblEtat.Text = "Bloquer";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(60, 344);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 21);
+            this.label14.TabIndex = 49;
+            this.label14.Text = "Etat";
+            // 
+            // ColId
+            // 
+            this.ColId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColId.DataPropertyName = "Id";
+            this.ColId.HeaderText = "N°";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            this.ColId.Width = 53;
+            // 
+            // ColNom
+            // 
+            this.ColNom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColNom.DataPropertyName = "Noms";
+            this.ColNom.HeaderText = "Nom Complet";
+            this.ColNom.Name = "ColNom";
+            this.ColNom.ReadOnly = true;
+            this.ColNom.Width = 145;
+            // 
+            // ColSex
+            // 
+            this.ColSex.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColSex.DataPropertyName = "Sex";
+            this.ColSex.HeaderText = "Sexe";
+            this.ColSex.Name = "ColSex";
+            this.ColSex.ReadOnly = true;
+            this.ColSex.Width = 71;
+            // 
+            // ColAdresse
+            // 
+            this.ColAdresse.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColAdresse.DataPropertyName = "Adresse";
+            this.ColAdresse.HeaderText = "Adresse";
+            this.ColAdresse.Name = "ColAdresse";
+            this.ColAdresse.ReadOnly = true;
+            this.ColAdresse.Width = 96;
+            // 
+            // ColContact
+            // 
+            this.ColContact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColContact.DataPropertyName = "Contact";
+            this.ColContact.HeaderText = "Contact";
+            this.ColContact.Name = "ColContact";
+            this.ColContact.ReadOnly = true;
+            this.ColContact.Width = 103;
+            // 
+            // ColEmail
+            // 
+            this.ColEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColEmail.DataPropertyName = "Email";
+            this.ColEmail.HeaderText = "Email";
+            this.ColEmail.Name = "ColEmail";
+            this.ColEmail.ReadOnly = true;
+            this.ColEmail.Width = 76;
+            // 
+            // ColPseudo
+            // 
+            this.ColPseudo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColPseudo.DataPropertyName = "Pseudo";
+            this.ColPseudo.HeaderText = "Pseudo";
+            this.ColPseudo.Name = "ColPseudo";
+            this.ColPseudo.ReadOnly = true;
+            this.ColPseudo.Width = 91;
+            // 
+            // ColPassword
+            // 
+            this.ColPassword.DataPropertyName = "PassWord";
+            this.ColPassword.HeaderText = "Pass";
+            this.ColPassword.Name = "ColPassword";
+            this.ColPassword.ReadOnly = true;
+            this.ColPassword.Visible = false;
+            // 
+            // ColNiveau
+            // 
+            this.ColNiveau.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColNiveau.DataPropertyName = "Niveau";
+            this.ColNiveau.HeaderText = "Niveau";
+            this.ColNiveau.Name = "ColNiveau";
+            this.ColNiveau.ReadOnly = true;
+            this.ColNiveau.Width = 91;
+            // 
+            // ColAbilite
+            // 
+            this.ColAbilite.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColAbilite.DataPropertyName = "Abilite";
+            this.ColAbilite.HeaderText = "Abilité";
+            this.ColAbilite.Name = "ColAbilite";
+            this.ColAbilite.ReadOnly = true;
+            this.ColAbilite.Width = 85;
+            // 
+            // ColFonction
+            // 
+            this.ColFonction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColFonction.DataPropertyName = "Fonction";
+            this.ColFonction.HeaderText = "Fonction";
+            this.ColFonction.Name = "ColFonction";
+            this.ColFonction.ReadOnly = true;
+            this.ColFonction.Width = 103;
+            // 
+            // ColPhoto
+            // 
+            this.ColPhoto.DataPropertyName = "Photo";
+            this.ColPhoto.HeaderText = "Photo";
+            this.ColPhoto.Name = "ColPhoto";
+            this.ColPhoto.ReadOnly = true;
+            this.ColPhoto.Visible = false;
+            // 
+            // ColEtat
+            // 
+            this.ColEtat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColEtat.DataPropertyName = "Etat";
+            this.ColEtat.HeaderText = "Etat";
+            this.ColEtat.Name = "ColEtat";
+            this.ColEtat.ReadOnly = true;
+            this.ColEtat.Width = 69;
             // 
             // UC_Agent
             // 
@@ -709,14 +770,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgAgent)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -731,25 +792,25 @@
         private System.Windows.Forms.TextBox serchTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblMail;
+        private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblFonction;
+        private System.Windows.Forms.Label lblAbilite;
+        private System.Windows.Forms.Label lblNiveau;
+        private System.Windows.Forms.Label lblPass;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblAdress;
+        private System.Windows.Forms.Label lblSex;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
@@ -760,16 +821,20 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomComp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.Label lblEtat;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColAdresse;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColContact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPseudo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPassword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNiveau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColAbilite;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColFonction;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPhoto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEtat;
     }
 }

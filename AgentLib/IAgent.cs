@@ -16,10 +16,12 @@ namespace AgentLib
         string Pseudo { get; set; }
         string PassWord { get; set; }
         string Niveau { get; set; }
+        string Abilite { get; set; }
         Sexe Sex { get; set; }
         string Email { get; set; }
         string Fonction { get; set; }
         Image Photo { get; set; }
+        string Etat { get; set; }
         int Nouveau();
         void Enregistrer(IAgent agent);
         void Supprimer(int id);

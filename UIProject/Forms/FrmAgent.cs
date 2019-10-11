@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgentLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TontineUtilities;
 
 namespace UIProject.Forms
 {
     public partial class FrmAgent : Form
     {
+        public int idAgent = 0;
         public FrmAgent()
         {
             InitializeComponent();
@@ -19,6 +22,8 @@ namespace UIProject.Forms
 
         private void button8_Click(object sender, EventArgs e)
         {
+            lblEtat.Visible = false;
+            cmbEtat.Visible = false;
             this.Dispose();
         }
 
@@ -180,11 +185,11 @@ namespace UIProject.Forms
                 lbl1.Visible = true;
                 checkBox6.Checked = true;
                 checkBox5.Checked = true;
-                lbl1.Text = "VSR";
+                lbl1.Text = "VCR";
             }
 
             else
-                lbl1.Text = "VS";
+                lbl1.Text = "VC";
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
@@ -326,6 +331,77 @@ namespace UIProject.Forms
 
             else
                 lbl1.Text = "PSE";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (nomsTxt.Text == "" || adresseTxt.Text == "" || fonctionTxt.Text == "" || phoneTxt.Text== "" || emailTxt.Text=="" || lbl1.Visible==false)
+            {
+                MessageBox.Show("Completez tous les champs svp !!!", "Champs Obligatiore", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                if (passTxt.Text != passConfTxt.Text)
+                    MessageBox.Show("Les deux mot de passe doivent etre identique", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                    SaveDatas();
+            }
+        }
+        void SaveDatas()
+        {
+            IAgent ag = new Agent();
+
+            ag.Id = idAgent;
+            ag.Noms = nomsTxt.Text;
+            ag.Sex = rbtnMasc.Checked == true ? Sexe.Masculin : Sexe.Féminin;
+            ag.Adresse = adresseTxt.Text;
+            ag.Fonction = fonctionTxt.Text;
+            ag.Contact = phoneTxt.Text;
+            ag.Email = emailTxt.Text;
+            ag.Pseudo = userTxt.Text;
+            ag.PassWord = passConfTxt.Text;
+
+            if (rbtn1.Checked == true)
+                ag.Niveau = gbNiveau1.Text;
+            else if(rbtn2.Checked==true)
+                ag.Niveau = gbNiveau2.Text;
+            else if (rbtn3.Checked == true)
+                ag.Niveau = gbNiveau3.Text;
+            else if (rbtn4.Checked == true)
+                ag.Niveau = gbNiveau4.Text;
+
+            ag.Abilite = lbl1.Text;
+            ag.Etat = cmbEtat.Text;
+            ag.Photo = photo.Image;
+
+            ag.Enregistrer(ag);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openDlg = new OpenFileDialog();
+            openDlg.ShowDialog();
+
+            try
+            {
+                if (openDlg.FileName != null)
+                {
+                    // try to open the file
+                    this.photo.Image = Bitmap.FromFile(openDlg.FileName);
+                    //this.tbFileName.Text = openDlg.FileName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("L'erreur suivant est survenue lors du chargement de la photo : " + ex.Message);
+            }
+        }
+
+        private void FrmAgent_Load(object sender, EventArgs e)
+        {
+            
+                
         }
     }
 }
