@@ -41,7 +41,7 @@ namespace UIProject.Forms
             }
         }
        
-        private void Principale_Form_Load(object sender, EventArgs e)
+        public void Principale_Form_Load(object sender, EventArgs e)
         {
             
             var form = new ConnectionUser();
@@ -194,14 +194,36 @@ namespace UIProject.Forms
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            UC_Agent fr = new UC_Agent();
-            //MoveSidePanel(btnRound);
+                UC_Agent fr = new UC_Agent();
+            //this.Dispose();
+            //fr.ShowDialog();
+            //UC_Agent fr = new UC_Agent();
+            ////MoveSidePanel(btnRound);
             ChargerUser(fr);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Principale_Form fr = new Principale_Form();
+            fr.Show();
+            fr.Dispose();
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Principale_Form fr = new Principale_Form();
+            fr.Refresh();
         }
     }
 }

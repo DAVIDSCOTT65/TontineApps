@@ -19,15 +19,21 @@ namespace UIProject.Forms
         public FrmEnvoieSMS()
         {
             InitializeComponent();
+            rbtnRecou.Checked = true;
         }
 
         private void FrmEnvoieSMS_Load(object sender, EventArgs e)
         {
             GetAllPorts(cboPort);
-            Refresh(new ClsSMS());
+            if (UserSession.GetInstance().Ability != "PSEB")
+                rbtnAutre.Enabled = false;
 
         }
         void Refresh(ClsSMS sms)
+        {
+            dgSms.DataSource = sms.AllNumDette();
+        }
+        void RefreshData(ClsSMS sms)
         {
             dgSms.DataSource = sms.AllSms();
         }
@@ -80,8 +86,11 @@ namespace UIProject.Forms
         {
             try
             {
-                Refresh(new ClsSMS());
-                DynamicClasses.GetInstance().SendMessages();
+                //Refresh(new ClsSMS());
+                if (rbtnRecou.Checked == true)
+                    DynamicClasses.GetInstance().SendSMSDettes();
+                else if (rbtnAutre.Checked == true)
+                    DynamicClasses.GetInstance().SendMessages();
 
             }
             catch (Exception ex)
@@ -89,57 +98,68 @@ namespace UIProject.Forms
 
                 //MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
-}
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            if (dgSms.RowCount <= 0 )
+                MessageBox.Show("Pas des méssages à envoyer ", "Attention",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            else if(cboPort.Text == "" || cboPort.Items.Count <= 0)
+                MessageBox.Show("Pas des modem brancher ", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                timer1.Start();
         }
 
         private void btnconnect_Click(object sender, EventArgs e)
         {
-            try
+            if (cboPort.Text == "")
+                MessageBox.Show("Veuillez inserer le Modem avant de cliquer ici");
+            else
             {
-                if (!EnterNewSettings())
-                    return;
-
-                Cursor.Current = Cursors.WaitCursor;
-                pubCon.comm = new GsmCommMain(pubCon.port, pubCon.baudRate, pubCon.timeout);
                 try
                 {
-                    pubCon.comm.Open();
-                    while (!pubCon.comm.IsConnected())
+                    if (!EnterNewSettings())
+                        return;
+
+                    Cursor.Current = Cursors.WaitCursor;
+                    pubCon.comm = new GsmCommMain(pubCon.port, pubCon.baudRate, pubCon.timeout);
+                    try
                     {
-                        Cursor.Current = Cursors.Default;
-                        if (MessageBox.Show(this, "No phone connected.", "Connection setup\n",
-                            MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation) == DialogResult.Cancel)
+                        pubCon.comm.Open();
+                        while (!pubCon.comm.IsConnected())
                         {
-                            pubCon.comm.Close();
-                            return;
+                            Cursor.Current = Cursors.Default;
+                            if (MessageBox.Show(this, "No phone connected.", "Connection setup\n",
+                                MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation) == DialogResult.Cancel)
+                            {
+                                pubCon.comm.Close();
+                                return;
+                            }
+                            Cursor.Current = Cursors.WaitCursor;
                         }
-                        Cursor.Current = Cursors.WaitCursor;
+                        Output("Successfully connected to the phone.\n");
+                        MessageBox.Show(this, "Successfully connected to the phone.", "Connection setup", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        pubCon.comm.Close();
+                        //label_statut.BackColor = Color.Yellow;
+                        //ControlMsg();
+                        label_statut.Text = "Connecté";
+                        reseauPic.Visible = true;
+                        //timer1.Start();
+                        //btnconnect.Enabled = false;
+                        //btndeconnect.Enabled = true;
                     }
-                    Output("Successfully connected to the phone.\n");
-                    MessageBox.Show(this, "Successfully connected to the phone.", "Connection setup", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    pubCon.comm.Close();
-                    //label_statut.BackColor = Color.Yellow;
-                    //ControlMsg();
-                    label_statut.Text = "Connecté";
-                    reseauPic.Visible = true;
-                    //timer1.Start();
-                    //btnconnect.Enabled = false;
-                    //btndeconnect.Enabled = true;
+                    catch (Exception ex)
+                    {
+                        Output("ERREUR : " + ex.Message);
+                        Output("");
+                        MessageBox.Show(this, "Connection error: " + ex.Message, "Connection setup", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
                 catch (Exception ex)
                 {
-                    Output("ERREUR : " + ex.Message);
-                    Output("");
                     MessageBox.Show(this, "Connection error: " + ex.Message, "Connection setup", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
                 }
-            }
-            catch (Exception ex) {
-                MessageBox.Show(this, "Connection error: " + ex.Message, "Connection setup", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void Output(string text)
@@ -218,6 +238,16 @@ namespace UIProject.Forms
             {
                 portnumber.Text = cboPort.Text.Substring(3, 2);
             }
+        }
+
+        private void rbtnRecou_CheckedChanged(object sender, EventArgs e)
+        {
+            Refresh(new ClsSMS());
+        }
+
+        private void rbtnAutre_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshData(new ClsSMS());
         }
     }
 }

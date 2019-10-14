@@ -95,7 +95,7 @@ namespace TontineUtilities
                 Utilisateur = value;
             }
         }
-        int Num { get; set; }
+        public int Num { get; set; }
         public List<ClsSMS> AllSms()
         {
             List<ClsSMS> lst = new List<ClsSMS>();
@@ -119,6 +119,29 @@ namespace TontineUtilities
             }
             return lst;
         }
+        public List<ClsSMS> AllNumDette()
+        {
+            List<ClsSMS> lst = new List<ClsSMS>();
+
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_SMS_DETTE";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 30, DbType.String, InstantRound.GetInstance().Id));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    lst.Add(GetSDette(rd));
+                }
+                rd.Dispose();
+            }
+            return lst;
+        }
         private ClsSMS GetSMS(IDataReader rd)
         {
             ClsSMS sms = new ClsSMS();
@@ -132,6 +155,20 @@ namespace TontineUtilities
             sms.EtatSms = Convert.ToInt32(rd["EtatSms"].ToString());
             sms.DateEnvoie = rd["DateEnvoie"].ToString();
             sms.Utilisateur = rd["UserSession"].ToString();
+
+            return sms;
+        }
+        private ClsSMS GetSDette(IDataReader rd)
+        {
+            ClsSMS sms = new ClsSMS();
+
+            i = i + 1;
+
+            sms.Num = i;
+            //sms.Code = Convert.ToInt32(rd["id"].ToString());
+            sms.NumeroTutaire = rd["Numero"].ToString();
+            sms.CorpsMessage = rd["Message"].ToString();
+            
 
             return sms;
         }

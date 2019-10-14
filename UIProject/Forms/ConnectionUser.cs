@@ -21,8 +21,10 @@ namespace UIProject.Forms
         //InstantRound ir = new InstantRound();
         public ConnectionUser()
         {
+            
             InitializeComponent();
             userTxt.Focus();
+
         }
         public void FundForm1(Principale_Form form1)
         {
@@ -77,7 +79,7 @@ namespace UIProject.Forms
         private void ConnectionUser_Load(object sender, EventArgs e)
         {
             dn.chargeCombo(tontineCombo, "Designation", "SELECT_DESIGNATION_ROUND");
-            userTxt.Focus();
+            
         }
 
         private void tontineCombo_SelectedIndexChanged(object sender, EventArgs e)

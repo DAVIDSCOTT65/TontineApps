@@ -90,6 +90,12 @@ namespace UIProject.UserControls
                 fr.cmbEtat.Visible = true;
                 fr.btnSave.Enabled = true;
             }
+            else
+            {
+                fr.gbNiveau.Enabled = false;
+                fr.lblWarning.Visible = true;
+                fr.btnSave.Enabled = false;
+            }
             fr.idAgent = ag.Nouveau();
             fr.ShowDialog();
             

@@ -131,7 +131,7 @@ namespace UIProject.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (UserSession.GetInstance().AccessLevel != "1")
+            if (UserSession.GetInstance().AccessLevel != "4")
             {
                 MessageBox.Show("Vous ne pouvez pas effectuer d'opération ici, seul les administrateurs le peuvent","Attention",MessageBoxButtons.OK,MessageBoxIcon.Stop);
             }
@@ -142,7 +142,7 @@ namespace UIProject.UserControls
 
         private void UC_Round_Load(object sender, EventArgs e)
         {
-            if (UserSession.GetInstance().AccessLevel != "1")
+            if (UserSession.GetInstance().AccessLevel != "4")
             {
                 niveauLbl.Visible = true;
             }

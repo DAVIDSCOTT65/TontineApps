@@ -738,6 +738,133 @@ namespace UIProject.Classes
 
             //return envoie;
         }
+        public void SendSMSDettes()
+        {
+            bool envoie = true;
+            string numero = "";
+            string message = "";
+            string codeMs = "";
+            string utilisateur = "";
+            string dateEnvoie = "";
+            string Etat = "";
+            int count = 0;
+
+            try
+            {
+                innitialiseConnect();
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+
+            cmd = new SqlCommand("SELECT_SMS_DETTE", (SqlConnection)ImplementeConnexion.Instance.Conn);
+             cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 30, DbType.String, InstantRound.GetInstance().Id));
+
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                numero = dr["Numero"].ToString();
+                message = dr["Message"].ToString();
+                
+
+                if (numero != "" && message != "" && count != 1)
+                {
+                    ClsMessages ms = new ClsMessages();
+                    if (message.Length <= 140)
+                    {
+                        //update_Valmsg(codeMs);
+                        if (ms.sendshortMsg(numero, message) == false)
+                        {
+                            if (ms.sendlongMsg(numero, message + "                                                   ") == false)
+                            {
+                                envoie = false;
+                                //ClsSMS msInsert = new ClsSMS();
+                                //msInsert.NumeroTutaire1 = numero;
+                                //msInsert.CorpsMessage1 = message;
+                                //msInsert.DateEnvoie1 = dateEnvoie;
+                                //msInsert.EtatSms1 = 0;
+                                //msInsert.Utilisateur1 = utilisateur;
+                                //insert_Messagerie(msInsert);
+
+                                numero = "";
+                                message = "";
+                                codeMs = "";
+                                dateEnvoie = "";
+                                utilisateur = "";
+                                Etat = "";
+                            }
+
+                        }
+                        else
+                        {
+                            envoie = true;
+                            numero = "";
+                            message = "";
+                            codeMs = "";
+                            dateEnvoie = "";
+                            utilisateur = "";
+                            Etat = "";
+                        }
+
+
+                    }
+                    else
+                    {
+                        //update_Valmsg(codeMs);
+                        if (ms.sendlongMsg(numero, message) == true)
+                        {
+                            numero = "";
+                            message = "";
+                            envoie = true;
+                        }
+                        else
+                        {
+                            envoie = false;
+
+                            //ClsSMS msInsert = new ClsSMS();
+                            //msInsert.CorpsMessage1 = message;
+                            //msInsert.DateEnvoie1 = dateEnvoie;
+                            //msInsert.EtatSms1 = 0;
+                            //msInsert.Utilisateur1 = utilisateur;
+                            //insert_Messagerie(msInsert);
+                        }
+
+                    }
+                    //update set statutMessage='non'
+
+
+                }
+            }
+            //dr.Dispose();
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                envoie = false;
+
+                //ClsSMS msInsert = new ClsSMS();
+                //msInsert.CorpsMessage1 = message;
+                //msInsert.DateEvoie1 = DateTime.Parse(dateEnvoie);
+                //msInsert.EtatSms1 = 0;
+                //msInsert.Utilisateur1 = utilisateur;
+                //insert_Messagerie(msInsert);
+            }
+
+            finally
+            {
+                con.Close();
+
+            }
+
+
+            //return envoie;
+        }
         public void update_Valmsg(string code)
         {
             //rd.Dispose();

@@ -48,6 +48,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.cboPort = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.reseauPic = new System.Windows.Forms.PictureBox();
             this.dgSms = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -56,12 +57,20 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.reseauPic = new System.Windows.Forms.PictureBox();
+            this.rbtnAutre = new System.Windows.Forms.RadioButton();
+            this.rbtnRecou = new System.Windows.Forms.RadioButton();
+            this.Col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reseauPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgSms)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reseauPic)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,6 +123,8 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.rbtnAutre);
+            this.panel5.Controls.Add(this.rbtnRecou);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.btnconnect);
@@ -239,6 +250,17 @@
             this.panel6.Size = new System.Drawing.Size(476, 310);
             this.panel6.TabIndex = 58;
             // 
+            // reseauPic
+            // 
+            this.reseauPic.Image = global::UIProject.Properties.Resources.Medium_Connection_50px;
+            this.reseauPic.Location = new System.Drawing.Point(415, 2);
+            this.reseauPic.Name = "reseauPic";
+            this.reseauPic.Size = new System.Drawing.Size(56, 27);
+            this.reseauPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.reseauPic.TabIndex = 41;
+            this.reseauPic.TabStop = false;
+            this.reseauPic.Visible = false;
+            // 
             // dgSms
             // 
             this.dgSms.AllowUserToAddRows = false;
@@ -257,6 +279,14 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgSms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgSms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgSms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Col1,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column1,
+            this.Column2});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -358,16 +388,92 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // reseauPic
+            // rbtnAutre
             // 
-            this.reseauPic.Image = global::UIProject.Properties.Resources.Medium_Connection_50px;
-            this.reseauPic.Location = new System.Drawing.Point(415, 2);
-            this.reseauPic.Name = "reseauPic";
-            this.reseauPic.Size = new System.Drawing.Size(56, 27);
-            this.reseauPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.reseauPic.TabIndex = 41;
-            this.reseauPic.TabStop = false;
-            this.reseauPic.Visible = false;
+            this.rbtnAutre.AutoSize = true;
+            this.rbtnAutre.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAutre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.rbtnAutre.Location = new System.Drawing.Point(169, 369);
+            this.rbtnAutre.Name = "rbtnAutre";
+            this.rbtnAutre.Size = new System.Drawing.Size(63, 20);
+            this.rbtnAutre.TabIndex = 45;
+            this.rbtnAutre.TabStop = true;
+            this.rbtnAutre.Text = "Autres";
+            this.rbtnAutre.UseVisualStyleBackColor = true;
+            this.rbtnAutre.CheckedChanged += new System.EventHandler(this.rbtnAutre_CheckedChanged);
+            // 
+            // rbtnRecou
+            // 
+            this.rbtnRecou.AutoSize = true;
+            this.rbtnRecou.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnRecou.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.rbtnRecou.Location = new System.Drawing.Point(7, 369);
+            this.rbtnRecou.Name = "rbtnRecou";
+            this.rbtnRecou.Size = new System.Drawing.Size(142, 20);
+            this.rbtnRecou.TabIndex = 44;
+            this.rbtnRecou.TabStop = true;
+            this.rbtnRecou.Text = " SMS Récouvrement";
+            this.rbtnRecou.UseVisualStyleBackColor = true;
+            this.rbtnRecou.CheckedChanged += new System.EventHandler(this.rbtnRecou_CheckedChanged);
+            // 
+            // Col1
+            // 
+            this.Col1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Col1.DataPropertyName = "Num";
+            this.Col1.HeaderText = "N°";
+            this.Col1.Name = "Col1";
+            this.Col1.ReadOnly = true;
+            this.Col1.Width = 53;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Code";
+            this.Column3.HeaderText = "Code";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "EtatSms1";
+            this.Column4.HeaderText = "Etat";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "DateEnvoie1";
+            this.Column5.HeaderText = "Date Envoie";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Utilisateur1";
+            this.Column6.HeaderText = "User";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.DataPropertyName = "NumeroTutaire1";
+            this.Column1.HeaderText = "Numéro";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 97;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.DataPropertyName = "CorpsMessage1";
+            this.Column2.HeaderText = "Corps du méssage";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 162;
             // 
             // FrmEnvoieSMS
             // 
@@ -395,10 +501,10 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reseauPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgSms)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reseauPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,5 +537,14 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox reseauPic;
+        private System.Windows.Forms.RadioButton rbtnAutre;
+        private System.Windows.Forms.RadioButton rbtnRecou;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

@@ -164,7 +164,8 @@ namespace UIProject.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ChartCotisation();
+            UC_Home fr = new UC_Home();
+            fr.Refresh();
         }
 
         private void panelGrid_Paint(object sender, PaintEventArgs e)

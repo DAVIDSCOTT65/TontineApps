@@ -73,6 +73,16 @@ namespace UIProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap About_30px {
+            get {
+                object obj = ResourceManager.GetObject("About_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap About_40px {
             get {
                 object obj = ResourceManager.GetObject("About_40px", resourceCulture);
@@ -116,6 +126,16 @@ namespace UIProject.Properties {
         internal static System.Drawing.Bitmap Calendar_52px {
             get {
                 object obj = ResourceManager.GetObject("Calendar_52px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_Window_30px {
+            get {
+                object obj = ResourceManager.GetObject("Close Window_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,6 +243,16 @@ namespace UIProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Help_30px {
+            get {
+                object obj = ResourceManager.GetObject("Help_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Home_40px {
             get {
                 object obj = ResourceManager.GetObject("Home_40px", resourceCulture);
@@ -246,6 +276,16 @@ namespace UIProject.Properties {
         internal static System.Drawing.Bitmap icons8_Shutdown_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Shutdown_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Licence_30px {
+            get {
+                object obj = ResourceManager.GetObject("Licence_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,6 +393,16 @@ namespace UIProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Offline_30px {
+            get {
+                object obj = ResourceManager.GetObject("Offline_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Refund_40px {
             get {
                 object obj = ResourceManager.GetObject("Refund_40px", resourceCulture);
@@ -366,6 +416,16 @@ namespace UIProject.Properties {
         internal static System.Drawing.Bitmap Rounded_Rectangle_Stroked_40px {
             get {
                 object obj = ResourceManager.GetObject("Rounded Rectangle Stroked_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Settings_30px {
+            get {
+                object obj = ResourceManager.GetObject("Settings_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
