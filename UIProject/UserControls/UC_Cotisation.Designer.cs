@@ -32,45 +32,26 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Cotisation));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Cotisation));
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.nouveauBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgCotisation = new System.Windows.Forms.DataGridView();
-            this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColIdcot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDateCo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDateCon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMontant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRefInscrit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRefRound = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMatricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPostnom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFrais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDesignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serchTxt = new System.Windows.Forms.TextBox();
             this.panelGrid = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelAddCotisation = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.dgManyCotisation = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSemaine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fraisLbl = new System.Windows.Forms.Label();
             this.weeksCombo = new System.Windows.Forms.ComboBox();
             this.weekLbl = new System.Windows.Forms.Label();
@@ -89,14 +70,36 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.membreCombo = new System.Windows.Forms.ComboBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.chkSocial = new System.Windows.Forms.CheckBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSemaine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColIdcot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDateCo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDateCon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMontant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColRefInscrit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColRefRound = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMatricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPostnom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFrais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDesignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCotisation)).BeginInit();
             this.panelGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelAddCotisation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgManyCotisation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -123,6 +126,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1177, 61);
             this.panel1.TabIndex = 36;
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = global::UIProject.Properties.Resources.Up_Squared_32px;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(1129, 13);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(45, 33);
+            this.button7.TabIndex = 11;
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button3
             // 
@@ -222,7 +243,8 @@
             this.ColSem,
             this.ColFrais,
             this.ColDesignation,
-            this.ColUser});
+            this.ColUser,
+            this.Column4});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,152 +269,6 @@
             this.dgCotisation.Size = new System.Drawing.Size(1160, 471);
             this.dgCotisation.TabIndex = 59;
             // 
-            // ColNum
-            // 
-            this.ColNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColNum.DataPropertyName = "Num";
-            this.ColNum.HeaderText = "N°";
-            this.ColNum.Name = "ColNum";
-            this.ColNum.ReadOnly = true;
-            this.ColNum.Width = 53;
-            // 
-            // ColIdcot
-            // 
-            this.ColIdcot.DataPropertyName = "Id";
-            this.ColIdcot.HeaderText = "IdCotisation";
-            this.ColIdcot.Name = "ColIdcot";
-            this.ColIdcot.ReadOnly = true;
-            this.ColIdcot.Visible = false;
-            // 
-            // ColDateCo
-            // 
-            this.ColDateCo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColDateCo.DataPropertyName = "DateCotisation";
-            this.ColDateCo.HeaderText = "Date de Cotisation";
-            this.ColDateCo.Name = "ColDateCo";
-            this.ColDateCo.ReadOnly = true;
-            this.ColDateCo.Width = 168;
-            // 
-            // ColDateCon
-            // 
-            this.ColDateCon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColDateCon.DataPropertyName = "DateConcernee";
-            this.ColDateCon.HeaderText = "Date Concernée";
-            this.ColDateCon.Name = "ColDateCon";
-            this.ColDateCon.ReadOnly = true;
-            this.ColDateCon.Width = 152;
-            // 
-            // ColMontant
-            // 
-            this.ColMontant.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColMontant.DataPropertyName = "Montant";
-            this.ColMontant.HeaderText = "Montant";
-            this.ColMontant.Name = "ColMontant";
-            this.ColMontant.ReadOnly = true;
-            this.ColMontant.Width = 105;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Mont";
-            this.Column1.HeaderText = "Mont";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // ColRefInscrit
-            // 
-            this.ColRefInscrit.DataPropertyName = "RefInscription";
-            this.ColRefInscrit.HeaderText = "IdInscription";
-            this.ColRefInscrit.Name = "ColRefInscrit";
-            this.ColRefInscrit.ReadOnly = true;
-            this.ColRefInscrit.Visible = false;
-            // 
-            // ColRefRound
-            // 
-            this.ColRefRound.DataPropertyName = "RefRound";
-            this.ColRefRound.HeaderText = "IdRound";
-            this.ColRefRound.Name = "ColRefRound";
-            this.ColRefRound.ReadOnly = true;
-            this.ColRefRound.Visible = false;
-            // 
-            // ColMatricule
-            // 
-            this.ColMatricule.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColMatricule.DataPropertyName = "Matricule";
-            this.ColMatricule.HeaderText = "Matricule";
-            this.ColMatricule.Name = "ColMatricule";
-            this.ColMatricule.ReadOnly = true;
-            this.ColMatricule.Width = 109;
-            // 
-            // ColNom
-            // 
-            this.ColNom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColNom.DataPropertyName = "Nom";
-            this.ColNom.HeaderText = "Nom";
-            this.ColNom.Name = "ColNom";
-            this.ColNom.ReadOnly = true;
-            this.ColNom.Width = 72;
-            // 
-            // ColPostnom
-            // 
-            this.ColPostnom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColPostnom.DataPropertyName = "Postnom";
-            this.ColPostnom.HeaderText = "Postnom";
-            this.ColPostnom.Name = "ColPostnom";
-            this.ColPostnom.ReadOnly = true;
-            this.ColPostnom.Width = 102;
-            // 
-            // ColPrenom
-            // 
-            this.ColPrenom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColPrenom.DataPropertyName = "Prenom";
-            this.ColPrenom.HeaderText = "Prénom";
-            this.ColPrenom.Name = "ColPrenom";
-            this.ColPrenom.ReadOnly = true;
-            this.ColPrenom.Width = 94;
-            // 
-            // ColSex
-            // 
-            this.ColSex.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColSex.DataPropertyName = "Sexe";
-            this.ColSex.HeaderText = "Sexe";
-            this.ColSex.Name = "ColSex";
-            this.ColSex.ReadOnly = true;
-            this.ColSex.Width = 71;
-            // 
-            // ColSem
-            // 
-            this.ColSem.DataPropertyName = "RefSemaine";
-            this.ColSem.HeaderText = "IdSemaine";
-            this.ColSem.Name = "ColSem";
-            this.ColSem.ReadOnly = true;
-            this.ColSem.Visible = false;
-            // 
-            // ColFrais
-            // 
-            this.ColFrais.DataPropertyName = "RefFrais";
-            this.ColFrais.HeaderText = "IdFrais";
-            this.ColFrais.Name = "ColFrais";
-            this.ColFrais.ReadOnly = true;
-            this.ColFrais.Visible = false;
-            // 
-            // ColDesignation
-            // 
-            this.ColDesignation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColDesignation.DataPropertyName = "Designation";
-            this.ColDesignation.HeaderText = "Frais";
-            this.ColDesignation.Name = "ColDesignation";
-            this.ColDesignation.ReadOnly = true;
-            this.ColDesignation.Width = 68;
-            // 
-            // ColUser
-            // 
-            this.ColUser.DataPropertyName = "UserSession";
-            this.ColUser.HeaderText = "User Session";
-            this.ColUser.Name = "ColUser";
-            this.ColUser.ReadOnly = true;
-            this.ColUser.Visible = false;
-            // 
             // serchTxt
             // 
             this.serchTxt.Location = new System.Drawing.Point(104, 12);
@@ -415,12 +291,24 @@
             this.panelGrid.TabIndex = 71;
             this.panelGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGrid_Paint);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(926, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(28, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 76;
+            this.pictureBox4.TabStop = false;
+            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panelAddCotisation
             // 
+            this.panelAddCotisation.Controls.Add(this.chkSocial);
             this.panelAddCotisation.Controls.Add(this.label10);
             this.panelAddCotisation.Controls.Add(this.dgManyCotisation);
             this.panelAddCotisation.Controls.Add(this.fraisLbl);
@@ -480,7 +368,8 @@
             this.dataGridViewTextBoxColumn1,
             this.ColSemaine,
             this.Column3,
-            this.Column12});
+            this.Column12,
+            this.Column2});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -504,31 +393,6 @@
             this.dgManyCotisation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgManyCotisation.Size = new System.Drawing.Size(354, 227);
             this.dgManyCotisation.TabIndex = 102;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Numéro";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // ColSemaine
-            // 
-            this.ColSemaine.HeaderText = "IdSemaine";
-            this.ColSemaine.Name = "ColSemaine";
-            this.ColSemaine.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Date";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Montant";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
             // 
             // fraisLbl
             // 
@@ -566,7 +430,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(430, 29);
+            this.checkBox2.Location = new System.Drawing.Point(508, 29);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(189, 25);
             this.checkBox2.TabIndex = 107;
@@ -721,34 +585,202 @@
             this.membreCombo.TabIndex = 93;
             this.membreCombo.SelectedIndexChanged += new System.EventHandler(this.membreCombo_SelectedIndexChanged_1);
             // 
-            // pictureBox4
+            // chkSocial
             // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(926, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(28, 27);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 76;
-            this.pictureBox4.TabStop = false;
+            this.chkSocial.AutoSize = true;
+            this.chkSocial.Location = new System.Drawing.Point(428, 29);
+            this.chkSocial.Name = "chkSocial";
+            this.chkSocial.Size = new System.Drawing.Size(74, 25);
+            this.chkSocial.TabIndex = 112;
+            this.chkSocial.Text = "Social";
+            this.chkSocial.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // dataGridViewTextBoxColumn1
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = global::UIProject.Properties.Resources.Up_Squared_32px;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(1129, 13);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 33);
-            this.button7.TabIndex = 11;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Numéro";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // ColSemaine
+            // 
+            this.ColSemaine.HeaderText = "IdSemaine";
+            this.ColSemaine.Name = "ColSemaine";
+            this.ColSemaine.ReadOnly = true;
+            this.ColSemaine.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Date";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Montant";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Social";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // ColNum
+            // 
+            this.ColNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColNum.DataPropertyName = "Num";
+            this.ColNum.HeaderText = "N°";
+            this.ColNum.Name = "ColNum";
+            this.ColNum.ReadOnly = true;
+            this.ColNum.Width = 53;
+            // 
+            // ColIdcot
+            // 
+            this.ColIdcot.DataPropertyName = "Id";
+            this.ColIdcot.HeaderText = "IdCotisation";
+            this.ColIdcot.Name = "ColIdcot";
+            this.ColIdcot.ReadOnly = true;
+            this.ColIdcot.Visible = false;
+            // 
+            // ColDateCo
+            // 
+            this.ColDateCo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColDateCo.DataPropertyName = "DateCotisation";
+            this.ColDateCo.HeaderText = "Date de Cotisation";
+            this.ColDateCo.Name = "ColDateCo";
+            this.ColDateCo.ReadOnly = true;
+            this.ColDateCo.Width = 168;
+            // 
+            // ColDateCon
+            // 
+            this.ColDateCon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColDateCon.DataPropertyName = "DateConcernee";
+            this.ColDateCon.HeaderText = "Date Concernée";
+            this.ColDateCon.Name = "ColDateCon";
+            this.ColDateCon.ReadOnly = true;
+            this.ColDateCon.Width = 152;
+            // 
+            // ColMontant
+            // 
+            this.ColMontant.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColMontant.DataPropertyName = "Montant";
+            this.ColMontant.HeaderText = "Montant";
+            this.ColMontant.Name = "ColMontant";
+            this.ColMontant.ReadOnly = true;
+            this.ColMontant.Width = 105;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Mont";
+            this.Column1.HeaderText = "Mont";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // ColRefInscrit
+            // 
+            this.ColRefInscrit.DataPropertyName = "RefInscription";
+            this.ColRefInscrit.HeaderText = "IdInscription";
+            this.ColRefInscrit.Name = "ColRefInscrit";
+            this.ColRefInscrit.ReadOnly = true;
+            this.ColRefInscrit.Visible = false;
+            // 
+            // ColRefRound
+            // 
+            this.ColRefRound.DataPropertyName = "RefRound";
+            this.ColRefRound.HeaderText = "IdRound";
+            this.ColRefRound.Name = "ColRefRound";
+            this.ColRefRound.ReadOnly = true;
+            this.ColRefRound.Visible = false;
+            // 
+            // ColMatricule
+            // 
+            this.ColMatricule.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColMatricule.DataPropertyName = "Matricule";
+            this.ColMatricule.HeaderText = "Matricule";
+            this.ColMatricule.Name = "ColMatricule";
+            this.ColMatricule.ReadOnly = true;
+            this.ColMatricule.Width = 109;
+            // 
+            // ColNom
+            // 
+            this.ColNom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColNom.DataPropertyName = "Nom";
+            this.ColNom.HeaderText = "Nom";
+            this.ColNom.Name = "ColNom";
+            this.ColNom.ReadOnly = true;
+            this.ColNom.Width = 72;
+            // 
+            // ColPostnom
+            // 
+            this.ColPostnom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColPostnom.DataPropertyName = "Postnom";
+            this.ColPostnom.HeaderText = "Postnom";
+            this.ColPostnom.Name = "ColPostnom";
+            this.ColPostnom.ReadOnly = true;
+            this.ColPostnom.Width = 102;
+            // 
+            // ColPrenom
+            // 
+            this.ColPrenom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColPrenom.DataPropertyName = "Prenom";
+            this.ColPrenom.HeaderText = "Prénom";
+            this.ColPrenom.Name = "ColPrenom";
+            this.ColPrenom.ReadOnly = true;
+            this.ColPrenom.Width = 94;
+            // 
+            // ColSex
+            // 
+            this.ColSex.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColSex.DataPropertyName = "Sexe";
+            this.ColSex.HeaderText = "Sexe";
+            this.ColSex.Name = "ColSex";
+            this.ColSex.ReadOnly = true;
+            this.ColSex.Width = 71;
+            // 
+            // ColSem
+            // 
+            this.ColSem.DataPropertyName = "RefSemaine";
+            this.ColSem.HeaderText = "IdSemaine";
+            this.ColSem.Name = "ColSem";
+            this.ColSem.ReadOnly = true;
+            this.ColSem.Visible = false;
+            // 
+            // ColFrais
+            // 
+            this.ColFrais.DataPropertyName = "RefFrais";
+            this.ColFrais.HeaderText = "IdFrais";
+            this.ColFrais.Name = "ColFrais";
+            this.ColFrais.ReadOnly = true;
+            this.ColFrais.Visible = false;
+            // 
+            // ColDesignation
+            // 
+            this.ColDesignation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColDesignation.DataPropertyName = "Designation";
+            this.ColDesignation.HeaderText = "Frais";
+            this.ColDesignation.Name = "ColDesignation";
+            this.ColDesignation.ReadOnly = true;
+            this.ColDesignation.Width = 68;
+            // 
+            // ColUser
+            // 
+            this.ColUser.DataPropertyName = "UserSession";
+            this.ColUser.HeaderText = "User Session";
+            this.ColUser.Name = "ColUser";
+            this.ColUser.ReadOnly = true;
+            this.ColUser.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Cas";
+            this.Column4.HeaderText = "Cas";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
             // 
             // UC_Cotisation
             // 
@@ -769,10 +801,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgCotisation)).EndInit();
             this.panelGrid.ResumeLayout(false);
             this.panelGrid.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelAddCotisation.ResumeLayout(false);
             this.panelAddCotisation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgManyCotisation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -794,10 +826,6 @@
         private System.Windows.Forms.Panel panelAddCotisation;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgManyCotisation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSemaine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.Label fraisLbl;
         private System.Windows.Forms.ComboBox weeksCombo;
         private System.Windows.Forms.Label weekLbl;
@@ -817,6 +845,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox membreCombo;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.CheckBox chkSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSemaine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColIdcot;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDateCo;
@@ -834,6 +869,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColFrais;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDesignation;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColUser;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

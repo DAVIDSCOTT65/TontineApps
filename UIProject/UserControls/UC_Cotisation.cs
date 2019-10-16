@@ -74,13 +74,13 @@ namespace UIProject.UserControls
                             if (rowCount == 0)
                             {
                                 idCotisation = cot.Nouveau();
-                                dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text);
+                                dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text, chkSocial.Checked == true ? 1 : 0);
                                 dateCotTxt.Text = dateCotise.AddDays(1).ToString();
                             }
                             else
                             {
                                 idCotisation = idCotisation + 1;
-                                dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text);
+                                dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text, chkSocial.Checked == true ? 1 : 0);
                                 dateCotTxt.Text = dateCotise.AddDays(1).ToString();
 
                             }
@@ -101,13 +101,13 @@ namespace UIProject.UserControls
                             if (rowCount == 0)
                             {
                                 idCotisation = cot.Nouveau();
-                                dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text);
+                                dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text, chkSocial.Checked == true ? 1 : 0);
                                 dateCotTxt.Text = dateCotise.AddDays(1).ToString();
                             }
                             else
                             {
                                 idCotisation = idCotisation + 1;
-                                dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text);
+                                dgManyCotisation.Rows.Add(idCotisation.ToString(), idSemaine, dateCotTxt.Text, montantTxt.Text, chkSocial.Checked==true ? 1 : 0);
                                 dateCotTxt.Text = dateCotise.AddDays(1).ToString();
 
                             }
@@ -165,6 +165,7 @@ namespace UIProject.UserControls
 
         private void UC_Cotisation_Load(object sender, EventArgs e)
         {
+            chkSocial.Checked = true;
             ChargemenCombos();
             RefreshData(new Cotisation());
         }
@@ -211,8 +212,7 @@ namespace UIProject.UserControls
         {
             if (checkBox1.Checked == true)
                 SavePlusieur();
-            //else
-            //    SaveOne();
+            
         }
         private void SaveOne()
         {
@@ -292,12 +292,15 @@ namespace UIProject.UserControls
 
                     if (idSemaine != 0)
                     {
+                        
+
                         cot.Id = Convert.ToInt32(dgManyCotisation[0, i].Value.ToString());
                         cot.RefInscription = idInscription;
                         cot.RefSemaine = Convert.ToInt32(dgManyCotisation[1, i].Value.ToString());
                         cot.DateConcernee = Convert.ToDateTime(dgManyCotisation[2, i].Value.ToString());
                         cot.RefFrais = idFrais;
                         cot.Montant = dgManyCotisation[3, i].Value.ToString();
+                        cot.Cas = Convert.ToInt32(dgManyCotisation[4, i].Value.ToString());
                         cot.UserSession = UserSession.GetInstance().UserName;
 
                         cot.Enregistrer(cot);
@@ -308,12 +311,15 @@ namespace UIProject.UserControls
                     }
                     else
                     {
+                        
+                        
                         cot.Id = Convert.ToInt32(dgManyCotisation[0, i].Value.ToString());
                         cot.RefInscription = idInscription;
                         cot.RefSemaine = InstantSemaine.GetInstance().IdSemaine;
                         cot.DateConcernee = Convert.ToDateTime(dgManyCotisation[2, i].Value.ToString());
                         cot.RefFrais = idFrais;
                         cot.Montant = dgManyCotisation[3, i].Value.ToString();
+                        cot.Cas = Convert.ToInt32(dgManyCotisation[4, i].Value.ToString());
                         cot.UserSession = UserSession.GetInstance().UserName;
 
                         cot.Enregistrer(cot);

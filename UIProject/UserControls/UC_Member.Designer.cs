@@ -309,7 +309,7 @@
             // initial
             // 
             this.initial.Location = new System.Drawing.Point(476, 218);
-            this.initial.Mask = "0000";
+            this.initial.Mask = "+000";
             this.initial.Name = "initial";
             this.initial.Size = new System.Drawing.Size(273, 27);
             this.initial.TabIndex = 28;
@@ -317,6 +317,7 @@
             // phoneTxt
             // 
             this.phoneTxt.Location = new System.Drawing.Point(476, 251);
+            this.phoneTxt.Mask = "0000000000";
             this.phoneTxt.Name = "phoneTxt";
             this.phoneTxt.Size = new System.Drawing.Size(273, 27);
             this.phoneTxt.TabIndex = 29;

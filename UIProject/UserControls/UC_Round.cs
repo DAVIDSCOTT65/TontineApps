@@ -39,7 +39,7 @@ namespace UIProject.UserControls
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (UserSession.GetInstance().AccessLevel != "1")
+            if (UserSession.GetInstance().AccessLevel != "4")
             {
                 MessageBox.Show("Vous ne pouvez pas effectuer d'opération ici, seul les administrateurs le peuvent", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
@@ -56,7 +56,7 @@ namespace UIProject.UserControls
         {
             try
             {
-                NewIdRound();
+                //NewIdRound();
 
                 if (idRound==0 || idDetail==0 || designationTxt.Text=="" || dateTxt.Text=="")
                 {
@@ -73,6 +73,8 @@ namespace UIProject.UserControls
 
                     rd.Enregistrer(rd);
                     RefreshData(new Details_Round());
+                    nouveauBtn.Enabled = true;
+                    Iniliser();
                 }
 
                 
@@ -93,16 +95,16 @@ namespace UIProject.UserControls
         {
             try
             {
-                NewIdDetailRound();
+                //NewIdDetailRound();
 
-                if (idDetail==0 || ecartTxt.Text=="" || montTxt.Text == "" || deviseTxt.Text=="" || nbrMax.Text=="")
+                if (idDetail==0 || ecartTxt.Text=="" || montTxt.Text == "" || deviseTxt.Text=="" || nbrMax.Text=="" || adTxt.Text== "" || casTxt.Text== "" || retTxt.Text == "")
                 {
-                    MessageBox.Show("Enregistrement impossible, il ne doit pas y avoir des champs vide");
+                    MessageBox.Show("Il ne doit pas y avoir des champs vide", "Enregistrement impossible", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     if(Convert.ToInt32(ecartTxt.Text)<=0 || Convert.ToInt32(montTxt.Text)<=0 || Convert.ToInt32(nbrMax.Text)<=0)
-                        MessageBox.Show("Enregistrement impossible, il y a des champs qui possède de valeur inférieur ou egal à zéro");
+                        MessageBox.Show("Il y a des champs qui possède de valeur inférieur ou egal à zéro.\n N.B : Seul les champs Frais adhésion, Cas social et Retenue sur remboursement peuvent prendre la valeur zéro", "Enregistrement impossible",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     else
                     {
                         Details_Round dr = new Details_Round();
@@ -112,11 +114,15 @@ namespace UIProject.UserControls
                         dr.Montant_Jour = Convert.ToDecimal(montTxt.Text);
                         dr.Devise = deviseTxt.Text;
                         dr.Limite = Convert.ToInt32(nbrMax.Text);
+                        dr.Frais_Adhesion = Convert.ToDecimal(adTxt.Text);
+                        dr.Cas = Convert.ToDecimal(casTxt.Text);
+                        dr.Retenue = Convert.ToDecimal(retTxt.Text);
                         dr.UserSession = UserSession.GetInstance().UserName;
 
                         dr.Enregistrer(dr);
 
                         RefreshData(new Details_Round());
+                        Iniliser();
                     }
                 }
                 
@@ -156,8 +162,8 @@ namespace UIProject.UserControls
         void clic_gridDetail()
         {
             gridClic = true;
-            idRound = 0;
-            idDetail = 0;
+            //idRound = 0;
+            //idDetail = 0;
             try
             {
                 int i;
@@ -169,9 +175,11 @@ namespace UIProject.UserControls
                 montTxt.Text = dgDetail["ColMont", i].Value.ToString();
                 deviseTxt.Text = dgDetail["ColDevise", i].Value.ToString();
                 nbrMax.Text = dgDetail["ColLimite", i].Value.ToString();
-                
+                adTxt.Text = dgDetail["ColAd", i].Value.ToString();
+                casTxt.Text = dgDetail["ColCas", i].Value.ToString();
+                retTxt.Text = dgDetail["ColRet", i].Value.ToString();
 
-
+                button1.Enabled = true;
 
 
             }
@@ -183,7 +191,7 @@ namespace UIProject.UserControls
         void clic_gridRound()
         {
             gridClic = true;
-            idRound = 0;
+            //idRound = 0;
             
             try
             {
@@ -194,9 +202,9 @@ namespace UIProject.UserControls
                 idRound = Convert.ToInt32(dgRound["ColIdRound", i].Value.ToString());
                 designationTxt.Text = dgRound["ColDesignation", i].Value.ToString();
                 dateTxt.Text = dgRound["ColDatedebut", i].Value.ToString();
-               
 
 
+                button2.Enabled = true;
 
 
 
@@ -220,6 +228,40 @@ namespace UIProject.UserControls
         private void dgRound_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             clic_gridRound();
+        }
+
+        private void nouveauBtn_Click(object sender, EventArgs e)
+        {
+            Iniliser();
+            NewIdRound();
+            NewIdDetailRound();
+            nouveauBtn.Enabled = false;
+            button2.Enabled = true;
+            button1.Enabled = true;
+        }
+        void Iniliser()
+        {
+            idDetail = 0;
+            idRound = 0;
+            designationTxt.Clear();
+            dateTxt.Clear();
+            ecartTxt.Clear();
+            montTxt.Clear();
+            deviseTxt.Clear();
+            nbrMax.Clear();
+            adTxt.Clear();
+            casTxt.Clear();
+            retTxt.Clear();
+            button1.Enabled = false;
+            button2.Enabled = false;
+        }
+
+        private void deviseTxt_TextChanged(object sender, EventArgs e)
+        {
+            label15.Text = deviseTxt.Text;
+            label16.Text = deviseTxt.Text;
+            label17.Text = deviseTxt.Text;
+            label18.Text = deviseTxt.Text;
         }
     }
 }

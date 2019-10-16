@@ -40,29 +40,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.quartierTxt = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comTxt = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.villeTxt = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.paysTxt = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.initial = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numTxt = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.avenueTxt = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dgInscit = new System.Windows.Forms.DataGridView();
-            this.contactTxt = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.contactTxt = new System.Windows.Forms.MaskedTextBox();
+            this.dgInscit = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +57,21 @@
             this.commune = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quart = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avenue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numTxt = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.avenueTxt = new System.Windows.Forms.TextBox();
+            this.initial = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.quartierTxt = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comTxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.villeTxt = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.paysTxt = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -205,6 +205,238 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Adresse détaillées";
             // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(921, 102);
+            this.maskedTextBox2.Mask = "0000000000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(143, 27);
+            this.maskedTextBox2.TabIndex = 46;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(873, 102);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(42, 27);
+            this.textBox6.TabIndex = 45;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(770, 106);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 19);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "4èm Phone";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(921, 69);
+            this.maskedTextBox1.Mask = "0000000000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(143, 27);
+            this.maskedTextBox1.TabIndex = 43;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(873, 69);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(42, 27);
+            this.textBox5.TabIndex = 42;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(770, 73);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(97, 19);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "3èm Phone";
+            // 
+            // contactTxt
+            // 
+            this.contactTxt.Location = new System.Drawing.Point(921, 32);
+            this.contactTxt.Mask = "0000000000";
+            this.contactTxt.Name = "contactTxt";
+            this.contactTxt.Size = new System.Drawing.Size(143, 27);
+            this.contactTxt.TabIndex = 40;
+            // 
+            // dgInscit
+            // 
+            this.dgInscit.AllowUserToAddRows = false;
+            this.dgInscit.AllowUserToDeleteRows = false;
+            this.dgInscit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgInscit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgInscit.BackgroundColor = System.Drawing.Color.White;
+            this.dgInscit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgInscit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgInscit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgInscit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.pays,
+            this.ville,
+            this.commune,
+            this.quart,
+            this.avenue});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgInscit.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgInscit.Location = new System.Drawing.Point(11, 168);
+            this.dgInscit.Name = "dgInscit";
+            this.dgInscit.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgInscit.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgInscit.RowHeadersVisible = false;
+            this.dgInscit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgInscit.Size = new System.Drawing.Size(1053, 169);
+            this.dgInscit.TabIndex = 39;
+            this.dgInscit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgInscit_CellClick);
+            this.dgInscit.SelectionChanged += new System.EventHandler(this.DgInscit_SelectionChanged);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "RefAdresse";
+            this.id.HeaderText = "Numéro";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "RefMembre";
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Numero";
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Id";
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // pays
+            // 
+            this.pays.DataPropertyName = "Pays";
+            this.pays.HeaderText = "Pays";
+            this.pays.Name = "pays";
+            this.pays.ReadOnly = true;
+            // 
+            // ville
+            // 
+            this.ville.DataPropertyName = "Ville";
+            this.ville.HeaderText = "Ville";
+            this.ville.Name = "ville";
+            this.ville.ReadOnly = true;
+            // 
+            // commune
+            // 
+            this.commune.DataPropertyName = "Commune";
+            this.commune.HeaderText = "Commune";
+            this.commune.Name = "commune";
+            this.commune.ReadOnly = true;
+            // 
+            // quart
+            // 
+            this.quart.DataPropertyName = "Quartier";
+            this.quart.HeaderText = "Quartier";
+            this.quart.Name = "quart";
+            this.quart.ReadOnly = true;
+            // 
+            // avenue
+            // 
+            this.avenue.DataPropertyName = "Avenue";
+            this.avenue.HeaderText = "Avenue";
+            this.avenue.Name = "avenue";
+            this.avenue.ReadOnly = true;
+            // 
+            // numTxt
+            // 
+            this.numTxt.Location = new System.Drawing.Point(475, 102);
+            this.numTxt.Name = "numTxt";
+            this.numTxt.Size = new System.Drawing.Size(273, 27);
+            this.numTxt.TabIndex = 23;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(401, 106);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 19);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Numéro";
+            // 
+            // avenueTxt
+            // 
+            this.avenueTxt.Enabled = false;
+            this.avenueTxt.Location = new System.Drawing.Point(475, 65);
+            this.avenueTxt.Name = "avenueTxt";
+            this.avenueTxt.Size = new System.Drawing.Size(273, 27);
+            this.avenueTxt.TabIndex = 21;
+            // 
+            // initial
+            // 
+            this.initial.Location = new System.Drawing.Point(873, 32);
+            this.initial.Name = "initial";
+            this.initial.Size = new System.Drawing.Size(42, 27);
+            this.initial.TabIndex = 25;
+            this.initial.Text = "+243";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(770, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 19);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "2èm Phone";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(403, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 19);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Avenue";
+            // 
             // quartierTxt
             // 
             this.quartierTxt.Location = new System.Drawing.Point(475, 32);
@@ -273,172 +505,6 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Pays";
             // 
-            // initial
-            // 
-            this.initial.Location = new System.Drawing.Point(873, 32);
-            this.initial.Name = "initial";
-            this.initial.Size = new System.Drawing.Size(42, 27);
-            this.initial.TabIndex = 25;
-            this.initial.Text = "+243";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(770, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 19);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "2èm Phone";
-            // 
-            // numTxt
-            // 
-            this.numTxt.Location = new System.Drawing.Point(475, 102);
-            this.numTxt.Name = "numTxt";
-            this.numTxt.Size = new System.Drawing.Size(273, 27);
-            this.numTxt.TabIndex = 23;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(401, 106);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 19);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Numéro";
-            // 
-            // avenueTxt
-            // 
-            this.avenueTxt.Enabled = false;
-            this.avenueTxt.Location = new System.Drawing.Point(475, 65);
-            this.avenueTxt.Name = "avenueTxt";
-            this.avenueTxt.Size = new System.Drawing.Size(273, 27);
-            this.avenueTxt.TabIndex = 21;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(403, 69);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 19);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Avenue";
-            // 
-            // dgInscit
-            // 
-            this.dgInscit.AllowUserToAddRows = false;
-            this.dgInscit.AllowUserToDeleteRows = false;
-            this.dgInscit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgInscit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgInscit.BackgroundColor = System.Drawing.Color.White;
-            this.dgInscit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgInscit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgInscit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgInscit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.pays,
-            this.ville,
-            this.commune,
-            this.quart,
-            this.avenue});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgInscit.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgInscit.Location = new System.Drawing.Point(11, 168);
-            this.dgInscit.Name = "dgInscit";
-            this.dgInscit.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgInscit.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgInscit.RowHeadersVisible = false;
-            this.dgInscit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgInscit.Size = new System.Drawing.Size(1053, 169);
-            this.dgInscit.TabIndex = 39;
-            this.dgInscit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgInscit_CellClick);
-            this.dgInscit.SelectionChanged += new System.EventHandler(this.DgInscit_SelectionChanged);
-            // 
-            // contactTxt
-            // 
-            this.contactTxt.Location = new System.Drawing.Point(921, 32);
-            this.contactTxt.Mask = "000000000";
-            this.contactTxt.Name = "contactTxt";
-            this.contactTxt.Size = new System.Drawing.Size(143, 27);
-            this.contactTxt.TabIndex = 40;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(921, 69);
-            this.maskedTextBox1.Mask = "000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(143, 27);
-            this.maskedTextBox1.TabIndex = 43;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(873, 69);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(42, 27);
-            this.textBox5.TabIndex = 42;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(770, 73);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 19);
-            this.label10.TabIndex = 41;
-            this.label10.Text = "3èm Phone";
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(921, 102);
-            this.maskedTextBox2.Mask = "000000000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(143, 27);
-            this.maskedTextBox2.TabIndex = 46;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(873, 102);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(42, 27);
-            this.textBox6.TabIndex = 45;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(770, 106);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 19);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "4èm Phone";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -455,72 +521,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "RefAdresse";
-            this.id.HeaderText = "Numéro";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "RefMembre";
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Numero";
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Id";
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            // 
-            // pays
-            // 
-            this.pays.DataPropertyName = "Pays";
-            this.pays.HeaderText = "Pays";
-            this.pays.Name = "pays";
-            this.pays.ReadOnly = true;
-            // 
-            // ville
-            // 
-            this.ville.DataPropertyName = "Ville";
-            this.ville.HeaderText = "Ville";
-            this.ville.Name = "ville";
-            this.ville.ReadOnly = true;
-            // 
-            // commune
-            // 
-            this.commune.DataPropertyName = "Commune";
-            this.commune.HeaderText = "Commune";
-            this.commune.Name = "commune";
-            this.commune.ReadOnly = true;
-            // 
-            // quart
-            // 
-            this.quart.DataPropertyName = "Quartier";
-            this.quart.HeaderText = "Quartier";
-            this.quart.Name = "quart";
-            this.quart.ReadOnly = true;
-            // 
-            // avenue
-            // 
-            this.avenue.DataPropertyName = "Avenue";
-            this.avenue.HeaderText = "Avenue";
-            this.avenue.Name = "avenue";
-            this.avenue.ReadOnly = true;
-            // 
             // MiniFormAdresse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -535,7 +535,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MiniFormAdresse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MiniFormAdresse";

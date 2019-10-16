@@ -22,6 +22,9 @@ namespace RoundLib
         public DateTime DateDebut { get; set; }
         public DateTime DateFin { get; set; }
         public int IdRound { get; set; }
+        public decimal Frais_Adhesion { get; set; }
+        public decimal Cas { get; set; }
+        public decimal Retenue { get; set; }
         public int Nouveau()
         {
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
@@ -53,9 +56,12 @@ namespace RoundLib
 
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, Id));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@ecart", 4, DbType.Int32, Ecart_Jour));
-                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@montant", 4, DbType.Decimal, Montant_Jour));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@montant", 20, DbType.Decimal, Montant_Jour));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@devise", 20, DbType.String, Devise));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@limite", 4, DbType.Int32, Limite));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@frais", 20, DbType.Decimal, Frais_Adhesion));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@cas", 20, DbType.Decimal, Cas));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@retenue", 20, DbType.Decimal, Retenue));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@usersession", 30, DbType.String, UserSession));
 
                 cmd.ExecuteNonQuery();
@@ -134,6 +140,9 @@ namespace RoundLib
             dr.Devise = rd["Devise"].ToString();
             dr.Ecart_Jour= Convert.ToInt32(rd["Ecart_Jour"].ToString());
             dr.Limite= Convert.ToInt32(rd["Limite"].ToString());
+            //dr.Frais_Adhesion = Convert.ToDecimal(rd["Frais_Adhesion"].ToString());
+            //dr.Cas = Convert.ToDecimal(rd["Cas_Social"].ToString());
+            //dr.Retenue = Convert.ToDecimal(rd["Retenue_Remboursement"].ToString());
 
             return dr;
         }
@@ -147,7 +156,9 @@ namespace RoundLib
             dr.Devise = rd["Devise"].ToString();
             dr.Ecart_Jour = Convert.ToInt32(rd["Ecart_Jour"].ToString());
             dr.Limite = Convert.ToInt32(rd["Limite"].ToString());
-
+            dr.Frais_Adhesion = Convert.ToDecimal(rd["Frais_Adhesion"].ToString());
+            dr.Cas = Convert.ToDecimal(rd["Cas_Social"].ToString());
+            dr.Retenue = Convert.ToDecimal(rd["Retenue_Remboursement"].ToString());
             return dr;
         }
     }

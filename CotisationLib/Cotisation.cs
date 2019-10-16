@@ -31,6 +31,7 @@ namespace CotisationLib
         public string Sexe { get; set; }
         public string Designation { get; set; }
         public string UserSession { get; set; }
+        public int Cas { get; set; }
         public int Nouveau()
         {
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
@@ -66,6 +67,7 @@ namespace CotisationLib
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@date_concerne", 20, DbType.Date, DateConcernee));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@ref_frais", 4, DbType.Int32, RefFrais));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@montant", 4, DbType.Decimal, Convert.ToDecimal(Montant)));
+                cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@cas", 4, DbType.Int32, Convert.ToDecimal(Cas)));
                 cmd.Parameters.Add(Parametre.Instance.AjouterParametre(cmd, "@usersession", 30, DbType.String, UserSession));
 
                 cmd.ExecuteNonQuery();

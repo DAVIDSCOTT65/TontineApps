@@ -325,6 +325,7 @@
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
             series1.Legend = "Legend1";
             series1.Name = "Cotisation";
+            series1.YValuesPerPoint = 2;
             this.chartWeek.Series.Add(series1);
             this.chartWeek.Size = new System.Drawing.Size(999, 319);
             this.chartWeek.TabIndex = 8;
